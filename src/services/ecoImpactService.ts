@@ -451,12 +451,12 @@ export const ecoImpactService = {
 
     const { data, error } = await supabaseAdmin
       .from("profiles")
-      .select("id,full_name,avatar_url")
+      .select("id,full_name")
       .in("id", actorIds);
     if (error) handleSupabaseError(error, "Failed to load leaderboard profiles");
 
     const profiles = new Map((data ?? []).map((profile) => {
-      const typed = profile as { id: string; full_name: string | null; avatar_url: string | null };
+      const typed = profile as { id: string; full_name: string | null };
       return [typed.id, typed];
     }));
 
@@ -468,7 +468,7 @@ export const ecoImpactService = {
           rank: 0,
           actor_id: actorId,
           display_name: profile?.full_name ?? "Người dùng FoodSave",
-          avatar_url: profile?.avatar_url ?? null,
+          avatar_url: null,
           food_saved_kg: totals.food_saved_kg,
           co2_avoided_kg: totals.co2_avoided_kg,
           meals_equivalent: totals.meals_equivalent

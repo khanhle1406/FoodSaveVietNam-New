@@ -8,9 +8,7 @@ type ProfileRow = {
   role?: string | null;
   full_name?: string | null;
   phone?: string | null;
-  avatar_url?: string | null;
   status?: string | null;
-  metadata?: Record<string, unknown> | null;
   created_at?: string | null;
   updated_at?: string | null;
 };
@@ -37,7 +35,7 @@ type StoreRow = {
 const requirePartnerProfile = async (userId: string): Promise<ProfileRow> => {
   const { data, error } = await supabaseAdmin
     .from("profiles")
-    .select("id,role,full_name,phone,avatar_url,status,metadata,created_at,updated_at")
+    .select("id,role,full_name,phone,status,created_at,updated_at")
     .eq("id", userId)
     .single();
 
@@ -75,7 +73,7 @@ const loadProfilesById = async (ownerIds: string[]): Promise<Map<string, Profile
 
   const { data, error } = await supabaseAdmin
     .from("profiles")
-    .select("id,role,full_name,phone,avatar_url,status,metadata,created_at,updated_at")
+    .select("id,role,full_name,phone,status,created_at,updated_at")
     .in("id", ownerIds);
 
   if (error) handleSupabaseError(error, "Failed to load partner profiles");
@@ -96,7 +94,7 @@ export const adminService = {
         .order("created_at", { ascending: false }),
       supabaseAdmin
         .from("profiles")
-        .select("id,role,full_name,phone,avatar_url,status,metadata,created_at,updated_at")
+        .select("id,role,full_name,phone,status,created_at,updated_at")
         .eq("role", "partner")
         .eq("status", "pending")
     ]);
@@ -143,7 +141,7 @@ export const adminService = {
       .from("profiles")
       .update({ status: "active", updated_at: new Date().toISOString() })
       .eq("id", userId)
-      .select("id,role,full_name,phone,avatar_url,status,metadata,created_at,updated_at")
+      .select("id,role,full_name,phone,status,created_at,updated_at")
       .single();
 
     if (profileError) handleSupabaseError(profileError, "Failed to approve partner profile");
@@ -182,7 +180,7 @@ export const adminService = {
       .from("profiles")
       .update({ status: "rejected", updated_at: new Date().toISOString() })
       .eq("id", userId)
-      .select("id,role,full_name,phone,avatar_url,status,metadata,created_at,updated_at")
+      .select("id,role,full_name,phone,status,created_at,updated_at")
       .single();
 
     if (profileError) handleSupabaseError(profileError, "Failed to reject partner profile");

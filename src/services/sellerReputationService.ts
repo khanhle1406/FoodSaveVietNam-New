@@ -1,5 +1,3 @@
-import type { PoolClient } from "pg";
-import { postgresPool } from "../config/postgres";
 import { ERROR_CODES } from "../constants/errors";
 import { HTTP_STATUS } from "../constants/http";
 import { emitStoreStatusChanged } from "../realtime/socketServer";
@@ -7,6 +5,7 @@ import type { UserRole } from "../types/domain";
 import type { SellerReputation, SellerReputationStatus, StoreStatusChangedPayload } from "../types/sellerReputation";
 import { AppError } from "../utils/appError";
 import { logger } from "../utils/logger";
+import { handleSupabaseError, supabaseAdmin } from "./supabaseService";
 
 type TimestampValue = Date | string | null;
 
@@ -18,15 +17,6 @@ interface SellerReputationRow {
   restricted_until: TimestampValue;
   created_at: Date | string;
   updated_at: Date | string;
-}
-
-interface ExistsRow {
-  exists: boolean;
-}
-
-interface CancellationMutationResult {
-  reputationBeforePenalty: SellerReputation;
-  trustScoreBefore: number;
 }
 
 const CANCELLATION_PENALTY_POINTS = 15;
@@ -69,103 +59,60 @@ const buildStatusPayload = (
   emittedAt: new Date().toISOString()
 });
 
-const withTransaction = async <T>(callback: (client: PoolClient) => Promise<T>): Promise<T> => {
-  const client = await postgresPool.connect();
+const ensureSellerReputation = async (sellerId: string): Promise<void> => {
+  const { data: existing } = await supabaseAdmin
+    .from("seller_reputation")
+    .select("seller_id")
+    .eq("seller_id", sellerId)
+    .maybeSingle();
 
-  try {
-    await client.query("begin");
-    const result = await callback(client);
-    await client.query("commit");
-    return result;
-  } catch (error) {
-    try {
-      await client.query("rollback");
-    } catch (rollbackError) {
-      logger.error("Không thể rollback transaction danh tiếng seller", rollbackError);
-    }
-    throw error;
-  } finally {
-    client.release();
+  if (!existing) {
+    const { data: store } = await supabaseAdmin
+      .from("stores")
+      .select("id,rating")
+      .eq("id", sellerId)
+      .maybeSingle();
+
+    await supabaseAdmin.from("seller_reputation").upsert({
+      seller_id: sellerId,
+      rating_avg: store?.rating ? Number(store.rating) : 5.0
+    }, { onConflict: "seller_id", ignoreDuplicates: true });
   }
-};
-
-const ensureSellerReputation = async (client: PoolClient, sellerId: string): Promise<void> => {
-  // Tạo hồ sơ danh tiếng từ bảng stores nếu seller chưa từng phát sinh điểm uy tín.
-  await client.query(
-    `
-      insert into public.seller_reputation (seller_id, rating_avg)
-      select stores.id, stores.rating
-      from public.stores
-      where stores.id = $1
-      on conflict (seller_id) do nothing
-    `,
-    [sellerId]
-  );
-};
-
-const fetchReputationForUpdate = async (client: PoolClient, sellerId: string): Promise<SellerReputationRow> => {
-  const result = await client.query<SellerReputationRow>(
-    `
-      select seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at
-      from public.seller_reputation
-      where seller_id = $1
-      for update
-    `,
-    [sellerId]
-  );
-
-  const row = result.rows[0];
-  if (!row) {
-    throw new AppError("Không tìm thấy hồ sơ danh tiếng của seller", HTTP_STATUS.NOT_FOUND, ERROR_CODES.RESOURCE_NOT_FOUND);
-  }
-
-  return row;
 };
 
 const fetchReputation = async (sellerId: string): Promise<SellerReputation> => {
-  const result = await postgresPool.query<SellerReputationRow>(
-    `
-      select seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at
-      from public.seller_reputation
-      where seller_id = $1
-    `,
-    [sellerId]
-  );
+  const { data, error } = await supabaseAdmin
+    .from("seller_reputation")
+    .select("seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at")
+    .eq("seller_id", sellerId)
+    .maybeSingle();
 
-  const row = result.rows[0];
-  if (!row) {
+  if (error) handleSupabaseError(error, "Failed to load seller reputation");
+  if (!data) {
     throw new AppError("Không tìm thấy hồ sơ danh tiếng của seller", HTTP_STATUS.NOT_FOUND, ERROR_CODES.RESOURCE_NOT_FOUND);
   }
 
-  return mapReputation(row);
+  return mapReputation(data as unknown as SellerReputationRow);
 };
 
 const assertSellerReadableByActor = async (sellerId: string, actorId: string, actorRole: UserRole): Promise<void> => {
   if (actorRole === "admin") return;
 
-  const result = await postgresPool.query<ExistsRow>(
-    `
-      select exists (
-        select 1
-        from public.stores
-        where stores.id = $1
-          and stores.owner_id = $2
-      ) as "exists"
-    `,
-    [sellerId, actorId]
-  );
+  const { data, error } = await supabaseAdmin
+    .from("stores")
+    .select("id")
+    .eq("id", sellerId)
+    .eq("owner_id", actorId)
+    .maybeSingle();
 
-  if (!result.rows[0]?.exists) {
+  if (error || !data) {
     throw new AppError("Bạn không có quyền xem danh tiếng của seller này", HTTP_STATUS.FORBIDDEN, ERROR_CODES.AUTH_FORBIDDEN);
   }
 };
 
 export const sellerReputationService = {
   async getSellerReputation(sellerId: string): Promise<SellerReputation> {
-    await withTransaction(async (client) => {
-      await ensureSellerReputation(client, sellerId);
-    });
-
+    await ensureSellerReputation(sellerId);
     return fetchReputation(sellerId);
   },
 
@@ -174,78 +121,46 @@ export const sellerReputationService = {
     return sellerReputationService.getSellerReputation(sellerId);
   },
 
-  async handleSellerCancellation(sellerId: string, orderId: string): Promise<SellerReputation> {
-    const cancellationResult = await withTransaction<CancellationMutationResult>(async (client) => {
-      await ensureSellerReputation(client, sellerId);
-      const current = await fetchReputationForUpdate(client, sellerId);
-      const trustScoreBefore = Number(current.trust_score);
+  async handleSellerCancellation(sellerId: string, orderId?: string): Promise<SellerReputation> {
+    await ensureSellerReputation(sellerId);
+    const current = await fetchReputation(sellerId);
+    const trustScoreBefore = Number(current.trust_score);
+    const newTrustScore = Math.max(trustScoreBefore - CANCELLATION_PENALTY_POINTS, 0);
 
-      const updatedResult = await client.query<SellerReputationRow>(
-        `
-          update public.seller_reputation
-          set trust_score = greatest(trust_score - $2, 0)
-          where seller_id = $1
-          returning seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at
-        `,
-        [sellerId, CANCELLATION_PENALTY_POINTS]
-      );
+    const { data: updated, error } = await supabaseAdmin
+      .from("seller_reputation")
+      .update({
+        trust_score: newTrustScore,
+        updated_at: new Date().toISOString()
+      })
+      .eq("seller_id", sellerId)
+      .select("seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at")
+      .single();
 
-      const updated = updatedResult.rows[0];
-      if (!updated) {
-        throw new AppError("Không thể cập nhật điểm uy tín của seller", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
-      }
+    if (error || !updated) {
+      throw new AppError("Không thể cập nhật điểm uy tín của seller", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
+    }
 
-      // Lưu lịch sử vi phạm để đội vận hành có thể đối soát theo từng đơn.
-      await client.query(
-        `
-          insert into public.seller_violations (
-            seller_id,
-            order_id,
-            violation_type,
-            reason,
-            point_delta,
-            trust_score_before,
-            trust_score_after,
-            rating_avg_snapshot,
-            status_after,
-            metadata
-          )
-          values (
-            $1,
-            $2,
-            'SELLER_CANCELLED_ORDER',
-            'Seller hủy đơn do hết hàng ảo',
-            $3,
-            $4,
-            $5,
-            $6,
-            $7,
-            $8::jsonb
-          )
-        `,
-        [
-          sellerId,
-          orderId,
-          -CANCELLATION_PENALTY_POINTS,
-          trustScoreBefore,
-          Number(updated.trust_score),
-          Number(updated.rating_avg),
-          updated.status,
-          JSON.stringify({ source: "handleSellerCancellation", orderId })
-        ]
-      );
-
-      return {
-        reputationBeforePenalty: mapReputation(updated),
-        trustScoreBefore
-      };
-    });
+    if (orderId) {
+      await supabaseAdmin.from("seller_violations").insert({
+        seller_id: sellerId,
+        order_id: orderId,
+        violation_type: "SELLER_CANCELLED_ORDER",
+        reason: "Seller hủy đơn do hết hàng ảo",
+        point_delta: -CANCELLATION_PENALTY_POINTS,
+        trust_score_before: trustScoreBefore,
+        trust_score_after: newTrustScore,
+        rating_avg_snapshot: Number(updated.rating_avg),
+        status_after: updated.status,
+        metadata: { source: "handleSellerCancellation", orderId }
+      });
+    }
 
     logger.info("Đã trừ điểm seller vì hủy đơn", {
       sellerId,
       orderId,
-      trustScoreBefore: cancellationResult.trustScoreBefore,
-      trustScoreAfter: cancellationResult.reputationBeforePenalty.trust_score
+      trustScoreBefore,
+      trustScoreAfter: newTrustScore
     });
 
     return sellerReputationService.checkAndApplyPenalties(sellerId);
@@ -253,151 +168,132 @@ export const sellerReputationService = {
 
   async checkAndApplyPenalties(sellerId: string): Promise<SellerReputation> {
     let realtimePayload: StoreStatusChangedPayload | null = null;
-
-    const finalReputation = await withTransaction<SellerReputation>(async (client) => {
-      await ensureSellerReputation(client, sellerId);
-      const current = await fetchReputationForUpdate(client, sellerId);
-      const trustScore = Number(current.trust_score);
-      if (current.status === "Banned") {
-        return mapReputation(current);
-      }
-
-      if (trustScore < BAN_THRESHOLD) {
-        const bannedResult = await client.query<SellerReputationRow>(
-          `
-            update public.seller_reputation
-            set status = 'Banned',
-                restricted_until = null
-            where seller_id = $1
-            returning seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at
-          `,
-          [sellerId]
-        );
-
-        const banned = bannedResult.rows[0];
-        if (!banned) {
-          throw new AppError("Không thể khóa seller vi phạm", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
-        }
-
-        const reputation = mapReputation(banned);
-        realtimePayload = buildStatusPayload(
-          reputation,
-          "TRUST_SCORE_BELOW_40",
-          "Tài khoản cửa hàng đã bị khóa vĩnh viễn do điểm uy tín dưới 40."
-        );
-        return reputation;
-      }
-
-      if (trustScore < RESTRICTION_TRUST_THRESHOLD) {
-        const restrictedResult = await client.query<SellerReputationRow>(
-          `
-            update public.seller_reputation
-            set status = 'Restricted',
-                restricted_until = greatest(coalesce(restricted_until, now()), now()) + interval '48 hours'
-            where seller_id = $1
-            returning seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at
-          `,
-          [sellerId]
-        );
-
-        const restricted = restrictedResult.rows[0];
-        if (!restricted) {
-          throw new AppError("Không thể áp dụng chế tài seller", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
-        }
-
-        const reputation = mapReputation(restricted);
-        realtimePayload = buildStatusPayload(
-          reputation,
-          "TRUST_SCORE_BELOW_85",
-          "Cửa hàng tạm thời bị chặn đăng món mới trong 48 giờ do điểm uy tín từ 40 đến dưới 85."
-        );
-        return reputation;
-      }
-
-      return mapReputation(current);
-    });
-
-    if (realtimePayload) {
-      emitStoreStatusChanged(realtimePayload);
+    await ensureSellerReputation(sellerId);
+    const current = await fetchReputation(sellerId);
+    const trustScore = Number(current.trust_score);
+    if (current.status === "Banned") {
+      return current;
     }
 
-    return finalReputation;
+    if (trustScore < BAN_THRESHOLD) {
+      const { data: banned, error } = await supabaseAdmin
+        .from("seller_reputation")
+        .update({
+          status: "Banned",
+          restricted_until: null,
+          updated_at: new Date().toISOString()
+        })
+        .eq("seller_id", sellerId)
+        .select("seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at")
+        .single();
+
+      if (error || !banned) {
+        throw new AppError("Không thể khóa seller vi phạm", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
+      }
+
+      const reputation = mapReputation(banned as unknown as SellerReputationRow);
+      realtimePayload = buildStatusPayload(
+        reputation,
+        "TRUST_SCORE_BELOW_40",
+        "Tài khoản cửa hàng đã bị khóa vĩnh viễn do điểm uy tín dưới 40."
+      );
+      emitStoreStatusChanged(realtimePayload);
+      return reputation;
+    }
+
+    if (trustScore < RESTRICTION_TRUST_THRESHOLD) {
+      const restrictedUntilDate = new Date(Date.now() + 48 * 60 * 60 * 1000).toISOString();
+      const { data: restricted, error } = await supabaseAdmin
+        .from("seller_reputation")
+        .update({
+          status: "Restricted",
+          restricted_until: restrictedUntilDate,
+          updated_at: new Date().toISOString()
+        })
+        .eq("seller_id", sellerId)
+        .select("seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at")
+        .single();
+
+      if (error || !restricted) {
+        throw new AppError("Không thể áp dụng chế tài seller", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
+      }
+
+      const reputation = mapReputation(restricted as unknown as SellerReputationRow);
+      realtimePayload = buildStatusPayload(
+        reputation,
+        "TRUST_SCORE_BELOW_85",
+        "Cửa hàng tạm thời bị chặn đăng món mới trong 48 giờ do điểm uy tín từ 40 đến dưới 85."
+      );
+      emitStoreStatusChanged(realtimePayload);
+      return reputation;
+    }
+
+    return current;
   },
 
-  async handleOrderSuccess(sellerId: string, isCharityOrder: boolean): Promise<SellerReputation> {
+  async handleOrderSuccess(sellerId: string, isCharityOrder?: boolean): Promise<SellerReputation> {
     let realtimePayload: StoreStatusChangedPayload | null = null;
     const recoveryPoints = isCharityOrder ? CHARITY_ORDER_RECOVERY_POINTS : NORMAL_ORDER_RECOVERY_POINTS;
 
-    const finalReputation = await withTransaction<SellerReputation>(async (client) => {
-      await ensureSellerReputation(client, sellerId);
-      const current = await fetchReputationForUpdate(client, sellerId);
-      const newTrustScore = Math.min(Number(current.trust_score) + recoveryPoints, 100);
-      const shouldRestoreToActive =
-        current.status === "Restricted" &&
-        newTrustScore >= RESTRICTION_TRUST_THRESHOLD;
+    await ensureSellerReputation(sellerId);
+    const current = await fetchReputation(sellerId);
+    const newTrustScore = Math.min(Number(current.trust_score) + recoveryPoints, 100);
+    const shouldRestoreToActive =
+      current.status === "Restricted" &&
+      newTrustScore >= RESTRICTION_TRUST_THRESHOLD;
 
-      const updatedResult = await client.query<SellerReputationRow>(
-        `
-          update public.seller_reputation
-          set trust_score = $2,
-              status = case when $3::boolean then 'Active'::public.seller_reputation_status else status end,
-              restricted_until = case when $3::boolean then null else restricted_until end
-          where seller_id = $1
-          returning seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at
-        `,
-        [sellerId, newTrustScore, shouldRestoreToActive]
-      );
+    const { data: updated, error } = await supabaseAdmin
+      .from("seller_reputation")
+      .update({
+        trust_score: newTrustScore,
+        ...(shouldRestoreToActive ? { status: "Active", restricted_until: null } : {}),
+        updated_at: new Date().toISOString()
+      })
+      .eq("seller_id", sellerId)
+      .select("seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at")
+      .single();
 
-      const updated = updatedResult.rows[0];
-      if (!updated) {
-        throw new AppError("Không thể cộng điểm phục hồi cho seller", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
-      }
+    if (error || !updated) {
+      throw new AppError("Không thể cộng điểm phục hồi cho seller", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
+    }
 
-      const reputation = mapReputation(updated);
-      realtimePayload = buildStatusPayload(
-        reputation,
-        shouldRestoreToActive ? "SELLER_REPUTATION_RECOVERED" : "SUCCESSFUL_ORDER_REPUTATION_REWARD",
-        shouldRestoreToActive
-          ? "Chúc mừng, cửa hàng đã phục hồi uy tín và được mở lại tính năng đăng món mới."
-          : `Cửa hàng được cộng ${recoveryPoints} điểm uy tín nhờ hoàn tất đơn hàng.`
-      );
-
-      return reputation;
-    });
+    const reputation = mapReputation(updated as unknown as SellerReputationRow);
+    realtimePayload = buildStatusPayload(
+      reputation,
+      shouldRestoreToActive ? "SELLER_REPUTATION_RECOVERED" : "SUCCESSFUL_ORDER_REPUTATION_REWARD",
+      shouldRestoreToActive
+        ? "Chúc mừng, cửa hàng đã phục hồi uy tín và được mở lại tính năng đăng món mới."
+        : `Cửa hàng được cộng ${recoveryPoints} điểm uy tín nhờ hoàn tất đơn hàng.`
+    );
 
     if (realtimePayload) {
       emitStoreStatusChanged(realtimePayload);
     }
 
-    return finalReputation;
+    return reputation;
   },
 
   async updateSellerRatingAverage(sellerId: string, ratingAverage: number): Promise<SellerReputation> {
-    await withTransaction(async (client) => {
-      await ensureSellerReputation(client, sellerId);
-      const updatedResult = await client.query<SellerReputationRow>(
-        `
-          update public.seller_reputation
-          set rating_avg = $2
-          where seller_id = $1
-          returning seller_id, trust_score, rating_avg, status, restricted_until, created_at, updated_at
-        `,
-        [sellerId, ratingAverage]
-      );
+    await ensureSellerReputation(sellerId);
+    const { error: repError } = await supabaseAdmin
+      .from("seller_reputation")
+      .update({
+        rating_avg: ratingAverage,
+        updated_at: new Date().toISOString()
+      })
+      .eq("seller_id", sellerId);
 
-      if (!updatedResult.rows[0]) {
-        throw new AppError("Không thể cập nhật sao trung bình của seller", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
-      }
+    if (repError) {
+      throw new AppError("Không thể cập nhật sao trung bình của seller", HTTP_STATUS.INTERNAL_SERVER_ERROR, ERROR_CODES.INTERNAL_SERVER_ERROR);
+    }
 
-      await client.query(
-        `
-          update public.stores
-          set rating = $2
-          where id = $1
-        `,
-        [sellerId, ratingAverage]
-      );
-    });
+    await supabaseAdmin
+      .from("stores")
+      .update({
+        rating: ratingAverage,
+        updated_at: new Date().toISOString()
+      })
+      .eq("id", sellerId);
 
     return sellerReputationService.checkAndApplyPenalties(sellerId);
   }

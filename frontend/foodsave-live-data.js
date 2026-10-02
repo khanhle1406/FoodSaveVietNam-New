@@ -126,7 +126,8 @@
 
   function authToken() {
     const session = readAuthSession();
-    return session && typeof session.accessToken === "string" ? session.accessToken : "";
+    if (!session) return "";
+    return session.accessToken || session.access_token || session.token || "";
   }
 
   function directSupabaseClient() {
@@ -366,7 +367,7 @@
       pickupStart: donation.pickup_start ? new Date(donation.pickup_start).toLocaleString("vi-VN") : "",
       pickupEnd: donation.pickup_end ? new Date(donation.pickup_end).toLocaleString("vi-VN") : "",
       time: donation.created_at ? new Date(donation.created_at).toLocaleString("vi-VN") : "",
-      status: donation.status === "open" ? "new" : donation.status,
+      status: donation.status === "open" ? "new" : (donation.status === "in_route" ? "in-route" : donation.status),
       note: donation.note || "",
       vol: volunteer.full_name || null,
       distance: ""

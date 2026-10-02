@@ -3623,7 +3623,12 @@ function pDash(){
   <div class="card gradient-card"><div style="position:relative;z-index:1">
   <div class="st" style="color:#fff"><i class="ti ti-leaf" style="color:var(--yellow)"></i> ESG Impact & Hoa hồng</div>
   <div class="grid-3 m12">${partnerImpactCards().map(m=>`<div style="text-align:center;padding:14px 8px;background:rgba(255,255,255,.14);border-radius:13px;backdrop-filter:blur(10px)"><i class="ti ${m.i}" style="font-size:24px;color:var(--yellow);margin-bottom:6px;display:block"></i><div style="font-size:10px;opacity:.8;font-weight:800;text-transform:uppercase;letter-spacing:.04em">${m.l}</div><div style="font-family:'Plus Jakarta Sans';font-size:18px;font-weight:900;color:#fff;margin-top:3px">${m.v}</div></div>`).join('')}</div>
-  <div style="padding:12px 16px;background:rgba(255,255,255,.16);border-radius:12px;backdrop-filter:blur(10px)"><div style="font-family:'Plus Jakarta Sans';font-size:13px;font-weight:900;color:var(--yellow)">Phí hoa hồng đang giảm: 15% → 12%</div><div style="font-size:11px;opacity:.85;font-weight:500;margin-top:3px">Duy trì ★4.8+ trong 3 tháng → tiếp tục giảm</div></div></div></div>
+  <div style="padding:12px 16px;background:rgba(255,255,255,.16);border-radius:12px;backdrop-filter:blur(10px)"><div style="font-family:'Plus Jakarta Sans';font-size:13px;font-weight:900;color:var(--yellow)">Phí hoa hồng đang giảm: 15% → 12%</div><div style="font-size:11px;opacity:.85;font-weight:500;margin-top:3px">Duy trì ★4.8+ trong 3 tháng → tiếp tục giảm</div></div>
+  <div style="display:flex;gap:10px;margin-top:12px">
+    <button onclick="if(window.FoodSaveESG)FoodSaveESG.showCertificate({orgName:st.n||'Tous Les Jours Lê Duẩn',foodSavedKg:328,co2AvoidedKg:142,mealsShared:120});" class="btn btn-sm" style="flex:1;background:rgba(255,255,255,0.22);color:#fff;border:1px solid rgba(255,255,255,0.35);font-weight:800;border-radius:10px;padding:9px 12px;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;"><i class="ti ti-certificate"></i> Xuất chứng nhận ESG & CO₂</button>
+    <button onclick="if(window.FoodSaveKYB)FoodSaveKYB.showUploadModal();" class="btn btn-sm" style="background:rgba(255,255,255,0.22);color:#fff;border:1px solid rgba(255,255,255,0.35);font-weight:800;border-radius:10px;padding:9px 12px;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;"><i class="ti ti-shield-check"></i> Hồ sơ KYB</button>
+  </div>
+  </div></div>
   <div class="card"><div class="st"><i class="ti ti-chart-bar"></i> Doanh thu 7 ngày</div>
   <div class="bar-ch" style="margin-bottom:28px">${[180,320,250,420,380,500,Math.round(rev/1000)].map((h,i)=>`<div style="height:${Math.round(h/500*100)}%"><div class="bar-lb">${["T2","T3","T4","T5","T6","T7","CN"][i]}</div></div>`).join('')}</div></div>
   </div>`;
@@ -3723,8 +3728,80 @@ function ordDetail(){
 function cancelOrder(){modal('Hủy đơn hàng','<p style="font-size:13.5px;color:var(--muted);margin-bottom:16px;line-height:1.7;font-weight:500">Hủy đơn sẽ hoàn tiền cho khách.<br><strong style="color:var(--ink)">Nếu khách hủy muộn (>5p sau đặt) → Phạt khách 50% giá trị đơn.</strong></p><div style="display:flex;flex-direction:column;gap:10px"><button class="btn btn-r btn-lg" style="width:100%;justify-content:center" onclick="oP=\'cancelled\';closeM();R();tst(\'Đã hủy\',\'Khách bị phạt 50%\',\'expiry\')"><i class="ti ti-user-x"></i> Khách hủy muộn · Phạt 50%</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:center" onclick="oP=\'cancelled\';closeM();R();tst(\'Đã hủy\',\'Hoàn tiền đầy đủ\',\'payout\')"><i class="ti ti-building-store"></i> Cửa hàng hủy · Hoàn 100%</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:center" onclick="closeM()"><i class="ti ti-arrow-left"></i> Không hủy</button></div>');}
 function noShow(){modal('Khách vắng mặt','<p style="font-size:13.5px;color:var(--muted);margin-bottom:16px;line-height:1.7;font-weight:500">Khách không đến lấy hàng?<br><strong style="color:var(--ink)">Hệ thống: Hủy → Hoàn tiền → Trừ 15 điểm uy tín → Ghi nhận vi phạm</strong></p><div style="padding:12px 14px;background:var(--red-100);border-radius:12px;margin-bottom:14px;font-size:12.5px;color:var(--red-600);font-weight:800"><i class="ti ti-alert-triangle"></i> Dưới 40 điểm → Tạm chặn tài khoản theo Điều khoản</div><button class="btn btn-r btn-lg" style="width:100%;justify-content:center;margin-bottom:10px" onclick="oP=\'cancelled\';closeM();R();tst(\'Vắng mặt\',\'Trừ 15 điểm uy tín\',\'expiry\')"><i class="ti ti-user-off"></i> Xác nhận Vắng mặt</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:center" onclick="closeM()">Chờ thêm</button>');}
 
-function donateProduct(i){PRD[i].donated=true;donaHistory.unshift({org:"Tổ chức gần nhất",items:[{n:PRD[i].n,q:PRD[i].q,img:PRD[i].img}],time:"Vừa xong",st:"delivered"});R();tst('Đã tặng',PRD[i].n+' → Charity 0đ','charity');}
-function acceptCharity(ci){const c=CHS[ci];const prods=activePRD().filter(p=>p.l==='red'||p.l==='yellow').slice(0,2);prods.forEach(p=>p.donated=true);donaHistory.unshift({org:c.n,items:prods.map(p=>({n:p.n,q:p.q,img:p.img})),time:"Vừa xong",st:"delivered"});CHS[ci].st='matched';R();tst('Xác nhận',c.n+' đã nhận hàng','charity');}
+async function donateProduct(i){
+  const p = PRD[i];
+  if(!p) return;
+  p.donated=true;
+  donaHistory.unshift({org:"Tổ chức gần nhất",items:[{n:p.n,q:p.q,img:p.img}],time:"Vừa xong",st:"delivered"});
+  R();
+  tst('Đã tặng',p.n+' → Charity 0đ','charity');
+
+  if(window.FoodSaveAPI && p) {
+    try {
+      let storeId = null;
+      try {
+        const session = JSON.parse(localStorage.getItem('foodsave.auth.session') || '{}');
+        storeId = session.store_id || session.user?.store_id || session.user?.id;
+      } catch(e) {}
+
+      if(storeId) {
+        const weightKg = Number(p.q || 1) * 0.3;
+        const expiresAt = new Date(Date.now() + (p.leftMin ? p.leftMin * 60000 : 24 * 3600000)).toISOString();
+        await FoodSaveAPI.donations.create({
+          store_id: storeId,
+          items: p.n,
+          amount_text: `${p.q || 1} phần`,
+          weight_kg: Number(weightKg.toFixed(2)) || 0.5,
+          expires_at: expiresAt,
+          pickup_start: "Ngay khi xác nhận",
+          pickup_end: "Trong vòng 4 giờ",
+          urgency: p.l === 'red' ? 'red' : (p.l === 'yellow' ? 'yellow' : 'green'),
+          note: `Quyên góp từ cửa hàng: ${p.n}`
+        });
+      }
+    } catch(err) {
+      console.warn("Lỗi API donateProduct:", err);
+    }
+  }
+}
+
+async function acceptCharity(ci){
+  const c=CHS[ci];
+  const prods=activePRD().filter(p=>p.l==='red'||p.l==='yellow').slice(0,2);
+  prods.forEach(p=>p.donated=true);
+  donaHistory.unshift({org:c.n,items:prods.map(p=>({n:p.n,q:p.q,img:p.img})),time:"Vừa xong",st:"delivered"});
+  CHS[ci].st='matched';
+  R();
+  tst('Xác nhận',c.n+' đã nhận hàng','charity');
+
+  if(window.FoodSaveAPI && prods.length > 0) {
+    try {
+      let storeId = null;
+      try {
+        const session = JSON.parse(localStorage.getItem('foodsave.auth.session') || '{}');
+        storeId = session.store_id || session.user?.store_id || session.user?.id;
+      } catch(e) {}
+
+      if(storeId) {
+        const totalWeight = prods.reduce((sum, item) => sum + (Number(item.q || 1) * 0.3), 0);
+        await FoodSaveAPI.donations.create({
+          store_id: storeId,
+          items: prods.map(p => p.n).join(", "),
+          amount_text: `${prods.length} mặt hàng`,
+          weight_kg: Number(totalWeight.toFixed(2)) || 1.0,
+          expires_at: new Date(Date.now() + 24 * 3600000).toISOString(),
+          pickup_start: "Ngay khi xác nhận",
+          pickup_end: "Trong ngày",
+          urgency: "yellow",
+          note: `Phân phối cho ${c.n}`
+        });
+      }
+    } catch(err) {
+      console.warn("Lỗi API acceptCharity:", err);
+    }
+  }
+}
+
 function rejectCharity(ci){CHS[ci].st='rejected';donaHistory.unshift({org:CHS[ci].n,items:[],time:"Vừa xong",st:"rejected"});R();tst('Đã từ chối',CHS[ci].n,'info');}
 
 // ════════ INVENTORY ════════
@@ -3810,7 +3887,7 @@ function showDonaMetric(k){
   else if(k==='food'){const allItems=donaHistory.filter(d=>d.st==='delivered').flatMap(d=>d.items);const grouped={};allItems.forEach(it=>{grouped[it.n]=grouped[it.n]||{img:it.img,q:0};grouped[it.n].q+=it.q;});modal('Food Donated — Chi tiết',Object.entries(grouped).map(([n,v])=>`<div class="f ac g12 m8" style="padding:13px;background:var(--soft);border-radius:12px"><span style="font-size:24px">${v.img}</span><div class="f1"><div style="font-size:13.5px;font-weight:900;color:var(--green-950);font-family:'Plus Jakarta Sans'">${n}</div></div><span style="font-family:'Plus Jakarta Sans';font-size:15px;font-weight:900;color:var(--green-800)">x${v.q} (~${(v.q*0.3).toFixed(1)}kg)</span></div>`).join(''));}
   else{const orgs=[...new Set(donaHistory.filter(d=>d.st==='delivered').map(d=>d.org))];modal('Charity đã kết nối — '+orgs.length+' tổ chức',orgs.map(name=>{const count=donaHistory.filter(d=>d.org===name&&d.st==='delivered').length;const ch=CHS.find(c=>c.n===name);return`<div class="f ac g12 m8" style="padding:13px;background:var(--soft);border-radius:12px"><div style="width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--green-50),var(--green-100));display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans';font-size:14px;font-weight:900;color:var(--green-800)">${ch?ch.av:name[0]}</div><div class="f1"><div style="font-size:13.5px;font-weight:900;color:var(--green-950);font-family:'Plus Jakarta Sans'">${name}</div><div style="font-size:11px;color:var(--muted);font-weight:500">${ch?ch.addr:'—'}</div></div><span class="tg tg-g">${count} lần</span></div>`;}).join(''));}}
 
-function showDonaHistDetail(di){const d=donaHistory[di];modal('Chi tiết donation — '+d.org,`<div class="f ac g12 m14"><div style="width:52px;height:52px;border-radius:14px;background:${d.st==='delivered'?'var(--green-100)':'var(--red-100)'};color:${d.st==='delivered'?'var(--green-800)':'var(--red)'};display:flex;align-items:center;justify-content:center"><i class="ti ${d.st==='delivered'?'ti-check':'ti-x'}" style="font-size:22px"></i></div><div class="f1"><div style="font-family:'Plus Jakarta Sans';font-size:18px;font-weight:900;color:var(--green-950);letter-spacing:-.02em">${d.org}</div><div style="font-size:12px;color:var(--muted);font-weight:700">${d.time}</div></div><span class="tg ${d.st==='delivered'?'tg-g':'tg-r'}">${d.st==='delivered'?'Đã giao':'Từ chối'}</span></div>${d.items.length?`<div style="font-size:13px;font-weight:900;color:var(--ink-soft);margin-bottom:9px;text-transform:uppercase;letter-spacing:.04em;font-family:'Plus Jakarta Sans'">Sản phẩm đã tài trợ</div>${d.items.map(it=>`<div class="f ac g12 m8" style="padding:13px;background:var(--soft);border-radius:12px"><span style="font-size:24px">${it.img}</span><div class="f1"><div style="font-size:13.5px;font-weight:900;color:var(--green-950);font-family:'Plus Jakarta Sans'">${it.n}</div></div><span style="font-family:'Plus Jakarta Sans';font-size:15px;font-weight:900;color:var(--green-800)">x${it.q}</span></div>`).join('')}`:`<div style="padding:16px;background:var(--red-100);border-radius:12px;text-align:center"><div style="font-size:13.5px;color:var(--red-600);font-weight:800"><i class="ti ti-x"></i> Đã từ chối đáp ứng</div></div>`}`);}
+function showDonaHistDetail(di){const d=donaHistory[di];modal('Chi tiết donation — '+d.org,`<div class="f ac g12 m14"><div style="width:52px;height:52px;border-radius:14px;background:${d.st==='delivered'?'var(--green-100)':'var(--red-100)'};color:${d.st==='delivered'?'var(--green-800)':'var(--red)'};display:flex;align-items:center;justify-content:center"><i class="ti ${d.st==='delivered'?'ti-check':'ti-x'}" style="font-size:22px"></i></div><div class="f1"><div style="font-family:'Plus Jakarta Sans';font-size:18px;font-weight:900;color:var(--green-950);letter-spacing:-.02em">${d.org}</div><div style="font-size:12px;color:var(--muted);font-weight:700">${d.time}</div></div><span class="tg ${d.st==='delivered'?'tg-g':'tg-r'}">${d.st==='delivered'?'Đã giao':'Từ chối'}</span></div>${d.items.length?`<div style="font-size:13px;font-weight:900;color:var(--ink-soft);margin-bottom:9px;text-transform:uppercase;letter-spacing:.04em;font-family:'Plus Jakarta Sans'">Sản phẩm đã tài trợ</div>${d.items.map(it=>`<div class="f ac g12 m8" style="padding:13px;background:var(--soft);border-radius:12px"><span style="font-size:24px">${it.img}</span><div class="f1"><div style="font-size:13.5px;font-weight:900;color:var(--green-950);font-family:'Plus Jakarta Sans'">${it.n}</div></div><span style="font-family:'Plus Jakarta Sans';font-size:15px;font-weight:900;color:var(--green-800)">x${it.q}</span></div>`).join('')}`:`<div style="padding:16px;background:var(--red-100);border-radius:12px;text-align:center"><div style="font-size:13.5px;color:var(--red-600);font-weight:800"><i class="ti ti-x"></i> Đã từ chối đáp ứng</div></div>`}<div class="f g8" style="margin-top:16px"><button class="btn btn-primary" style="flex:1;justify-content:center" onclick="closeM();if(window.FoodSaveQR)FoodSaveQR.showHandoverQR({id:d.id||'FS-DONA-8012',donorName:st.n||'Tous Les Jours Lê Duẩn',itemsSummary:d.items.map(it=>it.n).join(', ')||'Thực phẩm quyên góp',recipientName:d.org});"><i class="ti ti-qrcode"></i> Mở mã QR bàn giao</button><button class="btn btn-o" style="justify-content:center" onclick="closeM()"><i class="ti ti-x"></i> Đóng</button></div>`);}
 
 function pAna(){
   const rev=ORD.filter(o=>o.st==='done').reduce((s,o)=>s+o.p,0);const ap=activePRD();
@@ -4594,26 +4671,92 @@ window.addEventListener('error',function(e){
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="frontend/localDb.js"></script>
+<script src="frontend/qrService.js"></script>
+<script src="frontend/esgCertificate.js"></script>
+<script src="frontend/apiClient.js"></script>
 <script>
-// Client Supabase riêng cho trang Partner - CỐ Ý KHÔNG nhúng chung
-// frontend/foodsave-auth-client.js ở đây: file đó có 1 khối code tự động ghi đè
-// window.regNext/regBack/loginPage/rAuth/enterPortal bằng 1 hệ thống "portal" cũ
-// dùng state model khác hẳn (partnerState(), wizard 7 bước) không khớp với wizard
-// 4 bước thật (regData/regKyc/regStep/REG_STEPS) đang chạy trên trang này - nếu
-// nhúng sẽ đè mất toàn bộ UI/logic đăng ký - đăng nhập thật đang có ở đây.
-// window.foodsaveSupabase là đúng tên biến toàn cục mà ensurePartnerSupabaseClient()
-// (dùng ở phần dashboard sau đăng nhập, phía trên trong file này) đã kỳ vọng sẵn.
 const PARTNER_SUPABASE_URL = 'https://idhpydhlgnxjjtyrgfkj.supabase.co';
 const PARTNER_SUPABASE_ANON_KEY = 'sb_publishable_kBjao9fkPwim7sJKZfWf_Q_JGRZuUOf';
 function getPartnerSupabase(){
   if(window.foodsaveSupabase)return window.foodsaveSupabase;
   if(!window.supabase||typeof window.supabase.createClient!=='function'){
-    throw new Error('Supabase JS chưa sẵn sàng. Hãy kiểm tra thứ tự nhúng script @supabase/supabase-js.');
+    throw new Error('Supabase JS chưa sẵn sàng.');
   }
   window.foodsaveSupabase=window.supabase.createClient(PARTNER_SUPABASE_URL,PARTNER_SUPABASE_ANON_KEY);
   return window.foodsaveSupabase;
 }
 window.getFoodSaveSupabaseClient=getPartnerSupabase;
+
+// ─── PHÂN HỆ QUẢN LÝ HỒ SƠ PHÁP LÝ KYB (DOANH NGHIỆP / CỬA HÀNG) ───
+window.FoodSaveKYB = {
+  showUploadModal: function() {
+    let currentStore = null;
+    if (window.FoodSaveLocalDB) {
+      const stores = window.FoodSaveLocalDB.getStores();
+      currentStore = stores[1] || stores[0]; // Tous Les Jours hoặc WinMart
+    }
+    const isVerified = currentStore?.verification_status === 'verified';
+    const statusBadge = isVerified 
+      ? '<span style="background:#dcfce7;color:#15803d;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:800"><i class="ti ti-badge-check"></i> ĐÃ XÁC THỰC KYB CHÍNH THỨC</span>'
+      : '<span style="background:#fef3c7;color:#b45309;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:800"><i class="ti ti-clock"></i> ĐANG CHỜ DUYỆT PHÁP LÝ</span>';
+
+    const modalHtml = `
+      <div style="font-family:'Plus Jakarta Sans',sans-serif;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line-2)">
+          <div>
+            <div style="font-size:16px;font-weight:900;color:var(--green-950)">${currentStore?.name || 'Cửa hàng đối tác'}</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:2px">Mã số thuế: ${currentStore?.tax_code || '0304567891'}</div>
+          </div>
+          ${statusBadge}
+        </div>
+
+        <div style="display:grid;gap:14px;margin-bottom:20px">
+          <div style="padding:14px;background:var(--soft);border-radius:12px;border:1.5px dashed var(--line)">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <span style="font-size:13px;font-weight:800;color:var(--green-950)"><i class="ti ti-file-certificate" style="color:var(--green-700)"></i> 1. Giấy phép Đăng ký Kinh doanh (GPKD)</span>
+              <span style="font-size:11px;font-weight:700;color:var(--green-700)">PDF / Hợp lệ</span>
+            </div>
+            <p style="font-size:11.5px;color:var(--muted);margin:0 0 10px 0">${currentStore?.license_docs?.business?.name || 'GPKD_TousLesJours_2026.pdf'}</p>
+            <button class="btn btn-sm btn-o" style="width:100%;justify-content:center" onclick="tst('Tải tài liệu','Đã chọn file GPKD mới','info')"><i class="ti ti-upload"></i> Cập nhật bản scan GPKD</button>
+          </div>
+
+          <div style="padding:14px;background:var(--soft);border-radius:12px;border:1.5px dashed var(--line)">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <span style="font-size:13px;font-weight:800;color:var(--green-950)"><i class="ti ti-shield-check" style="color:var(--green-700)"></i> 2. Chứng nhận Vệ sinh ATTP (Ban QLATTP)</span>
+              <span style="font-size:11px;font-weight:700;color:var(--green-700)">Hiệu lực: 2029</span>
+            </div>
+            <p style="font-size:11.5px;color:var(--muted);margin:0 0 10px 0">${currentStore?.license_docs?.food_safety?.name || 'ATTP_SoYTe_TPHCM.pdf'}</p>
+            <button class="btn btn-sm btn-o" style="width:100%;justify-content:center" onclick="tst('Tải tài liệu','Đã chọn chứng nhận ATVSTP mới','info')"><i class="ti ti-upload"></i> Cập nhật chứng nhận ATTP</button>
+          </div>
+        </div>
+
+        <div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:12px 14px;border-radius:8px;font-size:12px;color:#166534;line-height:1.5;margin-bottom:18px">
+          <strong>Tiêu chuẩn đối tác an toàn:</strong> Cửa hàng đạt chứng nhận KYB sẽ được ưu tiên hiển thị đầu bảng danh sách món, giảm 20% phí hoa hồng sàn và xuất chứng nhận ESG xanh.
+        </div>
+
+        <div style="display:flex;gap:10px">
+          <button class="btn btn-primary btn-lg" style="flex:1;justify-content:center" onclick="closeM();tst('Hồ sơ KYB','Hồ sơ đã được lưu và gửi ban thẩm định FoodSave','accept')"><i class="ti ti-check"></i> Lưu & Gửi thẩm định</button>
+          <button class="btn btn-o btn-lg" style="justify-content:center" onclick="closeM()"><i class="ti ti-x"></i> Đóng</button>
+        </div>
+      </div>
+    `;
+
+    if (typeof modal === 'function') {
+      modal('Hồ sơ Pháp lý & Chứng nhận KYB', modalHtml);
+    }
+  }
+};
+
+// Đồng bộ realtime liên tab
+if (window.FoodSaveLocalDB) {
+  window.FoodSaveLocalDB.subscribe((type, data) => {
+    console.log('[Partner LocalDB Sync]:', type, data);
+    if (type === 'DONATION_UPDATED') {
+      if (typeof tst === 'function') tst('Tổ chức từ thiện', `Đơn hàng đã cập nhật: ${data.status}`, 'charity');
+    }
+  });
+}
 </script>
 
 </body>

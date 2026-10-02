@@ -3098,14 +3098,14 @@ function inboxDetail(){
     :d.status==='accepted'?`
       <div style="text-align:center;padding:18px"><i class="ti ti-check" style="font-size:46px;color:var(--green-700);margin-bottom:10px;display:block"></i><p style="font-size:13.5px;color:var(--muted);font-weight:700">Đã chấp nhận · Đợi TNV xuất phát</p></div>
       <div class="card" style="padding:13px;background:var(--green-100);border:1px solid var(--green-200);margin-bottom:0"><div style="font-size:11.5px;font-weight:900;color:var(--green-800);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px"><i class="ti ti-user"></i> TNV được giao</div><div style="font-size:14px;font-weight:900;color:var(--green-950);font-family:'Plus Jakarta Sans'">${d.vol}</div></div>
-      <button class="btn btn-bl btn-lg" style="width:100%;justify-content:center" onclick="DONATIONS[${selD}].status='in-route';R();tst('TNV xuất phát','${d.vol} đang trên đường','info')"><i class="ti ti-route"></i> Bắt đầu pickup</button>`
+      <button class="btn btn-bl btn-lg" style="width:100%;justify-content:center" onclick="changeDonationStatus(${selD},'in-route');tst('TNV xuất phát','${d.vol} đang trên đường','info')"><i class="ti ti-route"></i> Bắt đầu pickup</button>`
     :d.status==='in-route'?`
       <div class="card" style="padding:14px;background:var(--purple-100);border:1px solid #ddd6fe;margin-bottom:0">
         <div style="font-family:'Plus Jakarta Sans';font-size:13px;font-weight:900;color:var(--purple);margin-bottom:8px"><i class="ti ti-truck-delivery"></i> Đang trên đường</div>
         <div style="font-size:12px;color:var(--ink-soft);font-weight:600">${d.vol} đã xuất phát.<br>Dự kiến đến cửa hàng: <strong>~15 phút</strong></div>
       </div>
       <div style="padding:13px;background:var(--soft);border-radius:12px;display:flex;align-items:center;gap:10px"><i class="ti ti-phone" style="color:var(--green-700);font-size:18px"></i><div class="f1"><div style="font-size:11px;color:var(--muted);font-weight:700">Liên hệ TNV</div><div style="font-size:13px;font-weight:900;color:var(--green-950);font-family:'Plus Jakarta Sans'">0901 234 567</div></div></div>
-      <button class="btn btn-green btn-lg" style="width:100%;justify-content:center" onclick="DONATIONS[${selD}].status='completed';R();tst('Đã nhận','${d.weight} đã được giao tới tổ chức','accept')"><i class="ti ti-check"></i> Xác nhận đã nhận</button>`
+      <button class="btn btn-green btn-lg" style="width:100%;justify-content:center" onclick="changeDonationStatus(${selD},'completed');tst('Đã nhận','${d.weight} đã được giao tới tổ chức','accept')"><i class="ti ti-check"></i> Xác nhận đã nhận</button>`
     :`
       <div style="text-align:center;padding:24px"><div style="width:80px;height:80px;border-radius:22px;background:linear-gradient(135deg,var(--green-600),var(--green-800));display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 12px 28px rgba(34,197,94,.36)"><i class="ti ti-check" style="font-size:42px;color:#fff;font-weight:900"></i></div><h3 style="font-family:'Plus Jakarta Sans';font-size:22px;font-weight:900;color:var(--green-800);margin-bottom:5px;letter-spacing:-.02em">Hoàn thành!</h3><p style="font-size:12.5px;color:var(--muted);font-weight:500">${d.weight} · ${d.vol}</p></div>
       <button class="btn btn-o btn-lg" style="width:100%;justify-content:center" onclick="selD=null;R()"><i class="ti ti-arrow-left"></i> Danh sách</button>`}
@@ -3113,16 +3113,54 @@ function inboxDetail(){
   </div></div>`;
 }
 
-function acceptD(i){
+async function changeDonationStatus(i, newStatus, reason) {
+  const d = DONATIONS[i];
+  if (!d) return;
+  d.status = newStatus;
+  R();
+  if (window.FoodSaveAPI && d.id && !String(d.id).startsWith('local-')) {
+    try {
+      await FoodSaveAPI.donations.updateStatus(d.id, {
+        status: newStatus,
+        note: reason || undefined
+      });
+    } catch (err) {
+      console.warn("Lỗi API update donation status:", err);
+    }
+  }
+}
+
+async function acceptD(i){
   const d=DONATIONS[i];
+  if (!d) return;
   const sel=document.getElementById('selVol');
   const volId=sel?sel.value:'';
   const vol=volId?VOLUNTEERS.find(v=>v.id===volId):null;
   d.status='accepted';d.vol=vol?vol.name:'Tự động chọn';
   R();tst('Đã chấp nhận',`${d.store} · ${vol?vol.name+' điều phối':'TNV gần nhất'}`,'accept');
+
+  if (window.FoodSaveAPI && d.id && !String(d.id).startsWith('local-')) {
+    try {
+      let charityId = null;
+      try {
+        const session = JSON.parse(localStorage.getItem('foodsave.auth.session') || '{}');
+        charityId = session.charity_id || session.user?.charity_id || session.user?.id;
+      } catch (e) {}
+
+      if (charityId) {
+        await FoodSaveAPI.donations.accept(d.id, {
+          charity_id: charityId,
+          assigned_volunteer_id: volId || undefined
+        });
+      }
+    } catch (err) {
+      console.warn("Lỗi API accept donation:", err);
+    }
+  }
 }
+
 function rejectD(i){
-  modal('Từ chối donation',`<p style="font-size:13px;color:var(--muted);margin-bottom:16px;font-weight:500">Chọn lý do từ chối ${DONATIONS[i].id}:</p><div style="display:flex;flex-direction:column;gap:10px"><button class="btn btn-o btn-lg" style="width:100%;justify-content:flex-start" onclick="DONATIONS[${i}].status='rejected';closeM();R();tst('Đã từ chối','Quá xa, không có TNV','info')"><i class="ti ti-map-pin-off"></i> Quá xa</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:flex-start" onclick="DONATIONS[${i}].status='rejected';closeM();R();tst('Đã từ chối','Hết TNV','info')"><i class="ti ti-users-off"></i> Hết TNV</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:flex-start" onclick="DONATIONS[${i}].status='rejected';closeM();R();tst('Đã từ chối','Không phù hợp đối tượng','info')"><i class="ti ti-shield-off"></i> Không phù hợp đối tượng</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:flex-start" onclick="DONATIONS[${i}].status='rejected';closeM();R();tst('Đã từ chối','Đủ thực phẩm hôm nay','info')"><i class="ti ti-bowl-off"></i> Đã đủ thực phẩm</button></div>`);
+  modal('Từ chối donation',`<p style="font-size:13px;color:var(--muted);margin-bottom:16px;font-weight:500">Chọn lý do từ chối ${DONATIONS[i].id}:</p><div style="display:flex;flex-direction:column;gap:10px"><button class="btn btn-o btn-lg" style="width:100%;justify-content:flex-start" onclick="changeDonationStatus(${i},'rejected','Quá xa');closeM();tst('Đã từ chối','Quá xa, không có TNV','info')"><i class="ti ti-map-pin-off"></i> Quá xa</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:flex-start" onclick="changeDonationStatus(${i},'rejected','Hết TNV');closeM();tst('Đã từ chối','Hết TNV','info')"><i class="ti ti-users-off"></i> Hết TNV</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:flex-start" onclick="changeDonationStatus(${i},'rejected','Không phù hợp');closeM();tst('Đã từ chối','Không phù hợp đối tượng','info')"><i class="ti ti-shield-off"></i> Không phù hợp đối tượng</button><button class="btn btn-o btn-lg" style="width:100%;justify-content:flex-start" onclick="changeDonationStatus(${i},'rejected','Đã đủ thực phẩm');closeM();tst('Đã từ chối','Đủ thực phẩm hôm nay','info')"><i class="ti ti-bowl-off"></i> Đã đủ thực phẩm</button></div>`);
 }
 function showFilterModal(){modal('Bộ lọc donation','<div class="field"><label>Khoảng cách tối đa</label><select class="inp"><option>Tất cả</option><option>≤1km</option><option>≤2km</option><option>≤5km</option></select></div><div class="field"><label>Loại thực phẩm</label><select class="inp"><option>Tất cả</option><option>Bánh mì / bakery</option><option>Cơm hộp / chế biến</option><option>Rau củ tươi</option><option>Sữa & sản phẩm sữa</option></select></div><div class="field"><label>Khung giờ pickup</label><select class="inp"><option>Tất cả</option><option>Sáng (6-12h)</option><option>Chiều (12-18h)</option><option>Tối (18-22h)</option></select></div><button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="closeM();tst(\'Đã lọc\',\'Áp dụng bộ lọc\',\'info\')"><i class="ti ti-filter-check"></i> Áp dụng</button>');}
 
@@ -3149,13 +3187,13 @@ function pPickup(){
     <div style="padding:11px;background:#fff;border-radius:10px"><div style="font-size:10px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.04em"><i class="ti ti-clock"></i> ETA</div><div style="font-size:13px;font-weight:900;color:var(--purple);margin-top:3px;font-family:'Plus Jakarta Sans'">~15 phút</div></div>
   </div>
   <div class="ptk" style="height:8px;margin-bottom:10px"><div class="ptf" style="width:65%;background:linear-gradient(90deg,var(--purple),var(--rose))"></div></div>
-  <div class="f g8"><button class="btn btn-green" style="flex:1;justify-content:center" onclick="DONATIONS[${i}].status='completed';R();tst('Đã hoàn tất','${d.weight} đã nhận','accept')"><i class="ti ti-check"></i> Đã nhận hàng</button><button class="btn btn-o" style="flex:1;justify-content:center"><i class="ti ti-phone"></i> Gọi TNV</button><button class="btn btn-o" style="justify-content:center"><i class="ti ti-map-2"></i></button></div>
+  <div class="f g8"><button class="btn btn-green" style="flex:1;justify-content:center" onclick="changeDonationStatus(${i},'completed');tst('Đã hoàn tất','${d.weight} đã nhận','accept')"><i class="ti ti-check"></i> Đã nhận hàng</button><button class="btn btn-primary" style="flex:1.2;justify-content:center;background:linear-gradient(135deg,var(--green-700),#047857);color:#fff" onclick="if(window.FoodSaveQR)FoodSaveQR.showScanner({donationId:'${d.id}', expectedDonor:'${d.store}'}, (res)=>{changeDonationStatus(${i},'completed');tst('Xác thực QR thành công','Đã bàn giao và lưu biên bản đối soát','accept');});"><i class="ti ti-qrcode"></i> Quét mã đối soát</button><button class="btn btn-o" style="justify-content:center"><i class="ti ti-phone"></i> Gọi</button></div>
   </div>`;}).join('')}</div>`:''}
   ${accepted.length?`<div class="card m12"><div class="st"><i class="ti ti-check"></i> Đã chấp nhận — Chờ TNV xuất phát</div>
   ${accepted.map(d=>{const i=DONATIONS.indexOf(d);return`<div class="oc" onclick="pg='inbox';selD=${i};R()">
   <div class="pi" style="background:var(--blue-100);color:var(--blue);font-size:24px">${d.img}</div>
   <div class="f1" style="min-width:0"><div class="f ac g6 m6"><span style="font-size:13px;font-weight:900;color:var(--green-950);font-family:'Plus Jakarta Sans'">${d.id}</span><span class="tg tg-b">${stM[d.status]}</span><span class="tg ${urgT(d.urgency)}">${urgN(d.urgency)}</span></div><div style="font-size:11.5px;color:var(--muted);font-weight:500">${d.store} · ${d.items}</div><div style="font-size:10.5px;color:var(--blue);font-weight:700"><i class="ti ti-user"></i>${d.vol} · <i class="ti ti-clock"></i>Pickup ${d.pickupStart}</div></div>
-  <button class="btn btn-bl btn-sm" onclick="event.stopPropagation();DONATIONS[${i}].status='in-route';R();tst('TNV xuất phát','${d.vol} đang trên đường','info')"><i class="ti ti-route"></i> Xuất phát</button>
+  <button class="btn btn-bl btn-sm" onclick="event.stopPropagation();changeDonationStatus(${i},'in-route');tst('TNV xuất phát','${d.vol} đang trên đường','info')"><i class="ti ti-route"></i> Xuất phát</button>
   </div>`;}).join('')}</div>`:''}
   ${completed.length?`<div class="card m12"><div class="st"><i class="ti ti-flag-check"></i> Đã hoàn thành hôm nay</div>
   ${completed.map(d=>`<div class="f ac g12" style="padding:14px;background:var(--green-100);border-radius:12px;margin-bottom:8px;border-left:3px solid var(--green-700)"><span style="font-size:26px">${d.img}</span><div class="f1"><div class="f ac g6"><span style="font-size:13px;font-weight:900;color:var(--green-950);font-family:'Plus Jakarta Sans'">${d.id}</span><span class="tg tg-g"><i class="ti ti-check"></i> Hoàn thành</span>${d.rating?`<span style="font-size:11px;color:var(--yellow-600);font-weight:800;font-family:'Plus Jakarta Sans'"><i class="ti ti-star-filled" style="color:var(--yellow)"></i>${d.rating}</span>`:''}</div><div style="font-size:11.5px;color:var(--muted);font-weight:500;margin-top:3px">${d.store} · ${d.items}</div><div style="font-size:10.5px;color:var(--green-800);font-weight:700"><i class="ti ti-package"></i>${d.weight} · <i class="ti ti-user"></i>${d.vol}</div></div><button class="btn btn-o btn-sm"><i class="ti ti-file"></i> Biên bản</button></div>`).join('')}</div>`:''}
@@ -3269,7 +3307,7 @@ function pBene(){
 // ════════════════════════════════════════════════════
 function pReports(){
   return`
-  <div class="card gradient-card-g m14"><div style="position:relative;z-index:1"><div class="f ac jb"><div><div style="font-family:'Plus Jakarta Sans';font-size:24px;font-weight:900;color:#fff;letter-spacing:-.025em"><i class="ti ti-file-analytics" style="color:var(--yellow)"></i> Báo cáo ESG tự động</div><div style="font-size:12.5px;color:rgba(255,255,255,.85);margin-top:5px;font-weight:500">Tạo PDF tự động mỗi tháng · Tự gửi cho nhà tài trợ vào ngày 5</div></div><button class="btn btn-accent"><i class="ti ti-download"></i> Tải báo cáo T5</button></div></div></div>
+  <div class="card gradient-card-g m14"><div style="position:relative;z-index:1"><div class="f ac jb"><div><div style="font-family:'Plus Jakarta Sans';font-size:24px;font-weight:900;color:#fff;letter-spacing:-.025em"><i class="ti ti-file-analytics" style="color:var(--yellow)"></i> Báo cáo ESG & CO₂ tự động</div><div style="font-size:12.5px;color:rgba(255,255,255,.85);margin-top:5px;font-weight:500">Tạo PDF tự động mỗi tháng · Đo lường chuẩn IPCC 2021 & GRI</div></div><button class="btn btn-accent" onclick="if(window.FoodSaveESG)FoodSaveESG.showCertificate({orgName:'Mái Ấm Tre Xanh (Thảo Đàn)',foodSavedKg:842,co2AvoidedKg:2105,mealsShared:3200});"><i class="ti ti-certificate"></i> Xuất chứng nhận ESG & CO₂</button></div></div></div>
 
   <div class="grid-4 m14">${charityReportCards().map(m=>`<div class="metric"><div class="f ac jb"><span class="metric-l">${m.l}</span><div class="metric-ic" style="background:${m.bg};color:${m.c}"><i class="ti ${m.i}"></i></div></div><div class="metric-v" style="color:${m.c}">${m.v}</div></div>`).join('')}</div>
 
@@ -3676,12 +3714,78 @@ window.addEventListener('error',function(e){
 });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="frontend/localDb.js"></script>
+<script src="frontend/qrService.js"></script>
+<script src="frontend/esgCertificate.js"></script>
+<script src="frontend/apiClient.js"></script>
 <script src="frontend/foodsave-live-data.js"></script>
 
+<script>
+window.FS = window.FS || {};
 
-<script>window.FS = window.FS || {}; /* Backend data sync is loaded from frontend/foodsave-live-data.js. */</script>
+// Thiết lập Realtime cho các đợt quyên góp (Cả Supabase Cloud & Local Inter-tab DB)
+(function setupDonationRealtime() {
+  // 1. Đồng bộ và lắng nghe Local Database Engine
+  if (window.FoodSaveLocalDB) {
+    try {
+      const localDons = FoodSaveLocalDB.getDonations();
+      if (Array.isArray(window.DONATIONS) && localDons.length > 0) {
+        localDons.forEach(ld => {
+          const idx = window.DONATIONS.findIndex(d => d.id === ld.id || d.id === ld.donation_code);
+          if (idx === -1) {
+            window.DONATIONS.unshift(ld);
+          } else {
+            window.DONATIONS[idx] = Object.assign({}, window.DONATIONS[idx], ld);
+          }
+        });
+        if (typeof R === 'function') R();
+      }
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+      FoodSaveLocalDB.subscribe((type, data) => {
+        console.log('[Charity Realtime LocalDB]:', type, data);
+        if (type === 'DONATION_CREATED' && Array.isArray(window.DONATIONS)) {
+          const exists = window.DONATIONS.find(d => d.id === data.id);
+          if (!exists) {
+            window.DONATIONS.unshift(data);
+            if (typeof tst === 'function') tst('Đợt quyên góp mới!', `${data.store} vừa tặng ${data.items}`, 'accept');
+            if (typeof R === 'function') R();
+          }
+        } else if (type === 'DONATION_UPDATED' && Array.isArray(window.DONATIONS)) {
+          const idx = window.DONATIONS.findIndex(d => d.id === data.id);
+          if (idx !== -1) {
+            window.DONATIONS[idx] = Object.assign({}, window.DONATIONS[idx], data);
+            if (typeof R === 'function') R();
+          }
+        }
+      });
+    } catch(e) {
+      console.warn('[Charity LocalDB Sync Error]:', e);
+    }
+  }
+
+  // 2. Lắng nghe Supabase Cloud Channel (nếu có kết nối)
+  try {
+    if (typeof window.supabase !== 'undefined' && typeof window.supabase.createClient === 'function') {
+      const sb = window.supabase.createClient(
+        'https://idhpydhlgnxjjtyrgfkj.supabase.co',
+        'sb_publishable_kBjao9fkPwim7sJKZfWf_Q_JGRZuUOf'
+      );
+      sb.channel('realtime_charity_donations')
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'donations' }, (payload) => {
+          console.log('[Realtime] Đợt quyên góp thay đổi:', payload);
+          if (window.FS && typeof window.FS.loadAuthenticatedData === 'function') {
+            window.FS.loadAuthenticatedData().then(() => { if (typeof R === 'function') R(); });
+          }
+        })
+        .subscribe();
+    }
+  } catch (e) {
+    console.warn('[Realtime] Không thể kết nối Supabase channel:', e);
+  }
+})();
+</script>
+
 <script src="frontend/foodsave-auth-client.js"></script>
 </body>
 </html>
