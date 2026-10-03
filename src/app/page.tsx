@@ -62,17 +62,16 @@ export default function HomePage() {
       {/* Topbar điều hướng chính */}
       <header className="topbar">
         <nav className="wrap nav" aria-label="Điều hướng chính">
-          <Link className="brand" href="/" aria-label="FoodSave">
+          <a className="brand" href="#top" aria-label="FoodSave">
             <span>
               <span className="wordmark">FOOD<span>SAVE</span></span>
               <span className="tagline">Cứu thực phẩm, bảo vệ hành tinh</span>
             </span>
-          </Link>
+          </a>
           <div className="nav-links">
             <a href="#story">Giới thiệu</a>
             <a href="#labels">Nhãn màu</a>
             <a href="#flow">Cách hoạt động</a>
-            <Link href="/admin" style={{ opacity: 0.85 }}>Quản trị</Link>
             <button
               className="btn yellow"
               type="button"
@@ -134,7 +133,7 @@ export default function HomePage() {
             <header className="section-head center">
               <span className="section-kicker">Brand Story</span>
               <h2>FoodSave là cầu nối thực phẩm phi lợi nhuận.</h2>
-              <p>Trang này là trang giới thiệu thương hiệu và điểm vào hệ thống. Các flow đăng nguồn, nhận nguồn, điều phối thông minh và báo cáo ESG nằm trong cổng chuyên biệt.</p>
+              <p>Trang này chỉ là trang giới thiệu thương hiệu và điểm vào đăng nhập. Các flow đăng nguồn, nhận nguồn, xác nhận và báo cáo sẽ nằm trong cổng riêng sau đó.</p>
             </header>
             <div className="grid three">
               <article className="card dark">
@@ -197,21 +196,21 @@ export default function HomePage() {
           <div className="wrap">
             <header className="section-head">
               <span className="section-kicker">How It Works</span>
-              <h2>Một thương hiệu, hai cổng chuyên biệt.</h2>
-              <p>FoodSave giữ trải nghiệm tinh gọn, bảo đảm tốc độ và phân loại chính xác theo nhu cầu thực tế.</p>
+              <h2>Một trang brand, hai cổng đăng nhập.</h2>
+              <p>FoodSave giữ trang giới thiệu tinh gọn. Người dùng chọn vai trò rồi đi tiếp sang flow riêng mà bạn sẽ xây sau.</p>
             </header>
             <div className="grid three flow">
               <article className="card step">
-                <h3>Doanh nghiệp đăng tin</h3>
+                <h3>Doanh nghiệp đăng nhập</h3>
                 <p>Quản lý nguồn thực phẩm còn dùng tốt, thời gian bàn giao, nhãn màu và trạng thái kết nối.</p>
               </article>
               <article className="card step">
-                <h3>Tổ chức từ thiện tiếp nhận</h3>
+                <h3>Tổ chức từ thiện đăng nhập</h3>
                 <p>Xem nguồn phù hợp, xác nhận nhu cầu, cập nhật năng lực vận chuyển và tiếp nhận.</p>
               </article>
               <article className="card step">
-                <h3>FoodSave điều phối AI</h3>
-                <p>Ưu tiên theo độ gấp hạn dùng, khoảng cách địa lý, năng lực tiếp nhận và chứng thực minh bạch.</p>
+                <h3>FoodSave điều phối</h3>
+                <p>Ưu tiên theo nhãn màu, khoảng cách, thời hạn sử dụng và khả năng xử lý thực tế.</p>
               </article>
             </div>
           </div>
@@ -223,7 +222,7 @@ export default function HomePage() {
             <header className="section-head">
               <span className="section-kicker">Access Portal</span>
               <h2>Cổng đăng nhập FoodSave</h2>
-              <p>Chọn đúng vai trò. FoodSave hiện mở cổng cho Doanh nghiệp, Tổ chức từ thiện và Quản trị viên.</p>
+              <p>Chọn đúng vai trò. FoodSave hiện chỉ mở cổng cho doanh nghiệp và tổ chức từ thiện.</p>
             </header>
             <div className="portal-cards">
               <article className="portal-card">
@@ -250,9 +249,9 @@ export default function HomePage() {
       {/* Global Footnote */}
       <footer className="foodsave-global-footnote" aria-label="FoodSave footer">
         <div className="foodsave-footnote-wrap">
-          <Link className="foodsave-footnote-brand" href="/" aria-label="FoodSave">
+          <a className="foodsave-footnote-brand" href="#top" aria-label="FoodSave">
             <span className="brand-word">FOOD<span>SAVE</span></span>
-          </Link>
+          </a>
           <p className="foodsave-footnote-copy">
             © 2026 Công ty TNHH FoodSave Việt Nam · MSDN 0317456789 · Trụ sở 19 Nguyễn Hữu Thọ, TP.HCM · Thực phẩm cứu trợ miễn phí, không thương mại hóa quyên góp.
           </p>
@@ -341,18 +340,11 @@ export default function HomePage() {
                   Tiếp tục với vai trò {currentRole === 'business' ? 'doanh nghiệp' : 'tổ chức từ thiện'}
                 </button>
                 <p className="form-note">
-                  Hoặc bạn có thể truy cập trực tiếp vào{' '}
-                  <Link
-                    href={currentRole === 'business' ? '/partner' : '/charity'}
-                    style={{ textDecoration: 'underline', color: 'var(--green-800)' }}
-                  >
-                    Cổng {currentRole === 'business' ? 'Doanh nghiệp' : 'Từ thiện'}
-                  </Link>
-                  .
+                  Điểm vào tạm thời cho trang brand. Sau này nút này có thể nối sang flow đăng nhập thật.
                 </p>
                 {noticeVisible && (
                   <div className="notice" id="loginNotice" style={{ display: 'block' }}>
-                    Đã ghi nhận vai trò {currentRole === 'business' ? 'Doanh nghiệp' : 'Tổ chức từ thiện'}. Bạn đang chuyển hướng đến cổng làm việc...
+                    Đã ghi nhận vai trò đăng nhập. Sẵn sàng nối sang flow thật.
                   </div>
                 )}
               </form>

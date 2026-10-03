@@ -1,4 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css");
 
 :root{
   /* PALETTE — same as FoodSave brand */
@@ -1032,3 +1031,6 @@ textarea.inp{resize:none;font-family:inherit}
 .empty-state-title{font-family:'Plus Jakarta Sans';font-size:17px;font-weight:900;color:#0a0a0a;margin-bottom:8px}
 .empty-state-desc{font-size:13px;line-height:1.6;font-weight:500;max-width:380px;margin:0 auto 18px}
 
+
+
+@import "./foodsave-forest-theme.css";

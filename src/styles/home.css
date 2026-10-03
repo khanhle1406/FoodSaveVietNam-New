@@ -757,3 +757,5 @@
       .portal-card,
       .label-card { border-radius: 14px; padding: 24px; }
     }
+
+@import "./foodsave-forest-theme.css";
