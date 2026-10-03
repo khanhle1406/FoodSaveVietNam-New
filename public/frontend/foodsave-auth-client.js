@@ -86,8 +86,8 @@
     // PARTNER_TINH.html and CHARITY.html, which neither pattern matched — this made
     // pageRole silently fall back to "customer" on both pages and skip all of the
     // partner/charity window bindings (rAuth, enterPortal, regNext, etc.) below.
-    if (file.includes("foodsave_partner") || file.endsWith("partner_tinh.html")) return "partner";
-    if (file.includes("foodsave_charity") || file.endsWith("charity.html")) return "charity";
+    if (file.includes("partner")) return "partner";
+    if (file.includes("charity")) return "charity";
     return "customer";
   })();
 
