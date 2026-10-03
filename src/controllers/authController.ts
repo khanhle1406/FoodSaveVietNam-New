@@ -99,7 +99,7 @@ export const authController = {
 
   async refresh(req: Request, res: Response): Promise<void> {
     const body = req.validated?.body as RefreshTokenBody;
-    const result = await authService.refreshSession(body, requestMeta(req));
+    const result = await authService.refreshSession(body as { refresh_token: string }, requestMeta(req));
     sendSuccess(res, result);
   },
 

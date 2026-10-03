@@ -369,7 +369,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L154",
       "id": "frontend_foodsave_auth_client_normalizephone",
-      "community": 12,
+      "community": 14,
       "norm_label": "normalizephone()"
     },
     {
@@ -468,7 +468,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L286",
       "id": "frontend_foodsave_auth_client_readsession",
-      "community": 3,
+      "community": 24,
       "norm_label": "readsession()"
     },
     {
@@ -477,7 +477,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L296",
       "id": "frontend_foodsave_auth_client_clearsession",
-      "community": 3,
+      "community": 24,
       "norm_label": "clearsession()"
     },
     {
@@ -486,7 +486,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L301",
       "id": "frontend_foodsave_auth_client_clearblockeduserauthstate",
-      "community": 3,
+      "community": 24,
       "norm_label": "clearblockeduserauthstate()"
     },
     {
@@ -495,7 +495,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L324",
       "id": "frontend_foodsave_auth_client_checkblockeduser",
-      "community": 3,
+      "community": 24,
       "norm_label": "checkblockeduser()"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L367",
       "id": "frontend_foodsave_auth_client_customeruseridfromsession",
-      "community": 3,
+      "community": 24,
       "norm_label": "customeruseridfromsession()"
     },
     {
@@ -513,7 +513,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L372",
       "id": "frontend_foodsave_auth_client_initstoredcustomerblockguard",
-      "community": 3,
+      "community": 24,
       "norm_label": "initstoredcustomerblockguard()"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L462",
       "id": "frontend_foodsave_auth_client_updatecustomeruifromprofile",
-      "community": 26,
+      "community": 24,
       "norm_label": "updatecustomeruifromprofile()"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L476",
       "id": "frontend_foodsave_auth_client_customerprofilefromsupabasesession",
-      "community": 26,
+      "community": 24,
       "norm_label": "customerprofilefromsupabasesession()"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L493",
       "id": "frontend_foodsave_auth_client_syncsupabasecustomersession",
-      "community": 26,
+      "community": 24,
       "norm_label": "syncsupabasecustomersession()"
     },
     {
@@ -1269,7 +1269,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1807",
       "id": "frontend_foodsave_auth_client_splitpartnercontact",
-      "community": 12,
+      "community": 14,
       "norm_label": "splitpartnercontact()"
     },
     {
@@ -1314,7 +1314,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1835",
       "id": "frontend_foodsave_auth_client_partnercontactphone",
-      "community": 12,
+      "community": 14,
       "norm_label": "partnercontactphone()"
     },
     {
@@ -1404,7 +1404,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1967",
       "id": "frontend_foodsave_auth_client_sendpartneremailotp",
-      "community": 12,
+      "community": 14,
       "norm_label": "sendpartneremailotp()"
     },
     {
@@ -1422,7 +1422,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L2102",
       "id": "frontend_foodsave_auth_client_resendpartnerotp",
-      "community": 12,
+      "community": 14,
       "norm_label": "resendpartnerotp()"
     },
     {
@@ -3420,7 +3420,7 @@
       "source_file": "netlify/functions/api.ts",
       "source_location": "L1",
       "id": "functions_api",
-      "community": 11,
+      "community": 21,
       "norm_label": "api.ts"
     },
     {
@@ -3429,8 +3429,35 @@
       "source_file": "netlify/functions/api.ts",
       "source_location": "L5",
       "id": "functions_api_handler",
-      "community": 11,
+      "community": 21,
       "norm_label": "handler"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "next-env.d.ts",
+      "source_location": "L1",
+      "id": "next_env_d",
+      "community": 53,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "next.config.mjs",
+      "file_type": "code",
+      "source_file": "next.config.mjs",
+      "source_location": "L1",
+      "id": "next_config",
+      "community": 52,
+      "norm_label": "next.config.mjs"
+    },
+    {
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "next.config.mjs",
+      "source_location": "L2",
+      "id": "next_config_nextconfig",
+      "community": 52,
+      "norm_label": "nextconfig"
     },
     {
       "label": "package.json",
@@ -3505,10 +3532,19 @@
       "norm_label": "scripts"
     },
     {
-      "label": "build",
+      "label": "dev",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L10",
+      "id": "package_scripts_dev",
+      "community": 6,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
       "id": "package_scripts_build",
       "community": 6,
       "norm_label": "build"
@@ -3517,7 +3553,7 @@
       "label": "start",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L11",
+      "source_location": "L12",
       "id": "package_scripts_start",
       "community": 6,
       "norm_label": "start"
@@ -3526,7 +3562,7 @@
       "label": "test",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L12",
+      "source_location": "L13",
       "id": "package_scripts_test",
       "community": 6,
       "norm_label": "test"
@@ -3535,7 +3571,7 @@
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "id": "package_dependencies",
       "community": 6,
       "norm_label": "dependencies"
@@ -3544,16 +3580,25 @@
       "label": "@supabase/supabase-js",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "id": "package_dependencies_supabase_supabase_js",
       "community": 6,
       "norm_label": "@supabase/supabase-js"
     },
     {
+      "label": "clsx",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "package_dependencies_clsx",
+      "community": 6,
+      "norm_label": "clsx"
+    },
+    {
       "label": "cors",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L18",
       "id": "package_dependencies_cors",
       "community": 6,
       "norm_label": "cors"
@@ -3562,7 +3607,7 @@
       "label": "dotenv",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L19",
       "id": "package_dependencies_dotenv",
       "community": 6,
       "norm_label": "dotenv"
@@ -3571,7 +3616,7 @@
       "label": "express",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L20",
       "id": "package_dependencies_express",
       "community": 6,
       "norm_label": "express"
@@ -3580,7 +3625,7 @@
       "label": "express-rate-limit",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L21",
       "id": "package_dependencies_express_rate_limit",
       "community": 6,
       "norm_label": "express-rate-limit"
@@ -3589,25 +3634,61 @@
       "label": "helmet",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L22",
       "id": "package_dependencies_helmet",
       "community": 6,
       "norm_label": "helmet"
     },
     {
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "package_dependencies_lucide_react",
+      "community": 6,
+      "norm_label": "lucide-react"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "package_dependencies_next",
+      "community": 6,
+      "norm_label": "next"
+    },
+    {
       "label": "pg",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L25",
       "id": "package_dependencies_pg",
       "community": 6,
       "norm_label": "pg"
     },
     {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "id": "package_dependencies_react",
+      "community": 6,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "id": "package_dependencies_react_dom",
+      "community": 6,
+      "norm_label": "react-dom"
+    },
+    {
       "label": "serverless-http",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L28",
       "id": "package_dependencies_serverless_http",
       "community": 6,
       "norm_label": "serverless-http"
@@ -3616,16 +3697,25 @@
       "label": "socket.io",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L29",
       "id": "package_dependencies_socket_io",
       "community": 6,
       "norm_label": "socket.io"
     },
     {
+      "label": "tailwind-merge",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "id": "package_dependencies_tailwind_merge",
+      "community": 6,
+      "norm_label": "tailwind-merge"
+    },
+    {
       "label": "zod",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L31",
       "id": "package_dependencies_zod",
       "community": 6,
       "norm_label": "zod"
@@ -3634,16 +3724,25 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L33",
       "id": "package_devdependencies",
       "community": 6,
       "norm_label": "devdependencies"
     },
     {
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "id": "package_devdependencies_tailwindcss_postcss",
+      "community": 6,
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
       "label": "@types/cors",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L35",
       "id": "package_devdependencies_types_cors",
       "community": 6,
       "norm_label": "@types/cors"
@@ -3652,7 +3751,7 @@
       "label": "@types/express",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L36",
       "id": "package_devdependencies_types_express",
       "community": 6,
       "norm_label": "@types/express"
@@ -3661,7 +3760,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L37",
       "id": "package_devdependencies_types_node",
       "community": 6,
       "norm_label": "@types/node"
@@ -3670,19 +3769,73 @@
       "label": "@types/pg",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L38",
       "id": "package_devdependencies_types_pg",
       "community": 6,
       "norm_label": "@types/pg"
     },
     {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "id": "package_devdependencies_types_react",
+      "community": 6,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "id": "package_devdependencies_types_react_dom",
+      "community": 6,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "autoprefixer",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "id": "package_devdependencies_autoprefixer",
+      "community": 6,
+      "norm_label": "autoprefixer"
+    },
+    {
+      "label": "postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "id": "package_devdependencies_postcss",
+      "community": 6,
+      "norm_label": "postcss"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L43",
+      "id": "package_devdependencies_tailwindcss",
+      "community": 6,
+      "norm_label": "tailwindcss"
+    },
+    {
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L44",
       "id": "package_devdependencies_typescript",
       "community": 6,
       "norm_label": "typescript"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config",
+      "community": 54,
+      "norm_label": "postcss.config.mjs"
     },
     {
       "label": "app.ts",
@@ -3690,7 +3843,7 @@
       "source_file": "src/app.ts",
       "source_location": "L1",
       "id": "src_app",
-      "community": 11,
+      "community": 21,
       "norm_label": "app.ts"
     },
     {
@@ -3699,7 +3852,7 @@
       "source_file": "src/app.ts",
       "source_location": "L12",
       "id": "src_app_app",
-      "community": 11,
+      "community": 21,
       "norm_label": "app"
     },
     {
@@ -3708,7 +3861,7 @@
       "source_file": "src/app.ts",
       "source_location": "L17",
       "id": "src_app_isallowedcorsorigin",
-      "community": 11,
+      "community": 21,
       "norm_label": "isallowedcorsorigin()"
     },
     {
@@ -3717,8 +3870,215 @@
       "source_file": "src/app.ts",
       "source_location": "L25",
       "id": "src_app_origin",
-      "community": 11,
+      "community": 21,
       "norm_label": "origin()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/admin/page.tsx",
+      "source_location": "L1",
+      "id": "admin_page",
+      "community": 28,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "AdminPortalPage()",
+      "file_type": "code",
+      "source_file": "src/app/admin/page.tsx",
+      "source_location": "L22",
+      "id": "admin_page_adminportalpage",
+      "community": 28,
+      "norm_label": "adminportalpage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L1",
+      "id": "charity_page",
+      "community": 28,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "CharityPortalPage()",
+      "file_type": "code",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L24",
+      "id": "charity_page_charityportalpage",
+      "community": 28,
+      "norm_label": "charityportalpage()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L1",
+      "id": "app_layout",
+      "community": 28,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L5",
+      "id": "app_layout_metadata",
+      "community": 28,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L19",
+      "id": "app_layout_rootlayout",
+      "community": 28,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L1",
+      "id": "app_page",
+      "community": 28,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "HomePage()",
+      "file_type": "code",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L22",
+      "id": "app_page_homepage",
+      "community": 28,
+      "norm_label": "homepage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L1",
+      "id": "partner_page",
+      "community": 28,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "PartnerPortalPage()",
+      "file_type": "code",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L24",
+      "id": "partner_page_partnerportalpage",
+      "community": 28,
+      "norm_label": "partnerportalpage()"
+    },
+    {
+      "label": "UrgentRedBanner.tsx",
+      "file_type": "code",
+      "source_file": "src/components/alerts/UrgentRedBanner.tsx",
+      "source_location": "L1",
+      "id": "alerts_urgentredbanner",
+      "community": 28,
+      "norm_label": "urgentredbanner.tsx"
+    },
+    {
+      "label": "UrgentRedBannerProps",
+      "file_type": "code",
+      "source_file": "src/components/alerts/UrgentRedBanner.tsx",
+      "source_location": "L7",
+      "id": "alerts_urgentredbanner_urgentredbannerprops",
+      "community": 28,
+      "norm_label": "urgentredbannerprops"
+    },
+    {
+      "label": "UrgentRedBanner()",
+      "file_type": "code",
+      "source_file": "src/components/alerts/UrgentRedBanner.tsx",
+      "source_location": "L13",
+      "id": "alerts_urgentredbanner_urgentredbanner",
+      "community": 28,
+      "norm_label": "urgentredbanner()"
+    },
+    {
+      "label": "EsgCertificateModal.tsx",
+      "file_type": "code",
+      "source_file": "src/components/esg/EsgCertificateModal.tsx",
+      "source_location": "L1",
+      "id": "esg_esgcertificatemodal",
+      "community": 28,
+      "norm_label": "esgcertificatemodal.tsx"
+    },
+    {
+      "label": "EsgCertificateModalProps",
+      "file_type": "code",
+      "source_file": "src/components/esg/EsgCertificateModal.tsx",
+      "source_location": "L6",
+      "id": "esg_esgcertificatemodal_esgcertificatemodalprops",
+      "community": 28,
+      "norm_label": "esgcertificatemodalprops"
+    },
+    {
+      "label": "EsgCertificateModal()",
+      "file_type": "code",
+      "source_file": "src/components/esg/EsgCertificateModal.tsx",
+      "source_location": "L12",
+      "id": "esg_esgcertificatemodal_esgcertificatemodal",
+      "community": 28,
+      "norm_label": "esgcertificatemodal()"
+    },
+    {
+      "label": "LogisticsModal.tsx",
+      "file_type": "code",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L1",
+      "id": "logistics_logisticsmodal",
+      "community": 28,
+      "norm_label": "logisticsmodal.tsx"
+    },
+    {
+      "label": "LogisticsModalProps",
+      "file_type": "code",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L7",
+      "id": "logistics_logisticsmodal_logisticsmodalprops",
+      "community": 28,
+      "norm_label": "logisticsmodalprops"
+    },
+    {
+      "label": "LogisticsModal()",
+      "file_type": "code",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L14",
+      "id": "logistics_logisticsmodal_logisticsmodal",
+      "community": 28,
+      "norm_label": "logisticsmodal()"
+    },
+    {
+      "label": "QrHandoverModal.tsx",
+      "file_type": "code",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L1",
+      "id": "qr_qrhandovermodal",
+      "community": 28,
+      "norm_label": "qrhandovermodal.tsx"
+    },
+    {
+      "label": "QrHandoverModalProps",
+      "file_type": "code",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L7",
+      "id": "qr_qrhandovermodal_qrhandovermodalprops",
+      "community": 28,
+      "norm_label": "qrhandovermodalprops"
+    },
+    {
+      "label": "QrHandoverModal()",
+      "file_type": "code",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L13",
+      "id": "qr_qrhandovermodal_qrhandovermodal",
+      "community": 28,
+      "norm_label": "qrhandovermodal()"
     },
     {
       "label": "env.ts",
@@ -3816,7 +4176,7 @@
       "source_file": "src/constants/errors.ts",
       "source_location": "L1",
       "id": "constants_errors",
-      "community": 11,
+      "community": 21,
       "norm_label": "errors.ts"
     },
     {
@@ -3825,7 +4185,7 @@
       "source_file": "src/constants/errors.ts",
       "source_location": "L1",
       "id": "constants_errors_error_codes",
-      "community": 11,
+      "community": 21,
       "norm_label": "error_codes"
     },
     {
@@ -3834,7 +4194,7 @@
       "source_file": "src/constants/errors.ts",
       "source_location": "L14",
       "id": "constants_errors_errorcode",
-      "community": 11,
+      "community": 21,
       "norm_label": "errorcode"
     },
     {
@@ -3843,7 +4203,7 @@
       "source_file": "src/constants/http.ts",
       "source_location": "L1",
       "id": "constants_http",
-      "community": 11,
+      "community": 21,
       "norm_label": "http.ts"
     },
     {
@@ -3852,7 +4212,7 @@
       "source_file": "src/constants/http.ts",
       "source_location": "L1",
       "id": "constants_http_http_status",
-      "community": 11,
+      "community": 21,
       "norm_label": "http_status"
     },
     {
@@ -3861,8 +4221,107 @@
       "source_file": "src/constants/http.ts",
       "source_location": "L15",
       "id": "constants_http_httpstatus",
-      "community": 11,
+      "community": 21,
       "norm_label": "httpstatus"
+    },
+    {
+      "label": "LocalDbContext.tsx",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L1",
+      "id": "context_localdbcontext",
+      "community": 28,
+      "norm_label": "localdbcontext.tsx"
+    },
+    {
+      "label": "StoreKYB",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L5",
+      "id": "context_localdbcontext_storekyb",
+      "community": 28,
+      "norm_label": "storekyb"
+    },
+    {
+      "label": "DonationItem",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L20",
+      "id": "context_localdbcontext_donationitem",
+      "community": 28,
+      "norm_label": "donationitem"
+    },
+    {
+      "label": "HandoverLog",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L44",
+      "id": "context_localdbcontext_handoverlog",
+      "community": 28,
+      "norm_label": "handoverlog"
+    },
+    {
+      "label": "LocalDbContextType",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L56",
+      "id": "context_localdbcontext_localdbcontexttype",
+      "community": 28,
+      "norm_label": "localdbcontexttype"
+    },
+    {
+      "label": "DEFAULT_STORES",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L69",
+      "id": "context_localdbcontext_default_stores",
+      "community": 28,
+      "norm_label": "default_stores"
+    },
+    {
+      "label": "DEFAULT_DONATIONS",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L114",
+      "id": "context_localdbcontext_default_donations",
+      "community": 28,
+      "norm_label": "default_donations"
+    },
+    {
+      "label": "DEFAULT_LOGS",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L174",
+      "id": "context_localdbcontext_default_logs",
+      "community": 28,
+      "norm_label": "default_logs"
+    },
+    {
+      "label": "LocalDbContext",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L188",
+      "id": "context_localdbcontext_localdbcontext",
+      "community": 28,
+      "norm_label": "localdbcontext"
+    },
+    {
+      "label": "LocalDbProvider()",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L190",
+      "id": "context_localdbcontext_localdbprovider",
+      "community": 28,
+      "norm_label": "localdbprovider()"
+    },
+    {
+      "label": "useLocalDb()",
+      "file_type": "code",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L340",
+      "id": "context_localdbcontext_uselocaldb",
+      "community": 28,
+      "norm_label": "uselocaldb()"
     },
     {
       "label": "adminController.ts",
@@ -3870,7 +4329,7 @@
       "source_file": "src/controllers/adminController.ts",
       "source_location": "L1",
       "id": "controllers_admincontroller",
-      "community": 42,
+      "community": 11,
       "norm_label": "admincontroller.ts"
     },
     {
@@ -3879,7 +4338,7 @@
       "source_file": "src/controllers/adminController.ts",
       "source_location": "L6",
       "id": "controllers_admincontroller_adminuserparams",
-      "community": 42,
+      "community": 11,
       "norm_label": "adminuserparams"
     },
     {
@@ -3888,7 +4347,7 @@
       "source_file": "src/controllers/adminController.ts",
       "source_location": "L7",
       "id": "controllers_admincontroller_rejectpartnerbody",
-      "community": 42,
+      "community": 11,
       "norm_label": "rejectpartnerbody"
     },
     {
@@ -3897,7 +4356,7 @@
       "source_file": "src/controllers/adminController.ts",
       "source_location": "L9",
       "id": "controllers_admincontroller_admincontroller",
-      "community": 42,
+      "community": 11,
       "norm_label": "admincontroller"
     },
     {
@@ -3906,7 +4365,7 @@
       "source_file": "src/controllers/authController.ts",
       "source_location": "L1",
       "id": "controllers_authcontroller",
-      "community": 4,
+      "community": 10,
       "norm_label": "authcontroller.ts"
     },
     {
@@ -3915,7 +4374,7 @@
       "source_file": "src/controllers/authController.ts",
       "source_location": "L23",
       "id": "controllers_authcontroller_requestmeta",
-      "community": 4,
+      "community": 10,
       "norm_label": "requestmeta()"
     },
     {
@@ -3924,7 +4383,7 @@
       "source_file": "src/controllers/authController.ts",
       "source_location": "L28",
       "id": "controllers_authcontroller_bearertoken",
-      "community": 4,
+      "community": 10,
       "norm_label": "bearertoken()"
     },
     {
@@ -3942,7 +4401,7 @@
       "source_file": "src/controllers/catalogController.ts",
       "source_location": "L1",
       "id": "controllers_catalogcontroller",
-      "community": 7,
+      "community": 37,
       "norm_label": "catalogcontroller.ts"
     },
     {
@@ -3951,7 +4410,7 @@
       "source_file": "src/controllers/catalogController.ts",
       "source_location": "L8",
       "id": "controllers_catalogcontroller_uuidparams",
-      "community": 7,
+      "community": 37,
       "norm_label": "uuidparams"
     },
     {
@@ -3960,7 +4419,7 @@
       "source_file": "src/controllers/catalogController.ts",
       "source_location": "L10",
       "id": "controllers_catalogcontroller_catalogcontroller",
-      "community": 25,
+      "community": 37,
       "norm_label": "catalogcontroller"
     },
     {
@@ -3987,7 +4446,7 @@
       "source_file": "src/controllers/charityController.ts",
       "source_location": "L19",
       "id": "controllers_charitycontroller_charitycontroller",
-      "community": 28,
+      "community": 9,
       "norm_label": "charitycontroller"
     },
     {
@@ -4014,7 +4473,7 @@
       "source_file": "src/controllers/donationController.ts",
       "source_location": "L10",
       "id": "controllers_donationcontroller_donationcontroller",
-      "community": 40,
+      "community": 25,
       "norm_label": "donationcontroller"
     },
     {
@@ -4041,7 +4500,7 @@
       "source_file": "src/controllers/healthController.ts",
       "source_location": "L1",
       "id": "controllers_healthcontroller",
-      "community": 42,
+      "community": 40,
       "norm_label": "healthcontroller.ts"
     },
     {
@@ -4050,7 +4509,7 @@
       "source_file": "src/controllers/healthController.ts",
       "source_location": "L5",
       "id": "controllers_healthcontroller_healthcontroller",
-      "community": 42,
+      "community": 40,
       "norm_label": "healthcontroller"
     },
     {
@@ -4059,7 +4518,7 @@
       "source_file": "src/controllers/notificationController.ts",
       "source_location": "L1",
       "id": "controllers_notificationcontroller",
-      "community": 42,
+      "community": 45,
       "norm_label": "notificationcontroller.ts"
     },
     {
@@ -4068,7 +4527,7 @@
       "source_file": "src/controllers/notificationController.ts",
       "source_location": "L7",
       "id": "controllers_notificationcontroller_uuidparams",
-      "community": 42,
+      "community": 45,
       "norm_label": "uuidparams"
     },
     {
@@ -4086,7 +4545,7 @@
       "source_file": "src/controllers/partnerController.ts",
       "source_location": "L1",
       "id": "controllers_partnercontroller",
-      "community": 42,
+      "community": 30,
       "norm_label": "partnercontroller.ts"
     },
     {
@@ -4149,7 +4608,7 @@
       "source_file": "src/controllers/supportController.ts",
       "source_location": "L1",
       "id": "controllers_supportcontroller",
-      "community": 46,
+      "community": 42,
       "norm_label": "supportcontroller.ts"
     },
     {
@@ -4158,8 +4617,26 @@
       "source_file": "src/controllers/supportController.ts",
       "source_location": "L7",
       "id": "controllers_supportcontroller_supportcontroller",
-      "community": 46,
+      "community": 42,
       "norm_label": "supportcontroller"
+    },
+    {
+      "label": "supabaseClient.ts",
+      "file_type": "code",
+      "source_file": "src/lib/supabaseClient.ts",
+      "source_location": "L1",
+      "id": "lib_supabaseclient",
+      "community": 46,
+      "norm_label": "supabaseclient.ts"
+    },
+    {
+      "label": "supabase",
+      "file_type": "code",
+      "source_file": "src/lib/supabaseClient.ts",
+      "source_location": "L6",
+      "id": "lib_supabaseclient_supabase",
+      "community": 46,
+      "norm_label": "supabase"
     },
     {
       "label": "authMiddleware.ts",
@@ -4167,7 +4644,7 @@
       "source_file": "src/middlewares/authMiddleware.ts",
       "source_location": "L1",
       "id": "middlewares_authmiddleware",
-      "community": 11,
+      "community": 21,
       "norm_label": "authmiddleware.ts"
     },
     {
@@ -4176,7 +4653,7 @@
       "source_file": "src/middlewares/authMiddleware.ts",
       "source_location": "L8",
       "id": "middlewares_authmiddleware_extractbearertoken",
-      "community": 25,
+      "community": 4,
       "norm_label": "extractbearertoken()"
     },
     {
@@ -4185,7 +4662,7 @@
       "source_file": "src/middlewares/authMiddleware.ts",
       "source_location": "L21",
       "id": "middlewares_authmiddleware_authmiddleware",
-      "community": 25,
+      "community": 4,
       "norm_label": "authmiddleware()"
     },
     {
@@ -4203,7 +4680,7 @@
       "source_file": "src/middlewares/errorHandler.ts",
       "source_location": "L1",
       "id": "middlewares_errorhandler",
-      "community": 11,
+      "community": 21,
       "norm_label": "errorhandler.ts"
     },
     {
@@ -4212,7 +4689,7 @@
       "source_file": "src/middlewares/errorHandler.ts",
       "source_location": "L9",
       "id": "middlewares_errorhandler_formatzodissues",
-      "community": 11,
+      "community": 21,
       "norm_label": "formatzodissues()"
     },
     {
@@ -4221,7 +4698,7 @@
       "source_file": "src/middlewares/errorHandler.ts",
       "source_location": "L16",
       "id": "middlewares_errorhandler_errorhandler",
-      "community": 11,
+      "community": 21,
       "norm_label": "errorhandler()"
     },
     {
@@ -4230,7 +4707,7 @@
       "source_file": "src/middlewares/rateLimiter.ts",
       "source_location": "L1",
       "id": "middlewares_ratelimiter",
-      "community": 11,
+      "community": 21,
       "norm_label": "ratelimiter.ts"
     },
     {
@@ -4239,7 +4716,7 @@
       "source_file": "src/middlewares/rateLimiter.ts",
       "source_location": "L6",
       "id": "middlewares_ratelimiter_apiratelimiter",
-      "community": 11,
+      "community": 21,
       "norm_label": "apiratelimiter"
     },
     {
@@ -4248,7 +4725,7 @@
       "source_file": "src/middlewares/validateRequest.ts",
       "source_location": "L1",
       "id": "middlewares_validaterequest",
-      "community": 40,
+      "community": 25,
       "norm_label": "validaterequest.ts"
     },
     {
@@ -4257,7 +4734,7 @@
       "source_file": "src/middlewares/validateRequest.ts",
       "source_location": "L4",
       "id": "middlewares_validaterequest_validationschema",
-      "community": 40,
+      "community": 25,
       "norm_label": "validationschema"
     },
     {
@@ -4266,7 +4743,7 @@
       "source_file": "src/middlewares/validateRequest.ts",
       "source_location": "L10",
       "id": "middlewares_validaterequest_validaterequest",
-      "community": 40,
+      "community": 25,
       "norm_label": "validaterequest()"
     },
     {
@@ -4392,7 +4869,7 @@
       "source_file": "src/routes/authRoutes.ts",
       "source_location": "L21",
       "id": "routes_authroutes_authroutes",
-      "community": 25,
+      "community": 40,
       "norm_label": "authroutes"
     },
     {
@@ -4401,7 +4878,7 @@
       "source_file": "src/routes/catalogRoutes.ts",
       "source_location": "L1",
       "id": "routes_catalogroutes",
-      "community": 25,
+      "community": 37,
       "norm_label": "catalogroutes.ts"
     },
     {
@@ -4410,7 +4887,7 @@
       "source_file": "src/routes/catalogRoutes.ts",
       "source_location": "L11",
       "id": "routes_catalogroutes_catalogroutes",
-      "community": 25,
+      "community": 37,
       "norm_label": "catalogroutes"
     },
     {
@@ -4419,7 +4896,7 @@
       "source_file": "src/routes/charityRoutes.ts",
       "source_location": "L1",
       "id": "routes_charityroutes",
-      "community": 28,
+      "community": 9,
       "norm_label": "charityroutes.ts"
     },
     {
@@ -4428,7 +4905,7 @@
       "source_file": "src/routes/charityRoutes.ts",
       "source_location": "L18",
       "id": "routes_charityroutes_charityroutes",
-      "community": 25,
+      "community": 40,
       "norm_label": "charityroutes"
     },
     {
@@ -4437,7 +4914,7 @@
       "source_file": "src/routes/donationRoutes.ts",
       "source_location": "L1",
       "id": "routes_donationroutes",
-      "community": 40,
+      "community": 25,
       "norm_label": "donationroutes.ts"
     },
     {
@@ -4446,7 +4923,7 @@
       "source_file": "src/routes/donationRoutes.ts",
       "source_location": "L9",
       "id": "routes_donationroutes_donationroutes",
-      "community": 40,
+      "community": 25,
       "norm_label": "donationroutes"
     },
     {
@@ -4473,7 +4950,7 @@
       "source_file": "src/routes/healthRoutes.ts",
       "source_location": "L1",
       "id": "routes_healthroutes",
-      "community": 42,
+      "community": 40,
       "norm_label": "healthroutes.ts"
     },
     {
@@ -4482,7 +4959,7 @@
       "source_file": "src/routes/healthRoutes.ts",
       "source_location": "L4",
       "id": "routes_healthroutes_healthroutes",
-      "community": 42,
+      "community": 40,
       "norm_label": "healthroutes"
     },
     {
@@ -4491,7 +4968,7 @@
       "source_file": "src/routes/index.ts",
       "source_location": "L1",
       "id": "routes_index",
-      "community": 25,
+      "community": 40,
       "norm_label": "index.ts"
     },
     {
@@ -4500,7 +4977,7 @@
       "source_file": "src/routes/index.ts",
       "source_location": "L16",
       "id": "routes_index_apiroutes",
-      "community": 25,
+      "community": 40,
       "norm_label": "apiroutes"
     },
     {
@@ -4518,7 +4995,7 @@
       "source_file": "src/routes/notificationRoutes.ts",
       "source_location": "L8",
       "id": "routes_notificationroutes_notificationroutes",
-      "community": 45,
+      "community": 40,
       "norm_label": "notificationroutes"
     },
     {
@@ -4581,7 +5058,7 @@
       "source_file": "src/routes/supportRoutes.ts",
       "source_location": "L1",
       "id": "routes_supportroutes",
-      "community": 46,
+      "community": 42,
       "norm_label": "supportroutes.ts"
     },
     {
@@ -4590,7 +5067,7 @@
       "source_file": "src/routes/supportRoutes.ts",
       "source_location": "L7",
       "id": "routes_supportroutes_supportroutes",
-      "community": 46,
+      "community": 42,
       "norm_label": "supportroutes"
     },
     {
@@ -4806,7 +5283,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L135",
       "id": "schemas_authschemas_loginbody",
-      "community": 4,
+      "community": 10,
       "norm_label": "loginbody"
     },
     {
@@ -4824,7 +5301,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L137",
       "id": "schemas_authschemas_passwordresetbody",
-      "community": 4,
+      "community": 10,
       "norm_label": "passwordresetbody"
     },
     {
@@ -4833,7 +5310,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L138",
       "id": "schemas_authschemas_googleoauthstartbody",
-      "community": 4,
+      "community": 10,
       "norm_label": "googleoauthstartbody"
     },
     {
@@ -4842,7 +5319,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L139",
       "id": "schemas_authschemas_googleotprequestbody",
-      "community": 4,
+      "community": 10,
       "norm_label": "googleotprequestbody"
     },
     {
@@ -4851,7 +5328,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L140",
       "id": "schemas_authschemas_googleotpverifybody",
-      "community": 4,
+      "community": 10,
       "norm_label": "googleotpverifybody"
     },
     {
@@ -4860,7 +5337,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L141",
       "id": "schemas_authschemas_facebookoauthstartbody",
-      "community": 4,
+      "community": 10,
       "norm_label": "facebookoauthstartbody"
     },
     {
@@ -4869,7 +5346,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L142",
       "id": "schemas_authschemas_facebookoauthcallbackbody",
-      "community": 4,
+      "community": 10,
       "norm_label": "facebookoauthcallbackbody"
     },
     {
@@ -4878,7 +5355,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L143",
       "id": "schemas_authschemas_phoneotprequestbody",
-      "community": 4,
+      "community": 10,
       "norm_label": "phoneotprequestbody"
     },
     {
@@ -4887,7 +5364,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L144",
       "id": "schemas_authschemas_phoneotpverifybody",
-      "community": 4,
+      "community": 10,
       "norm_label": "phoneotpverifybody"
     },
     {
@@ -4896,7 +5373,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L145",
       "id": "schemas_authschemas_registerpartnerbody",
-      "community": 4,
+      "community": 10,
       "norm_label": "registerpartnerbody"
     },
     {
@@ -4905,7 +5382,7 @@
       "source_file": "src/schemas/authSchemas.ts",
       "source_location": "L146",
       "id": "schemas_authschemas_registercharitybody",
-      "community": 4,
+      "community": 10,
       "norm_label": "registercharitybody"
     },
     {
@@ -4914,7 +5391,7 @@
       "source_file": "src/schemas/catalogSchemas.ts",
       "source_location": "L1",
       "id": "schemas_catalogschemas",
-      "community": 7,
+      "community": 37,
       "norm_label": "catalogschemas.ts"
     },
     {
@@ -4923,7 +5400,7 @@
       "source_file": "src/schemas/catalogSchemas.ts",
       "source_location": "L7",
       "id": "schemas_catalogschemas_storelistqueryschema",
-      "community": 25,
+      "community": 37,
       "norm_label": "storelistqueryschema"
     },
     {
@@ -4932,7 +5409,7 @@
       "source_file": "src/schemas/catalogSchemas.ts",
       "source_location": "L21",
       "id": "schemas_catalogschemas_createstorebodyschema",
-      "community": 25,
+      "community": 37,
       "norm_label": "createstorebodyschema"
     },
     {
@@ -4941,7 +5418,7 @@
       "source_file": "src/schemas/catalogSchemas.ts",
       "source_location": "L34",
       "id": "schemas_catalogschemas_updatestorebodyschema",
-      "community": 25,
+      "community": 37,
       "norm_label": "updatestorebodyschema"
     },
     {
@@ -4950,7 +5427,7 @@
       "source_file": "src/schemas/catalogSchemas.ts",
       "source_location": "L39",
       "id": "schemas_catalogschemas_storelistquery",
-      "community": 7,
+      "community": 37,
       "norm_label": "storelistquery"
     },
     {
@@ -4959,7 +5436,7 @@
       "source_file": "src/schemas/catalogSchemas.ts",
       "source_location": "L40",
       "id": "schemas_catalogschemas_createstorebody",
-      "community": 7,
+      "community": 37,
       "norm_label": "createstorebody"
     },
     {
@@ -4968,7 +5445,7 @@
       "source_file": "src/schemas/catalogSchemas.ts",
       "source_location": "L41",
       "id": "schemas_catalogschemas_updatestorebody",
-      "community": 7,
+      "community": 37,
       "norm_label": "updatestorebody"
     },
     {
@@ -4986,7 +5463,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L3",
       "id": "schemas_charityschemas_createcharityprofilebodyschema",
-      "community": 28,
+      "community": 9,
       "norm_label": "createcharityprofilebodyschema"
     },
     {
@@ -4995,7 +5472,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L14",
       "id": "schemas_charityschemas_updatecharityprofilebodyschema",
-      "community": 28,
+      "community": 9,
       "norm_label": "updatecharityprofilebodyschema"
     },
     {
@@ -5004,7 +5481,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L19",
       "id": "schemas_charityschemas_createvolunteerbodyschema",
-      "community": 28,
+      "community": 9,
       "norm_label": "createvolunteerbodyschema"
     },
     {
@@ -5013,7 +5490,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L31",
       "id": "schemas_charityschemas_updatevolunteerbodyschema",
-      "community": 28,
+      "community": 9,
       "norm_label": "updatevolunteerbodyschema"
     },
     {
@@ -5022,7 +5499,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L33",
       "id": "schemas_charityschemas_createbeneficiarygroupbodyschema",
-      "community": 28,
+      "community": 9,
       "norm_label": "createbeneficiarygroupbodyschema"
     },
     {
@@ -5031,7 +5508,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L42",
       "id": "schemas_charityschemas_createimpactreportbodyschema",
-      "community": 28,
+      "community": 9,
       "norm_label": "createimpactreportbodyschema"
     },
     {
@@ -5040,7 +5517,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L54",
       "id": "schemas_charityschemas_creategalleryitembodyschema",
-      "community": 28,
+      "community": 9,
       "norm_label": "creategalleryitembodyschema"
     },
     {
@@ -5049,7 +5526,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L65",
       "id": "schemas_charityschemas_publicgalleryqueryschema",
-      "community": 28,
+      "community": 9,
       "norm_label": "publicgalleryqueryschema"
     },
     {
@@ -5202,7 +5679,7 @@
       "source_file": "src/schemas/donationSchemas.ts",
       "source_location": "L5",
       "id": "schemas_donationschemas_donationlistqueryschema",
-      "community": 40,
+      "community": 25,
       "norm_label": "donationlistqueryschema"
     },
     {
@@ -5211,7 +5688,7 @@
       "source_file": "src/schemas/donationSchemas.ts",
       "source_location": "L14",
       "id": "schemas_donationschemas_createdonationbodyschema",
-      "community": 40,
+      "community": 25,
       "norm_label": "createdonationbodyschema"
     },
     {
@@ -5220,7 +5697,7 @@
       "source_file": "src/schemas/donationSchemas.ts",
       "source_location": "L27",
       "id": "schemas_donationschemas_acceptdonationbodyschema",
-      "community": 40,
+      "community": 25,
       "norm_label": "acceptdonationbodyschema"
     },
     {
@@ -5229,7 +5706,7 @@
       "source_file": "src/schemas/donationSchemas.ts",
       "source_location": "L32",
       "id": "schemas_donationschemas_updatedonationstatusbodyschema",
-      "community": 40,
+      "community": 25,
       "norm_label": "updatedonationstatusbodyschema"
     },
     {
@@ -5526,7 +6003,7 @@
       "source_file": "src/schemas/supportSchemas.ts",
       "source_location": "L1",
       "id": "schemas_supportschemas",
-      "community": 46,
+      "community": 42,
       "norm_label": "supportschemas.ts"
     },
     {
@@ -5535,7 +6012,7 @@
       "source_file": "src/schemas/supportSchemas.ts",
       "source_location": "L3",
       "id": "schemas_supportschemas_createcontactmessagebodyschema",
-      "community": 46,
+      "community": 42,
       "norm_label": "createcontactmessagebodyschema"
     },
     {
@@ -5544,7 +6021,7 @@
       "source_file": "src/schemas/supportSchemas.ts",
       "source_location": "L16",
       "id": "schemas_supportschemas_createcontactmessagebody",
-      "community": 46,
+      "community": 42,
       "norm_label": "createcontactmessagebody"
     },
     {
@@ -5607,7 +6084,7 @@
       "source_file": "src/services/adminService.ts",
       "source_location": "L35",
       "id": "services_adminservice_requirepartnerprofile",
-      "community": 21,
+      "community": 11,
       "norm_label": "requirepartnerprofile()"
     },
     {
@@ -5616,7 +6093,7 @@
       "source_file": "src/services/adminService.ts",
       "source_location": "L55",
       "id": "services_adminservice_requirepartnerstores",
-      "community": 21,
+      "community": 11,
       "norm_label": "requirepartnerstores()"
     },
     {
@@ -5625,7 +6102,7 @@
       "source_file": "src/services/adminService.ts",
       "source_location": "L71",
       "id": "services_adminservice_loadprofilesbyid",
-      "community": 21,
+      "community": 11,
       "norm_label": "loadprofilesbyid()"
     },
     {
@@ -5634,7 +6111,7 @@
       "source_file": "src/services/adminService.ts",
       "source_location": "L84",
       "id": "services_adminservice_adminservice",
-      "community": 42,
+      "community": 11,
       "norm_label": "adminservice"
     },
     {
@@ -5679,7 +6156,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L54",
       "id": "services_authservice_authresult",
-      "community": 37,
+      "community": 31,
       "norm_label": "authresult"
     },
     {
@@ -5733,7 +6210,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L119",
       "id": "services_authservice_oauthotpchallenge",
-      "community": 10,
+      "community": 21,
       "norm_label": "oauthotpchallenge"
     },
     {
@@ -5796,7 +6273,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L175",
       "id": "services_authservice_compactobject",
-      "community": 35,
+      "community": 10,
       "norm_label": "compactobject()"
     },
     {
@@ -5805,7 +6282,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L179",
       "id": "services_authservice_metadatatext",
-      "community": 35,
+      "community": 10,
       "norm_label": "metadatatext()"
     },
     {
@@ -5823,7 +6300,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L233",
       "id": "services_authservice_isoauthauthuser",
-      "community": 35,
+      "community": 10,
       "norm_label": "isoauthauthuser()"
     },
     {
@@ -5832,7 +6309,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L244",
       "id": "services_authservice_autherror",
-      "community": 35,
+      "community": 10,
       "norm_label": "autherror()"
     },
     {
@@ -5850,7 +6327,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L269",
       "id": "services_authservice_loadprofile",
-      "community": 35,
+      "community": 10,
       "norm_label": "loadprofile()"
     },
     {
@@ -5859,7 +6336,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L283",
       "id": "services_authservice_loadprofilebyidornull",
-      "community": 35,
+      "community": 10,
       "norm_label": "loadprofilebyidornull()"
     },
     {
@@ -5868,7 +6345,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L294",
       "id": "services_authservice_loadcontext",
-      "community": 35,
+      "community": 10,
       "norm_label": "loadcontext()"
     },
     {
@@ -5877,7 +6354,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L331",
       "id": "services_authservice_buildauthresult",
-      "community": 35,
+      "community": 10,
       "norm_label": "buildauthresult()"
     },
     {
@@ -5931,7 +6408,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L463",
       "id": "services_authservice_signinwithemailpassword",
-      "community": 35,
+      "community": 10,
       "norm_label": "signinwithemailpassword()"
     },
     {
@@ -5940,7 +6417,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L479",
       "id": "services_authservice_upsertprofile",
-      "community": 21,
+      "community": 11,
       "norm_label": "upsertprofile()"
     },
     {
@@ -5976,7 +6453,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L534",
       "id": "services_authservice_ensureoauthprofile",
-      "community": 35,
+      "community": 10,
       "norm_label": "ensureoauthprofile()"
     },
     {
@@ -5985,7 +6462,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L586",
       "id": "services_authservice_createoauthotpchallenge",
-      "community": 35,
+      "community": 10,
       "norm_label": "createoauthotpchallenge()"
     },
     {
@@ -5994,7 +6471,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L632",
       "id": "services_authservice_loadoauthotpchallenge",
-      "community": 35,
+      "community": 10,
       "norm_label": "loadoauthotpchallenge()"
     },
     {
@@ -6012,7 +6489,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L694",
       "id": "services_authservice_requestoauthotp",
-      "community": 35,
+      "community": 10,
       "norm_label": "requestoauthotp()"
     },
     {
@@ -6021,7 +6498,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L782",
       "id": "services_authservice_verifyoauthotp",
-      "community": 35,
+      "community": 10,
       "norm_label": "verifyoauthotp()"
     },
     {
@@ -6030,7 +6507,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L872",
       "id": "services_authservice_buildauthresultfromoauthcallback",
-      "community": 35,
+      "community": 10,
       "norm_label": "buildauthresultfromoauthcallback()"
     },
     {
@@ -6039,7 +6516,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L894",
       "id": "services_authservice_completefacebookoauthcallback",
-      "community": 35,
+      "community": 10,
       "norm_label": "completefacebookoauthcallback()"
     },
     {
@@ -6066,7 +6543,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L1024",
       "id": "services_authservice_authservice",
-      "community": 4,
+      "community": 10,
       "norm_label": "authservice"
     },
     {
@@ -6102,7 +6579,7 @@
       "source_file": "src/services/catalogService.ts",
       "source_location": "L42",
       "id": "services_catalogservice_getstoreowner",
-      "community": 21,
+      "community": 11,
       "norm_label": "getstoreowner()"
     },
     {
@@ -6111,7 +6588,7 @@
       "source_file": "src/services/catalogService.ts",
       "source_location": "L54",
       "id": "services_catalogservice_catalogservice",
-      "community": 7,
+      "community": 37,
       "norm_label": "catalogservice"
     },
     {
@@ -6129,7 +6606,7 @@
       "source_file": "src/services/charityService.ts",
       "source_location": "L16",
       "id": "services_charityservice_assertcharityowner",
-      "community": 21,
+      "community": 11,
       "norm_label": "assertcharityowner()"
     },
     {
@@ -6507,7 +6984,7 @@
       "source_file": "src/services/ecoImpactService.ts",
       "source_location": "L305",
       "id": "services_ecoimpactservice_getownedstoreids",
-      "community": 21,
+      "community": 11,
       "norm_label": "getownedstoreids()"
     },
     {
@@ -6516,7 +6993,7 @@
       "source_file": "src/services/ecoImpactService.ts",
       "source_location": "L311",
       "id": "services_ecoimpactservice_getownedcharityids",
-      "community": 21,
+      "community": 11,
       "norm_label": "getownedcharityids()"
     },
     {
@@ -6543,7 +7020,7 @@
       "source_file": "src/services/ecoImpactService.ts",
       "source_location": "L341",
       "id": "services_ecoimpactservice_insertimpactevent",
-      "community": 21,
+      "community": 11,
       "norm_label": "insertimpactevent()"
     },
     {
@@ -6561,7 +7038,7 @@
       "source_file": "src/services/notificationService.ts",
       "source_location": "L1",
       "id": "services_notificationservice",
-      "community": 17,
+      "community": 45,
       "norm_label": "notificationservice.ts"
     },
     {
@@ -6570,7 +7047,7 @@
       "source_file": "src/services/notificationService.ts",
       "source_location": "L6",
       "id": "services_notificationservice_notificationservice",
-      "community": 42,
+      "community": 45,
       "norm_label": "notificationservice"
     },
     {
@@ -6579,7 +7056,7 @@
       "source_file": "src/services/partnerService.ts",
       "source_location": "L1",
       "id": "services_partnerservice",
-      "community": 42,
+      "community": 30,
       "norm_label": "partnerservice.ts"
     },
     {
@@ -6588,7 +7065,7 @@
       "source_file": "src/services/partnerService.ts",
       "source_location": "L7",
       "id": "services_partnerservice_partnerservice",
-      "community": 42,
+      "community": 30,
       "norm_label": "partnerservice"
     },
     {
@@ -6705,7 +7182,7 @@
       "source_file": "src/services/sellerReputationService.ts",
       "source_location": "L113",
       "id": "services_sellerreputationservice_sellerreputationservice",
-      "community": 39,
+      "community": 15,
       "norm_label": "sellerreputationservice"
     },
     {
@@ -6714,7 +7191,7 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L1",
       "id": "services_supabaseservice",
-      "community": 17,
+      "community": 21,
       "norm_label": "supabaseservice.ts"
     },
     {
@@ -6723,7 +7200,7 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L10",
       "id": "services_supabaseservice_paginationinput",
-      "community": 17,
+      "community": 21,
       "norm_label": "paginationinput"
     },
     {
@@ -6732,41 +7209,41 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L15",
       "id": "services_supabaseservice_getrange",
-      "community": 17,
+      "community": 45,
       "norm_label": "getrange()"
     },
     {
       "label": "toPagination()",
       "file_type": "code",
       "source_file": "src/services/supabaseService.ts",
-      "source_location": "L23",
+      "source_location": "L25",
       "id": "services_supabaseservice_topagination",
-      "community": 17,
+      "community": 45,
       "norm_label": "topagination()"
     },
     {
       "label": "handleSupabaseError()",
       "file_type": "code",
       "source_file": "src/services/supabaseService.ts",
-      "source_location": "L30",
+      "source_location": "L32",
       "id": "services_supabaseservice_handlesupabaseerror",
-      "community": 21,
+      "community": 11,
       "norm_label": "handlesupabaseerror()"
     },
     {
       "label": "requireRecord()",
       "file_type": "code",
       "source_file": "src/services/supabaseService.ts",
-      "source_location": "L46",
+      "source_location": "L48",
       "id": "services_supabaseservice_requirerecord",
-      "community": 21,
+      "community": 11,
       "norm_label": "requirerecord()"
     },
     {
       "label": "assertOwnerOrAdmin()",
       "file_type": "code",
       "source_file": "src/services/supabaseService.ts",
-      "source_location": "L54",
+      "source_location": "L56",
       "id": "services_supabaseservice_assertowneroradmin",
       "community": 7,
       "norm_label": "assertowneroradmin()"
@@ -6775,9 +7252,9 @@
       "label": "generateCode()",
       "file_type": "code",
       "source_file": "src/services/supabaseService.ts",
-      "source_location": "L60",
+      "source_location": "L62",
       "id": "services_supabaseservice_generatecode",
-      "community": 17,
+      "community": 32,
       "norm_label": "generatecode()"
     },
     {
@@ -6786,7 +7263,7 @@
       "source_file": "src/services/supportService.ts",
       "source_location": "L1",
       "id": "services_supportservice",
-      "community": 46,
+      "community": 42,
       "norm_label": "supportservice.ts"
     },
     {
@@ -6795,7 +7272,7 @@
       "source_file": "src/services/supportService.ts",
       "source_location": "L7",
       "id": "services_supportservice_supportservice",
-      "community": 46,
+      "community": 42,
       "norm_label": "supportservice"
     },
     {
@@ -6804,7 +7281,7 @@
       "source_file": "src/types/api.ts",
       "source_location": "L1",
       "id": "types_api",
-      "community": 37,
+      "community": 31,
       "norm_label": "api.ts"
     },
     {
@@ -6813,7 +7290,7 @@
       "source_file": "src/types/api.ts",
       "source_location": "L3",
       "id": "types_api_successresponse",
-      "community": 37,
+      "community": 31,
       "norm_label": "successresponse"
     },
     {
@@ -6822,7 +7299,7 @@
       "source_file": "src/types/api.ts",
       "source_location": "L8",
       "id": "types_api_errorresponse",
-      "community": 37,
+      "community": 31,
       "norm_label": "errorresponse"
     },
     {
@@ -6831,7 +7308,7 @@
       "source_file": "src/types/api.ts",
       "source_location": "L17",
       "id": "types_api_paginatedresponse",
-      "community": 37,
+      "community": 31,
       "norm_label": "paginatedresponse"
     },
     {
@@ -6840,7 +7317,7 @@
       "source_file": "src/types/api.ts",
       "source_location": "L27",
       "id": "types_api_validatedrequestdata",
-      "community": 37,
+      "community": 31,
       "norm_label": "validatedrequestdata"
     },
     {
@@ -6858,7 +7335,7 @@
       "source_file": "src/types/domain.ts",
       "source_location": "L1",
       "id": "types_domain_userrole",
-      "community": 17,
+      "community": 21,
       "norm_label": "userrole"
     },
     {
@@ -6966,7 +7443,7 @@
       "source_file": "src/types/domain.ts",
       "source_location": "L17",
       "id": "types_domain_profile",
-      "community": 37,
+      "community": 31,
       "norm_label": "profile"
     },
     {
@@ -7110,7 +7587,7 @@
       "source_file": "src/types/express.d.ts",
       "source_location": "L1",
       "id": "types_express_d",
-      "community": 37,
+      "community": 31,
       "norm_label": "express.d.ts"
     },
     {
@@ -7119,7 +7596,7 @@
       "source_file": "src/types/express.d.ts",
       "source_location": "L7",
       "id": "types_express_d_request",
-      "community": 37,
+      "community": 31,
       "norm_label": "request"
     },
     {
@@ -7182,7 +7659,7 @@
       "source_file": "src/utils/appError.ts",
       "source_location": "L1",
       "id": "utils_apperror",
-      "community": 11,
+      "community": 21,
       "norm_label": "apperror.ts"
     },
     {
@@ -7191,7 +7668,7 @@
       "source_file": "src/utils/appError.ts",
       "source_location": "L6",
       "id": "utils_apperror_apperror",
-      "community": 11,
+      "community": 21,
       "norm_label": "apperror"
     },
     {
@@ -7200,7 +7677,7 @@
       "source_file": "src/utils/appError.ts",
       "source_location": "L11",
       "id": "utils_apperror_apperror_constructor",
-      "community": 11,
+      "community": 21,
       "norm_label": ".constructor()"
     },
     {
@@ -7362,7 +7839,7 @@
       "source_file": "src/utils/requestContext.ts",
       "source_location": "L1",
       "id": "utils_requestcontext",
-      "community": 11,
+      "community": 21,
       "norm_label": "requestcontext.ts"
     },
     {
@@ -7371,7 +7848,7 @@
       "source_file": "src/utils/requestContext.ts",
       "source_location": "L7",
       "id": "utils_requestcontext_actorcontext",
-      "community": 37,
+      "community": 21,
       "norm_label": "actorcontext"
     },
     {
@@ -7380,7 +7857,7 @@
       "source_file": "src/utils/requestContext.ts",
       "source_location": "L13",
       "id": "utils_requestcontext_getactor",
-      "community": 42,
+      "community": 30,
       "norm_label": "getactor()"
     },
     {
@@ -7389,7 +7866,7 @@
       "source_file": "src/utils/response.ts",
       "source_location": "L1",
       "id": "utils_response",
-      "community": 42,
+      "community": 31,
       "norm_label": "response.ts"
     },
     {
@@ -7398,7 +7875,7 @@
       "source_file": "src/utils/response.ts",
       "source_location": "L6",
       "id": "utils_response_sendsuccess",
-      "community": 42,
+      "community": 30,
       "norm_label": "sendsuccess()"
     },
     {
@@ -7413,172 +7890,181 @@
     {
       "label": "tsconfig.json",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L1",
-      "id": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_tsconfig_json",
-      "community": 31,
+      "id": "tsconfig",
+      "community": 16,
       "norm_label": "tsconfig.json"
     },
     {
       "label": "compilerOptions",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L2",
-      "id": "foodsavevietnam_tsconfig_compileroptions",
-      "community": 31,
+      "id": "tsconfig_compileroptions",
+      "community": 16,
       "norm_label": "compileroptions"
     },
     {
       "label": "target",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L3",
-      "id": "foodsavevietnam_tsconfig_compileroptions_target",
-      "community": 31,
+      "id": "tsconfig_compileroptions_target",
+      "community": 16,
       "norm_label": "target"
-    },
-    {
-      "label": "module",
-      "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L4",
-      "id": "foodsavevietnam_tsconfig_compileroptions_module",
-      "community": 31,
-      "norm_label": "module"
     },
     {
       "label": "lib",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L5",
-      "id": "foodsavevietnam_tsconfig_compileroptions_lib",
-      "community": 31,
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "id": "tsconfig_compileroptions_lib",
+      "community": 16,
       "norm_label": "lib"
     },
     {
-      "label": "rootDir",
+      "label": "allowJs",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L6",
-      "id": "foodsavevietnam_tsconfig_compileroptions_rootdir",
-      "community": 31,
-      "norm_label": "rootdir"
-    },
-    {
-      "label": "outDir",
-      "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L7",
-      "id": "foodsavevietnam_tsconfig_compileroptions_outdir",
-      "community": 31,
-      "norm_label": "outdir"
-    },
-    {
-      "label": "strict",
-      "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L8",
-      "id": "foodsavevietnam_tsconfig_compileroptions_strict",
-      "community": 31,
-      "norm_label": "strict"
-    },
-    {
-      "label": "esModuleInterop",
-      "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L9",
-      "id": "foodsavevietnam_tsconfig_compileroptions_esmoduleinterop",
-      "community": 31,
-      "norm_label": "esmoduleinterop"
-    },
-    {
-      "label": "forceConsistentCasingInFileNames",
-      "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L10",
-      "id": "foodsavevietnam_tsconfig_compileroptions_forceconsistentcasinginfilenames",
-      "community": 31,
-      "norm_label": "forceconsistentcasinginfilenames"
+      "id": "tsconfig_compileroptions_allowjs",
+      "community": 16,
+      "norm_label": "allowjs"
     },
     {
       "label": "skipLibCheck",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L11",
-      "id": "foodsavevietnam_tsconfig_compileroptions_skiplibcheck",
-      "community": 31,
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "id": "tsconfig_compileroptions_skiplibcheck",
+      "community": 16,
       "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "id": "tsconfig_compileroptions_strict",
+      "community": 16,
+      "norm_label": "strict"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "id": "tsconfig_compileroptions_noemit",
+      "community": 16,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "id": "tsconfig_compileroptions_esmoduleinterop",
+      "community": 16,
+      "norm_label": "esmoduleinterop"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "id": "tsconfig_compileroptions_module",
+      "community": 16,
+      "norm_label": "module"
     },
     {
       "label": "moduleResolution",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L12",
-      "id": "foodsavevietnam_tsconfig_compileroptions_moduleresolution",
-      "community": 31,
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "id": "tsconfig_compileroptions_moduleresolution",
+      "community": 16,
       "norm_label": "moduleresolution"
     },
     {
       "label": "resolveJsonModule",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L13",
-      "id": "foodsavevietnam_tsconfig_compileroptions_resolvejsonmodule",
-      "community": 31,
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "id": "tsconfig_compileroptions_resolvejsonmodule",
+      "community": 16,
       "norm_label": "resolvejsonmodule"
     },
     {
-      "label": "noImplicitOverride",
+      "label": "isolatedModules",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L14",
-      "id": "foodsavevietnam_tsconfig_compileroptions_noimplicitoverride",
-      "community": 31,
-      "norm_label": "noimplicitoverride"
-    },
-    {
-      "label": "noUncheckedIndexedAccess",
-      "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L15",
-      "id": "foodsavevietnam_tsconfig_compileroptions_nouncheckedindexedaccess",
-      "community": 31,
-      "norm_label": "nouncheckedindexedaccess"
-    },
-    {
-      "label": "exactOptionalPropertyTypes",
-      "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L16",
-      "id": "foodsavevietnam_tsconfig_compileroptions_exactoptionalpropertytypes",
-      "community": 31,
-      "norm_label": "exactoptionalpropertytypes"
-    },
-    {
-      "label": "types",
-      "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L17",
-      "id": "foodsavevietnam_tsconfig_compileroptions_types",
-      "community": 31,
-      "norm_label": "types"
+      "id": "tsconfig_compileroptions_isolatedmodules",
+      "community": 16,
+      "norm_label": "isolatedmodules"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L18",
+      "id": "tsconfig_compileroptions_jsx",
+      "community": 16,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L19",
+      "id": "tsconfig_compileroptions_incremental",
+      "community": 16,
+      "norm_label": "incremental"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L20",
+      "id": "tsconfig_compileroptions_plugins",
+      "community": 16,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "id": "tsconfig_compileroptions_paths",
+      "community": 16,
+      "norm_label": "paths"
+    },
+    {
+      "label": "@/*",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L26",
+      "id": "tsconfig_paths",
+      "community": 16,
+      "norm_label": "@/*"
     },
     {
       "label": "include",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L19",
-      "id": "foodsavevietnam_tsconfig_include",
-      "community": 31,
+      "source_file": "tsconfig.json",
+      "source_location": "L31",
+      "id": "tsconfig_include",
+      "community": 16,
       "norm_label": "include"
     },
     {
       "label": "exclude",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
-      "source_location": "L20",
-      "id": "foodsavevietnam_tsconfig_exclude",
-      "community": 31,
+      "source_file": "tsconfig.json",
+      "source_location": "L38",
+      "id": "tsconfig_exclude",
+      "community": 16,
       "norm_label": "exclude"
     },
     {
@@ -7600,40 +8086,13 @@
       "norm_label": "version"
     },
     {
-      "label": "cleanUrls",
+      "label": "framework",
       "file_type": "code",
       "source_file": "vercel.json",
       "source_location": "L3",
-      "id": "vercel_cleanurls",
+      "id": "vercel_framework",
       "community": 49,
-      "norm_label": "cleanurls"
-    },
-    {
-      "label": "trailingSlash",
-      "file_type": "code",
-      "source_file": "vercel.json",
-      "source_location": "L4",
-      "id": "vercel_trailingslash",
-      "community": 49,
-      "norm_label": "trailingslash"
-    },
-    {
-      "label": "rewrites",
-      "file_type": "code",
-      "source_file": "vercel.json",
-      "source_location": "L5",
-      "id": "vercel_rewrites",
-      "community": 49,
-      "norm_label": "rewrites"
-    },
-    {
-      "label": "headers",
-      "file_type": "code",
-      "source_file": "vercel.json",
-      "source_location": "L27",
-      "id": "vercel_headers",
-      "community": 49,
-      "norm_label": "headers"
+      "norm_label": "framework"
     },
     {
       "label": "README.md",
@@ -7985,6 +8444,105 @@
       "id": "brainstorming_improvements_giai_\u0111o\u1ea1n_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_n\u00e2ng_c\u1ea5p_giao_di\u1ec7n_2_\u0111\u1ebfn_3_tu\u1ea7n",
       "community": 19,
       "norm_label": "giai \u0111oan 4: van hanh thuc \u0111ia & nang cap giao dien (2 \u0111en 3 tuan)"
+    },
+    {
+      "label": "nextjs_migration_plan.md",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L1",
+      "id": "brainstorming_nextjs_migration_plan",
+      "community": 35,
+      "norm_label": "nextjs_migration_plan.md"
+    },
+    {
+      "label": "K\u1ebf Ho\u1ea1ch Chuy\u1ec3n \u0110\u1ed5i Chi Ti\u1ebft Sang Next.js App Router (Zero-Downtime Migration Plan)",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L1",
+      "id": "brainstorming_nextjs_migration_plan_k\u1ebf_ho\u1ea1ch_chuy\u1ec3n_\u0111\u1ed5i_chi_ti\u1ebft_sang_next_js_app_router_zero_downtime_migration_plan",
+      "community": 35,
+      "norm_label": "ke hoach chuyen \u0111oi chi tiet sang next.js app router (zero-downtime migration plan)"
+    },
+    {
+      "label": "1. Ph\u00e2n T\u00edch R\u1ee7i Ro & Chi\u1ebfn L\u01b0\u1ee3c An To\u00e0n (Risk & Mitigation Matrix)",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L10",
+      "id": "brainstorming_nextjs_migration_plan_1_ph\u00e2n_t\u00edch_r\u1ee7i_ro_chi\u1ebfn_l\u01b0\u1ee3c_an_to\u00e0n_risk_mitigation_matrix",
+      "community": 35,
+      "norm_label": "1. phan tich rui ro & chien luoc an toan (risk & mitigation matrix)"
+    },
+    {
+      "label": "2. L\u1ed9 Tr\u00ecnh Tri\u1ec3n Khai 6 Giai \u0110o\u1ea1n (Work Breakdown Structure)",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L21",
+      "id": "brainstorming_nextjs_migration_plan_2_l\u1ed9_tr\u00ecnh_tri\u1ec3n_khai_6_giai_\u0111o\u1ea1n_work_breakdown_structure",
+      "community": 35,
+      "norm_label": "2. lo trinh trien khai 6 giai \u0111oan (work breakdown structure)"
+    },
+    {
+      "label": "Giai \u0111o\u1ea1n 1: Chu\u1ea9n B\u1ecb H\u1ea1 T\u1ea7ng & C\u00e0i \u0110\u1eb7t Next.js Core",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L44",
+      "id": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_1_chu\u1ea9n_b\u1ecb_h\u1ea1_t\u1ea7ng_c\u00e0i_\u0111\u1eb7t_next_js_core",
+      "community": 35,
+      "norm_label": "giai \u0111oan 1: chuan bi ha tang & cai \u0111at next.js core"
+    },
+    {
+      "label": "Giai \u0111o\u1ea1n 2: Chuy\u1ec3n \u0110\u1ed5i Core Services & State Management",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L62",
+      "id": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_2_chuy\u1ec3n_\u0111\u1ed5i_core_services_state_management",
+      "community": 35,
+      "norm_label": "giai \u0111oan 2: chuyen \u0111oi core services & state management"
+    },
+    {
+      "label": "Giai \u0111o\u1ea1n 3: Chuy\u1ec3n \u0110\u1ed5i C\u00e1c Component Chuy\u00ean D\u1ee5ng T\u00e1i S\u1eed D\u1ee5ng",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L76",
+      "id": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_3_chuy\u1ec3n_\u0111\u1ed5i_c\u00e1c_component_chuy\u00ean_d\u1ee5ng_t\u00e1i_s\u1eed_d\u1ee5ng",
+      "community": 35,
+      "norm_label": "giai \u0111oan 3: chuyen \u0111oi cac component chuyen dung tai su dung"
+    },
+    {
+      "label": "Giai \u0111o\u1ea1n 4: X\u00e2y D\u1ef1ng C\u00e1c Tuy\u1ebfn \u0110\u01b0\u1eddng (App Router Pages)",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L94",
+      "id": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_4_x\u00e2y_d\u1ef1ng_c\u00e1c_tuy\u1ebfn_\u0111\u01b0\u1eddng_app_router_pages",
+      "community": 35,
+      "norm_label": "giai \u0111oan 4: xay dung cac tuyen \u0111uong (app router pages)"
+    },
+    {
+      "label": "Giai \u0111o\u1ea1n 5: T\u00edch H\u1ee3p API Routes & Supabase SSR",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L117",
+      "id": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_5_t\u00edch_h\u1ee3p_api_routes_supabase_ssr",
+      "community": 35,
+      "norm_label": "giai \u0111oan 5: tich hop api routes & supabase ssr"
+    },
+    {
+      "label": "Giai \u0111o\u1ea1n 6: Ki\u1ec3m Th\u1eed To\u00e0n Di\u1ec7n, Build Production & Tri\u1ec3n Khai Vercel",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L127",
+      "id": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_6_ki\u1ec3m_th\u1eed_to\u00e0n_di\u1ec7n_build_production_tri\u1ec3n_khai_vercel",
+      "community": 35,
+      "norm_label": "giai \u0111oan 6: kiem thu toan dien, build production & trien khai vercel"
+    },
+    {
+      "label": "3. B\u1ea3ng Ki\u1ec3m Tra Ti\u1ebfn \u0110\u1ed9 T\u1eebng B\u01b0\u1edbc (Migration Checklist)",
+      "file_type": "document",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L139",
+      "id": "brainstorming_nextjs_migration_plan_3_b\u1ea3ng_ki\u1ec3m_tra_ti\u1ebfn_\u0111\u1ed9_t\u1eebng_b\u01b0\u1edbc_migration_checklist",
+      "community": 35,
+      "norm_label": "3. bang kiem tra tien \u0111o tung buoc (migration checklist)"
     },
     {
       "label": "phase1_plan.md",
@@ -8455,6 +9013,60 @@
       "norm_label": "facebookoauthstartbodyschema"
     },
     {
+      "label": "buildCommand",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L4",
+      "community": 49,
+      "norm_label": "buildcommand",
+      "id": "vercel_buildcommand"
+    },
+    {
+      "label": "outputDirectory",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L5",
+      "community": 49,
+      "norm_label": "outputdirectory",
+      "id": "vercel_outputdirectory"
+    },
+    {
+      "label": "cleanUrls",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L6",
+      "community": 49,
+      "norm_label": "cleanurls",
+      "id": "vercel_cleanurls"
+    },
+    {
+      "label": "trailingSlash",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L7",
+      "community": 49,
+      "norm_label": "trailingslash",
+      "id": "vercel_trailingslash"
+    },
+    {
+      "label": "rewrites",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L8",
+      "community": 49,
+      "norm_label": "rewrites",
+      "id": "vercel_rewrites"
+    },
+    {
+      "label": "headers",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L30",
+      "community": 49,
+      "norm_label": "headers",
+      "id": "vercel_headers"
+    },
+    {
       "label": "ExistsRow",
       "file_type": "code",
       "source_file": "src/services/sellerReputationService.ts",
@@ -8707,51 +9319,6 @@
       "id": "foodsavevietnam_improvements_giai_\u0111o\u1ea1n_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_n\u00e2ng_c\u1ea5p_giao_di\u1ec7n_2_\u0111\u1ebfn_3_tu\u1ea7n"
     },
     {
-      "label": "tsconfig.json",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L1",
-      "community": 16,
-      "norm_label": "tsconfig.json",
-      "id": "tsconfig"
-    },
-    {
-      "label": "compilerOptions",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L2",
-      "community": 16,
-      "norm_label": "compileroptions",
-      "id": "tsconfig_compileroptions"
-    },
-    {
-      "label": "target",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L3",
-      "community": 16,
-      "norm_label": "target",
-      "id": "tsconfig_compileroptions_target"
-    },
-    {
-      "label": "module",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L4",
-      "community": 16,
-      "norm_label": "module",
-      "id": "tsconfig_compileroptions_module"
-    },
-    {
-      "label": "lib",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L5",
-      "community": 16,
-      "norm_label": "lib",
-      "id": "tsconfig_compileroptions_lib"
-    },
-    {
       "label": "rootDir",
       "file_type": "code",
       "source_file": "tsconfig.json",
@@ -8770,24 +9337,6 @@
       "id": "tsconfig_compileroptions_outdir"
     },
     {
-      "label": "strict",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L8",
-      "community": 16,
-      "norm_label": "strict",
-      "id": "tsconfig_compileroptions_strict"
-    },
-    {
-      "label": "esModuleInterop",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L9",
-      "community": 16,
-      "norm_label": "esmoduleinterop",
-      "id": "tsconfig_compileroptions_esmoduleinterop"
-    },
-    {
       "label": "forceConsistentCasingInFileNames",
       "file_type": "code",
       "source_file": "tsconfig.json",
@@ -8795,33 +9344,6 @@
       "community": 16,
       "norm_label": "forceconsistentcasinginfilenames",
       "id": "tsconfig_compileroptions_forceconsistentcasinginfilenames"
-    },
-    {
-      "label": "skipLibCheck",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L11",
-      "community": 16,
-      "norm_label": "skiplibcheck",
-      "id": "tsconfig_compileroptions_skiplibcheck"
-    },
-    {
-      "label": "moduleResolution",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L12",
-      "community": 16,
-      "norm_label": "moduleresolution",
-      "id": "tsconfig_compileroptions_moduleresolution"
-    },
-    {
-      "label": "resolveJsonModule",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L13",
-      "community": 16,
-      "norm_label": "resolvejsonmodule",
-      "id": "tsconfig_compileroptions_resolvejsonmodule"
     },
     {
       "label": "noImplicitOverride",
@@ -8858,24 +9380,6 @@
       "community": 16,
       "norm_label": "types",
       "id": "tsconfig_compileroptions_types"
-    },
-    {
-      "label": "include",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L19",
-      "community": 16,
-      "norm_label": "include",
-      "id": "tsconfig_include"
-    },
-    {
-      "label": "exclude",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L20",
-      "community": 16,
-      "norm_label": "exclude",
-      "id": "tsconfig_exclude"
     },
     {
       "label": "README.md",
@@ -9236,9 +9740,9 @@
       "source_file": "frontend/alertService.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_alertservice",
-      "target": "frontend_alertservice_playurgentchime",
-      "confidence_score": 1.0
+      "target": "frontend_alertservice_playurgentchime"
     },
     {
       "relation": "contains",
@@ -9246,9 +9750,9 @@
       "source_file": "frontend/alertService.js",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_alertservice",
-      "target": "frontend_alertservice_showznsnotificationmodal",
-      "confidence_score": 1.0
+      "target": "frontend_alertservice_showznsnotificationmodal"
     },
     {
       "relation": "contains",
@@ -9256,9 +9760,9 @@
       "source_file": "frontend/alertService.js",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_alertservice",
-      "target": "frontend_alertservice_triggerurgentdonationalert",
-      "confidence_score": 1.0
+      "target": "frontend_alertservice_triggerurgentdonationalert"
     },
     {
       "relation": "calls",
@@ -9267,9 +9771,9 @@
       "source_file": "frontend/alertService.js",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_alertservice_triggerurgentdonationalert",
-      "target": "frontend_alertservice_playurgentchime",
-      "confidence_score": 1.0
+      "target": "frontend_alertservice_playurgentchime"
     },
     {
       "relation": "contains",
@@ -19918,9 +20422,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice",
-      "target": "frontend_logisticsservice_calculatedistancekm",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_calculatedistancekm"
     },
     {
       "relation": "contains",
@@ -19928,9 +20432,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L106",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice",
-      "target": "frontend_logisticsservice_calculatefee",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_calculatefee"
     },
     {
       "relation": "contains",
@@ -19938,9 +20442,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice",
-      "target": "frontend_logisticsservice_getpreservationpacks",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_getpreservationpacks"
     },
     {
       "relation": "contains",
@@ -19948,9 +20452,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice",
-      "target": "frontend_logisticsservice_getproviders",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_getproviders"
     },
     {
       "relation": "contains",
@@ -19958,9 +20462,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice",
-      "target": "frontend_logisticsservice_showdispatchmodal",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_showdispatchmodal"
     },
     {
       "relation": "contains",
@@ -19968,9 +20472,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L284",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice",
-      "target": "frontend_logisticsservice_showdrivertrackingmodal",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_showdrivertrackingmodal"
     },
     {
       "relation": "calls",
@@ -19979,9 +20483,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice_showdispatchmodal",
-      "target": "frontend_logisticsservice_calculatedistancekm",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_calculatedistancekm"
     },
     {
       "relation": "calls",
@@ -19990,9 +20494,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice_showdispatchmodal",
-      "target": "frontend_logisticsservice_calculatefee",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_calculatefee"
     },
     {
       "relation": "calls",
@@ -20001,9 +20505,9 @@
       "source_file": "frontend/logisticsService.js",
       "source_location": "L217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_logisticsservice_showdispatchmodal",
-      "target": "frontend_logisticsservice_showdrivertrackingmodal",
-      "confidence_score": 1.0
+      "target": "frontend_logisticsservice_showdrivertrackingmodal"
     },
     {
       "relation": "contains",
@@ -20077,6 +20581,16 @@
       "confidence_score": 1.0,
       "source": "functions_api",
       "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "next_config",
+      "target": "next_config_nextconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20182,6 +20696,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -20194,8 +20718,18 @@
       "source_file": "package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_test",
+      "target": "package_scripts_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_clsx",
       "confidence_score": 1.0
     },
     {
@@ -20252,11 +20786,51 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_lucide_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_pg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20292,11 +20866,61 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwind_merge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L23",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_zod"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_autoprefixer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_postcss",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20337,6 +20961,26 @@
       "confidence_score": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_types_pg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20564,6 +21208,597 @@
       "confidence_score": 1.0,
       "source": "src_app_origin",
       "target": "src_app_isallowedcorsorigin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/admin/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "admin_page_adminportalpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/admin/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "context_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/admin/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "context_localdbcontext_storekyb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/admin/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "context_localdbcontext_uselocaldb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/admin/page.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "admin_page_adminportalpage",
+      "target": "context_localdbcontext_uselocaldb"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "alerts_urgentredbanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "alerts_urgentredbanner_urgentredbanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "charity_page_charityportalpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "context_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "context_localdbcontext_uselocaldb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "logistics_logisticsmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "logistics_logisticsmodal_logisticsmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "qr_qrhandovermodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "charity_page",
+      "target": "qr_qrhandovermodal_qrhandovermodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/charity/page.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "charity_page_charityportalpage",
+      "target": "context_localdbcontext_uselocaldb"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "context_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "context_localdbcontext_localdbprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "app_page_homepage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "context_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "context_localdbcontext_uselocaldb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/page.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "app_page_homepage",
+      "target": "context_localdbcontext_uselocaldb"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "context_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "context_localdbcontext_storekyb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "context_localdbcontext_uselocaldb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "esg_esgcertificatemodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "esg_esgcertificatemodal_esgcertificatemodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "partner_page_partnerportalpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "qr_qrhandovermodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "partner_page",
+      "target": "qr_qrhandovermodal_qrhandovermodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/partner/page.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "partner_page_partnerportalpage",
+      "target": "context_localdbcontext_uselocaldb"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/alerts/UrgentRedBanner.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "alerts_urgentredbanner",
+      "target": "alerts_urgentredbanner_urgentredbanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/alerts/UrgentRedBanner.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "alerts_urgentredbanner",
+      "target": "alerts_urgentredbanner_urgentredbannerprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/alerts/UrgentRedBanner.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "alerts_urgentredbanner",
+      "target": "context_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/alerts/UrgentRedBanner.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "alerts_urgentredbanner",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/alerts/UrgentRedBanner.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "alerts_urgentredbanner_urgentredbannerprops",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/esg/EsgCertificateModal.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "esg_esgcertificatemodal",
+      "target": "esg_esgcertificatemodal_esgcertificatemodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/esg/EsgCertificateModal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "esg_esgcertificatemodal",
+      "target": "esg_esgcertificatemodal_esgcertificatemodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "logistics_logisticsmodal",
+      "target": "context_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "logistics_logisticsmodal",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "logistics_logisticsmodal",
+      "target": "context_localdbcontext_uselocaldb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "logistics_logisticsmodal",
+      "target": "logistics_logisticsmodal_logisticsmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "logistics_logisticsmodal",
+      "target": "logistics_logisticsmodal_logisticsmodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "logistics_logisticsmodal_logisticsmodalprops",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/logistics/LogisticsModal.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "logistics_logisticsmodal_logisticsmodal",
+      "target": "context_localdbcontext_uselocaldb"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "qr_qrhandovermodal",
+      "target": "context_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "qr_qrhandovermodal",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "qr_qrhandovermodal",
+      "target": "context_localdbcontext_uselocaldb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "qr_qrhandovermodal",
+      "target": "qr_qrhandovermodal_qrhandovermodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "qr_qrhandovermodal",
+      "target": "qr_qrhandovermodal_qrhandovermodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "qr_qrhandovermodal_qrhandovermodalprops",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/qr/QrHandoverModal.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "qr_qrhandovermodal_qrhandovermodal",
+      "target": "context_localdbcontext_uselocaldb"
     },
     {
       "relation": "contains",
@@ -21983,6 +23218,106 @@
       "confidence_score": 1.0,
       "source": "utils_response",
       "target": "constants_http_httpstatus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_default_donations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_default_logs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_default_stores",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_donationitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_handoverlog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_localdbcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_localdbcontexttype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_localdbprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_storekyb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/LocalDbContext.tsx",
+      "source_location": "L340",
+      "weight": 1.0,
+      "source": "context_localdbcontext",
+      "target": "context_localdbcontext_uselocaldb",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -23689,6 +25024,16 @@
       "confidence_score": 1.0,
       "source": "routes_supportroutes",
       "target": "controllers_supportcontroller_supportcontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/supabaseClient.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "lib_supabaseclient",
+      "target": "lib_supabaseclient_supabase",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -31565,182 +32910,272 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_tsconfig_json",
-      "target": "foodsavevietnam_tsconfig_compileroptions"
+      "source": "tsconfig",
+      "target": "tsconfig_compileroptions"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_tsconfig_json",
-      "target": "foodsavevietnam_tsconfig_exclude"
+      "source": "tsconfig",
+      "target": "tsconfig_exclude"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L19",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_tsconfig_json",
-      "target": "foodsavevietnam_tsconfig_include"
+      "source": "tsconfig",
+      "target": "tsconfig_include"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_allowjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_esmoduleinterop"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_esmoduleinterop"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_exactoptionalpropertytypes"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_exactoptionalpropertytypes"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_forceconsistentcasinginfilenames"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_forceconsistentcasinginfilenames"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_incremental",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_isolatedmodules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_lib"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_lib"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_module"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_module"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_moduleresolution"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_moduleresolution"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_noimplicitoverride"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_noimplicitoverride"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L15",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_nouncheckedindexedaccess"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_nouncheckedindexedaccess"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_outdir"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_outdir"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
       "source_location": "L13",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_resolvejsonmodule"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_resolvejsonmodule"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_rootdir"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_rootdir"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_skiplibcheck"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_skiplibcheck"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_strict"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_strict"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_target"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_target"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/tsconfig.json",
+      "source_file": "tsconfig.json",
       "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_tsconfig_compileroptions",
-      "target": "foodsavevietnam_tsconfig_compileroptions_types"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_types"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions_paths",
+      "target": "tsconfig_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vercel",
+      "target": "vercel_buildcommand"
     },
     {
       "relation": "contains",
@@ -31748,9 +33183,19 @@
       "source_file": "vercel.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "vercel",
-      "target": "vercel_cleanurls",
-      "confidence_score": 1.0
+      "target": "vercel_cleanurls"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vercel",
+      "target": "vercel_framework"
     },
     {
       "relation": "contains",
@@ -31758,9 +33203,9 @@
       "source_file": "vercel.json",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "vercel",
-      "target": "vercel_headers",
-      "confidence_score": 1.0
+      "target": "vercel_headers"
     },
     {
       "relation": "contains",
@@ -31768,9 +33213,19 @@
       "source_file": "vercel.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "vercel",
-      "target": "vercel_rewrites",
-      "confidence_score": 1.0
+      "target": "vercel_outputdirectory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vercel",
+      "target": "vercel_rewrites"
     },
     {
       "relation": "contains",
@@ -31778,9 +33233,9 @@
       "source_file": "vercel.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "vercel",
-      "target": "vercel_trailingslash",
-      "confidence_score": 1.0
+      "target": "vercel_trailingslash"
     },
     {
       "relation": "contains",
@@ -31788,9 +33243,9 @@
       "source_file": "vercel.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "vercel",
-      "target": "vercel_version",
-      "confidence_score": 1.0
+      "target": "vercel_version"
     },
     {
       "relation": "contains",
@@ -32165,6 +33620,106 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan",
+      "target": "brainstorming_nextjs_migration_plan_k\u1ebf_ho\u1ea1ch_chuy\u1ec3n_\u0111\u1ed5i_chi_ti\u1ebft_sang_next_js_app_router_zero_downtime_migration_plan"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_k\u1ebf_ho\u1ea1ch_chuy\u1ec3n_\u0111\u1ed5i_chi_ti\u1ebft_sang_next_js_app_router_zero_downtime_migration_plan",
+      "target": "brainstorming_nextjs_migration_plan_1_ph\u00e2n_t\u00edch_r\u1ee7i_ro_chi\u1ebfn_l\u01b0\u1ee3c_an_to\u00e0n_risk_mitigation_matrix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_k\u1ebf_ho\u1ea1ch_chuy\u1ec3n_\u0111\u1ed5i_chi_ti\u1ebft_sang_next_js_app_router_zero_downtime_migration_plan",
+      "target": "brainstorming_nextjs_migration_plan_2_l\u1ed9_tr\u00ecnh_tri\u1ec3n_khai_6_giai_\u0111o\u1ea1n_work_breakdown_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_k\u1ebf_ho\u1ea1ch_chuy\u1ec3n_\u0111\u1ed5i_chi_ti\u1ebft_sang_next_js_app_router_zero_downtime_migration_plan",
+      "target": "brainstorming_nextjs_migration_plan_3_b\u1ea3ng_ki\u1ec3m_tra_ti\u1ebfn_\u0111\u1ed9_t\u1eebng_b\u01b0\u1edbc_migration_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_2_l\u1ed9_tr\u00ecnh_tri\u1ec3n_khai_6_giai_\u0111o\u1ea1n_work_breakdown_structure",
+      "target": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_1_chu\u1ea9n_b\u1ecb_h\u1ea1_t\u1ea7ng_c\u00e0i_\u0111\u1eb7t_next_js_core"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_2_l\u1ed9_tr\u00ecnh_tri\u1ec3n_khai_6_giai_\u0111o\u1ea1n_work_breakdown_structure",
+      "target": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_2_chuy\u1ec3n_\u0111\u1ed5i_core_services_state_management"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_2_l\u1ed9_tr\u00ecnh_tri\u1ec3n_khai_6_giai_\u0111o\u1ea1n_work_breakdown_structure",
+      "target": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_3_chuy\u1ec3n_\u0111\u1ed5i_c\u00e1c_component_chuy\u00ean_d\u1ee5ng_t\u00e1i_s\u1eed_d\u1ee5ng"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_2_l\u1ed9_tr\u00ecnh_tri\u1ec3n_khai_6_giai_\u0111o\u1ea1n_work_breakdown_structure",
+      "target": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_4_x\u00e2y_d\u1ef1ng_c\u00e1c_tuy\u1ebfn_\u0111\u01b0\u1eddng_app_router_pages"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_2_l\u1ed9_tr\u00ecnh_tri\u1ec3n_khai_6_giai_\u0111o\u1ea1n_work_breakdown_structure",
+      "target": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_5_t\u00edch_h\u1ee3p_api_routes_supabase_ssr"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/nextjs_migration_plan.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "brainstorming_nextjs_migration_plan_2_l\u1ed9_tr\u00ecnh_tri\u1ec3n_khai_6_giai_\u0111o\u1ea1n_work_breakdown_structure",
+      "target": "brainstorming_nextjs_migration_plan_giai_\u0111o\u1ea1n_6_ki\u1ec3m_th\u1eed_to\u00e0n_di\u1ec7n_build_production_tri\u1ec3n_khai_vercel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "brainstorming/phase1_plan.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -32468,9 +34023,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan",
-      "target": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai"
     },
     {
       "relation": "contains",
@@ -32478,9 +34033,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
-      "target": "brainstorming_phase4_plan_1_ph\u00e2n_t\u00edch_hi\u1ec7n_tr\u1ea1ng_y\u00eau_c\u1ea7u_giai_\u0111o\u1ea1n_4",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_1_ph\u00e2n_t\u00edch_hi\u1ec7n_tr\u1ea1ng_y\u00eau_c\u1ea7u_giai_\u0111o\u1ea1n_4"
     },
     {
       "relation": "contains",
@@ -32488,9 +34043,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
-      "target": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure"
     },
     {
       "relation": "contains",
@@ -32498,9 +34053,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
-      "target": "brainstorming_phase4_plan_3_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_t\u1eebng_b\u01b0\u1edbc",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_3_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_t\u1eebng_b\u01b0\u1edbc"
     },
     {
       "relation": "contains",
@@ -32508,9 +34063,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
-      "target": "brainstorming_phase4_plan_4_cam_k\u1ebft_b\u1ea3o_to\u00e0n",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_4_cam_k\u1ebft_b\u1ea3o_to\u00e0n"
     },
     {
       "relation": "contains",
@@ -32518,9 +34073,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
-      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_1_ph\u00e2n_h\u1ec7_\u0111i\u1ec1u_ph\u1ed1i_v\u1eadn_chuy\u1ec3n_kh\u1ea9n_c\u1ea5p_logistics_dispatch_engine",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_1_ph\u00e2n_h\u1ec7_\u0111i\u1ec1u_ph\u1ed1i_v\u1eadn_chuy\u1ec3n_kh\u1ea9n_c\u1ea5p_logistics_dispatch_engine"
     },
     {
       "relation": "contains",
@@ -32528,9 +34083,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
-      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_2_h\u1ec7_th\u1ed1ng_c\u1ea3nh_b\u00e1o_kh\u1ea9n_c\u1ea5p_t\u1ee9c_th\u1eddi_urgent_alert_zns_simulator",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_2_h\u1ec7_th\u1ed1ng_c\u1ea3nh_b\u00e1o_kh\u1ea9n_c\u1ea5p_t\u1ee9c_th\u1eddi_urgent_alert_zns_simulator"
     },
     {
       "relation": "contains",
@@ -32538,9 +34093,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
-      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_3_b\u1ed9_ki\u1ec3m_th\u1eed_t\u1ef1_\u0111\u1ed9ng_automated_test_suite",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_3_b\u1ed9_ki\u1ec3m_th\u1eed_t\u1ef1_\u0111\u1ed9ng_automated_test_suite"
     },
     {
       "relation": "contains",
@@ -32548,9 +34103,9 @@
       "source_file": "brainstorming/phase4_plan.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
-      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_4_c\u1ea5u_h\u00ecnh_tri\u1ec3n_khai_vercel_\u0111\u00f3ng_g\u00f3i",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_4_c\u1ea5u_h\u00ecnh_tri\u1ec3n_khai_vercel_\u0111\u00f3ng_g\u00f3i"
     },
     {
       "relation": "contains",
@@ -32558,9 +34113,9 @@
       "source_file": "docs/NEXTJS_MIGRATION.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_nextjs_migration",
-      "target": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
-      "confidence_score": 1.0
+      "target": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui"
     },
     {
       "relation": "contains",
@@ -32568,9 +34123,9 @@
       "source_file": "docs/NEXTJS_MIGRATION.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
-      "target": "docs_nextjs_migration_1_b\u1ea3n_\u0111\u1ed3_\u00e1nh_x\u1ea1_tuy\u1ebfn_\u0111\u01b0\u1eddng_route_mapping",
-      "confidence_score": 1.0
+      "target": "docs_nextjs_migration_1_b\u1ea3n_\u0111\u1ed3_\u00e1nh_x\u1ea1_tuy\u1ebfn_\u0111\u01b0\u1eddng_route_mapping"
     },
     {
       "relation": "contains",
@@ -32578,9 +34133,9 @@
       "source_file": "docs/NEXTJS_MIGRATION.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
-      "target": "docs_nextjs_migration_2_c\u00e1c_th\u00e0nh_ph\u1ea7n_shadcn_ui_t\u01b0\u01a1ng_\u1ee9ng",
-      "confidence_score": 1.0
+      "target": "docs_nextjs_migration_2_c\u00e1c_th\u00e0nh_ph\u1ea7n_shadcn_ui_t\u01b0\u01a1ng_\u1ee9ng"
     },
     {
       "relation": "contains",
@@ -32588,9 +34143,9 @@
       "source_file": "docs/NEXTJS_MIGRATION.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
-      "target": "docs_nextjs_migration_3_ki\u1ebfn_tr\u00fac_qu\u1ea3n_l\u00fd_d\u1eef_li\u1ec7u_data_layer_state_management",
-      "confidence_score": 1.0
+      "target": "docs_nextjs_migration_3_ki\u1ebfn_tr\u00fac_qu\u1ea3n_l\u00fd_d\u1eef_li\u1ec7u_data_layer_state_management"
     },
     {
       "relation": "contains",
@@ -32598,9 +34153,9 @@
       "source_file": "docs/NEXTJS_MIGRATION.md",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
-      "target": "docs_nextjs_migration_4_t\u00edch_h\u1ee3p_supabase_ssr_server_side_rendering",
-      "confidence_score": 1.0
+      "target": "docs_nextjs_migration_4_t\u00edch_h\u1ee3p_supabase_ssr_server_side_rendering"
     },
     {
       "relation": "contains",
@@ -32608,9 +34163,9 @@
       "source_file": "docs/NEXTJS_MIGRATION.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_nextjs_migration_2_c\u00e1c_th\u00e0nh_ph\u1ea7n_shadcn_ui_t\u01b0\u01a1ng_\u1ee9ng",
-      "target": "docs_nextjs_migration_\u00e1nh_x\u1ea1_giao_di\u1ec7n_c\u1ee5_th\u1ec3",
-      "confidence_score": 1.0
+      "target": "docs_nextjs_migration_\u00e1nh_x\u1ea1_giao_di\u1ec7n_c\u1ee5_th\u1ec3"
     },
     {
       "relation": "contains",
@@ -32618,9 +34173,9 @@
       "source_file": "docs/NEXTJS_MIGRATION.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_nextjs_migration_3_ki\u1ebfn_tr\u00fac_qu\u1ea3n_l\u00fd_d\u1eef_li\u1ec7u_data_layer_state_management",
-      "target": "docs_nextjs_migration_t\u00edch_h\u1ee3p_tanstack_query_react_query",
-      "confidence_score": 1.0
+      "target": "docs_nextjs_migration_t\u00edch_h\u1ee3p_tanstack_query_react_query"
     },
     {
       "relation": "contains",
@@ -32851,186 +34406,6 @@
       "confidence_score": 1.0,
       "source": "foodsavevietnam_improvements_chi_ti\u1ebft_c\u00e1c_b\u01b0\u1edbc_th\u1ef1c_hi\u1ec7n",
       "target": "foodsavevietnam_improvements_giai_\u0111o\u1ea1n_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_n\u00e2ng_c\u1ea5p_giao_di\u1ec7n_2_\u0111\u1ebfn_3_tu\u1ea7n"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig",
-      "target": "tsconfig_compileroptions"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig",
-      "target": "tsconfig_exclude"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig",
-      "target": "tsconfig_include"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_esmoduleinterop"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_exactoptionalpropertytypes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_forceconsistentcasinginfilenames"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_lib"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_module"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_moduleresolution"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_noimplicitoverride"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_nouncheckedindexedaccess"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_outdir"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_resolvejsonmodule"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_rootdir"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_skiplibcheck"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_strict"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_target"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_types"
     },
     {
       "relation": "contains",
@@ -33404,5 +34779,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "23671637d2e359857fcdf1a9265eaab8202444f0"
+  "built_at_commit": "22d1971f8f26e09f9ec868395dc267ac83fedddc"
 }

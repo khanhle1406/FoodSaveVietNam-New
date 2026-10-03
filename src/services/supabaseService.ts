@@ -8,11 +8,13 @@ import { AppError } from "../utils/appError";
 export { supabaseAdmin };
 
 export interface PaginationInput {
-  page: number;
-  limit: number;
+  page?: number;
+  limit?: number;
 }
 
-export const getRange = ({ page, limit }: PaginationInput): { from: number; to: number } => {
+export const getRange = (pagination: PaginationInput = {}): { from: number; to: number } => {
+  const page = pagination.page ?? 1;
+  const limit = pagination.limit ?? 20;
   const from = (page - 1) * limit;
   return {
     from,

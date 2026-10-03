@@ -121,7 +121,7 @@ export const donationService = {
       .single();
 
     if (loadError) handleSupabaseError(loadError, "Failed to load donation");
-    const existing = requireRecord(loadedDonation as { status: string; stores: { owner_id: string } } | null, "Donation was not found");
+    const existing = requireRecord(loadedDonation as unknown as { status: string; stores: { owner_id: string } } | null, "Donation was not found");
     if (existing.status !== "open") {
       throw new AppError("Only open donations can be accepted", HTTP_STATUS.CONFLICT, ERROR_CODES.RESOURCE_CONFLICT);
     }
@@ -162,7 +162,7 @@ export const donationService = {
       .single();
 
     if (loadError) handleSupabaseError(loadError, "Failed to load donation");
-    const donation = requireRecord(loadedDonation as { store_id: string; charity_id: string | null; status: string; stores: { owner_id: string } } | null, "Donation was not found");
+    const donation = requireRecord(loadedDonation as unknown as { store_id: string; charity_id: string | null; status: string; stores: { owner_id: string } } | null, "Donation was not found");
 
     if (actorRole === "partner") await assertStoreOwner(donation.store_id, actorId, actorRole);
     if (actorRole === "charity") {
