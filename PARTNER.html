@@ -3744,21 +3744,21 @@ async function donateProduct(i){
         storeId = session.store_id || session.user?.store_id || session.user?.id;
       } catch(e) {}
 
-      if(storeId) {
-        const weightKg = Number(p.q || 1) * 0.3;
-        const expiresAt = new Date(Date.now() + (p.leftMin ? p.leftMin * 60000 : 24 * 3600000)).toISOString();
-        await FoodSaveAPI.donations.create({
-          store_id: storeId,
-          items: p.n,
-          amount_text: `${p.q || 1} phần`,
-          weight_kg: Number(weightKg.toFixed(2)) || 0.5,
-          expires_at: expiresAt,
-          pickup_start: "Ngay khi xác nhận",
-          pickup_end: "Trong vòng 4 giờ",
-          urgency: p.l === 'red' ? 'red' : (p.l === 'yellow' ? 'yellow' : 'green'),
-          note: `Quyên góp từ cửa hàng: ${p.n}`
-        });
-      }
+      const finalStoreId = storeId || 'store-tous-01';
+      const weightKg = Number(p.q || 1) * 0.3;
+      const expiresAt = new Date(Date.now() + (p.leftMin ? p.leftMin * 60000 : 24 * 3600000)).toISOString();
+      await FoodSaveAPI.donations.create({
+        store_id: finalStoreId,
+        store: st.n || 'Tous Les Jours Lê Duẩn',
+        items: p.n,
+        amount_text: `${p.q || 1} phần`,
+        weight_kg: Number(weightKg.toFixed(2)) || 0.5,
+        expires_at: expiresAt,
+        pickup_start: "Ngay khi xác nhận",
+        pickup_end: "Trong vòng 3 giờ",
+        urgency: p.l === 'red' ? 'red' : (p.l === 'yellow' ? 'yellow' : 'green'),
+        note: `Quyên góp khẩn cấp từ cửa hàng: ${p.n}`
+      });
     } catch(err) {
       console.warn("Lỗi API donateProduct:", err);
     }
@@ -4674,6 +4674,8 @@ window.addEventListener('error',function(e){
 <script src="frontend/localDb.js"></script>
 <script src="frontend/qrService.js"></script>
 <script src="frontend/esgCertificate.js"></script>
+<script src="frontend/logisticsService.js"></script>
+<script src="frontend/alertService.js"></script>
 <script src="frontend/apiClient.js"></script>
 <script>
 const PARTNER_SUPABASE_URL = 'https://idhpydhlgnxjjtyrgfkj.supabase.co';

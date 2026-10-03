@@ -4,6 +4,42 @@
   "graph": {},
   "nodes": [
     {
+      "label": "alertService.js",
+      "file_type": "code",
+      "source_file": "frontend/alertService.js",
+      "source_location": "L1",
+      "id": "frontend_alertservice",
+      "community": 50,
+      "norm_label": "alertservice.js"
+    },
+    {
+      "label": "playUrgentChime()",
+      "file_type": "code",
+      "source_file": "frontend/alertService.js",
+      "source_location": "L10",
+      "id": "frontend_alertservice_playurgentchime",
+      "community": 50,
+      "norm_label": "playurgentchime()"
+    },
+    {
+      "label": "triggerUrgentDonationAlert()",
+      "file_type": "code",
+      "source_file": "frontend/alertService.js",
+      "source_location": "L39",
+      "id": "frontend_alertservice_triggerurgentdonationalert",
+      "community": 50,
+      "norm_label": "triggerurgentdonationalert()"
+    },
+    {
+      "label": "showZnsNotificationModal()",
+      "file_type": "code",
+      "source_file": "frontend/alertService.js",
+      "source_location": "L93",
+      "id": "frontend_alertservice_showznsnotificationmodal",
+      "community": 50,
+      "norm_label": "showznsnotificationmodal()"
+    },
+    {
       "label": "apiClient.js",
       "file_type": "code",
       "source_file": "frontend/apiClient.js",
@@ -333,7 +369,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L154",
       "id": "frontend_foodsave_auth_client_normalizephone",
-      "community": 0,
+      "community": 12,
       "norm_label": "normalizephone()"
     },
     {
@@ -981,7 +1017,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1321",
       "id": "frontend_foodsave_auth_client_savepartnerstep",
-      "community": 0,
+      "community": 12,
       "norm_label": "savepartnerstep()"
     },
     {
@@ -990,7 +1026,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1373",
       "id": "frontend_foodsave_auth_client_validatepartnerstep",
-      "community": 0,
+      "community": 12,
       "norm_label": "validatepartnerstep()"
     },
     {
@@ -1125,7 +1161,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1613",
       "id": "frontend_foodsave_auth_client_togglesellerday",
-      "community": 0,
+      "community": 12,
       "norm_label": "togglesellerday()"
     },
     {
@@ -1224,7 +1260,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1786",
       "id": "frontend_foodsave_auth_client_ensurepartnerregistrationdefaults",
-      "community": 0,
+      "community": 12,
       "norm_label": "ensurepartnerregistrationdefaults()"
     },
     {
@@ -1233,7 +1269,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1807",
       "id": "frontend_foodsave_auth_client_splitpartnercontact",
-      "community": 0,
+      "community": 12,
       "norm_label": "splitpartnercontact()"
     },
     {
@@ -1278,7 +1314,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1835",
       "id": "frontend_foodsave_auth_client_partnercontactphone",
-      "community": 0,
+      "community": 12,
       "norm_label": "partnercontactphone()"
     },
     {
@@ -1323,7 +1359,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1921",
       "id": "frontend_foodsave_auth_client_ensurepartnerotp",
-      "community": 0,
+      "community": 12,
       "norm_label": "ensurepartnerotp()"
     },
     {
@@ -1332,7 +1368,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1934",
       "id": "frontend_foodsave_auth_client_partnerotpremainingseconds",
-      "community": 0,
+      "community": 12,
       "norm_label": "partnerotpremainingseconds()"
     },
     {
@@ -1341,7 +1377,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1939",
       "id": "frontend_foodsave_auth_client_formatpartnerotptime",
-      "community": 0,
+      "community": 12,
       "norm_label": "formatpartnerotptime()"
     },
     {
@@ -1368,7 +1404,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L1967",
       "id": "frontend_foodsave_auth_client_sendpartneremailotp",
-      "community": 0,
+      "community": 12,
       "norm_label": "sendpartneremailotp()"
     },
     {
@@ -1386,7 +1422,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L2102",
       "id": "frontend_foodsave_auth_client_resendpartnerotp",
-      "community": 0,
+      "community": 12,
       "norm_label": "resendpartnerotp()"
     },
     {
@@ -1395,7 +1431,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L2106",
       "id": "frontend_foodsave_auth_client_partnerotpinput",
-      "community": 0,
+      "community": 12,
       "norm_label": "partnerotpinput()"
     },
     {
@@ -2142,7 +2178,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L3638",
       "id": "frontend_foodsave_auth_client_partnerstepotp",
-      "community": 0,
+      "community": 12,
       "norm_label": "partnerstepotp()"
     },
     {
@@ -2187,7 +2223,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L3758",
       "id": "frontend_foodsave_auth_client_selectpartnerbank",
-      "community": 0,
+      "community": 12,
       "norm_label": "selectpartnerbank()"
     },
     {
@@ -2196,7 +2232,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L3785",
       "id": "frontend_foodsave_auth_client_togglepartnerautomation",
-      "community": 0,
+      "community": 12,
       "norm_label": "togglepartnerautomation()"
     },
     {
@@ -2214,7 +2250,7 @@
       "source_file": "frontend/foodsave-auth-client.js",
       "source_location": "L3989",
       "id": "frontend_foodsave_auth_client_handlepartnerhashtagkey",
-      "community": 0,
+      "community": 12,
       "norm_label": "handlepartnerhashtagkey()"
     },
     {
@@ -3280,6 +3316,69 @@
       "norm_label": "subscribe()"
     },
     {
+      "label": "logisticsService.js",
+      "file_type": "code",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L1",
+      "id": "frontend_logisticsservice",
+      "community": 43,
+      "norm_label": "logisticsservice.js"
+    },
+    {
+      "label": "calculateDistanceKm()",
+      "file_type": "code",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L98",
+      "id": "frontend_logisticsservice_calculatedistancekm",
+      "community": 43,
+      "norm_label": "calculatedistancekm()"
+    },
+    {
+      "label": "calculateFee()",
+      "file_type": "code",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L106",
+      "id": "frontend_logisticsservice_calculatefee",
+      "community": 43,
+      "norm_label": "calculatefee()"
+    },
+    {
+      "label": "getProviders()",
+      "file_type": "code",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L113",
+      "id": "frontend_logisticsservice_getproviders",
+      "community": 43,
+      "norm_label": "getproviders()"
+    },
+    {
+      "label": "getPreservationPacks()",
+      "file_type": "code",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L117",
+      "id": "frontend_logisticsservice_getpreservationpacks",
+      "community": 43,
+      "norm_label": "getpreservationpacks()"
+    },
+    {
+      "label": "showDispatchModal()",
+      "file_type": "code",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L124",
+      "id": "frontend_logisticsservice_showdispatchmodal",
+      "community": 43,
+      "norm_label": "showdispatchmodal()"
+    },
+    {
+      "label": "showDriverTrackingModal()",
+      "file_type": "code",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L284",
+      "id": "frontend_logisticsservice_showdrivertrackingmodal",
+      "community": 43,
+      "norm_label": "showdrivertrackingmodal()"
+    },
+    {
       "label": "qrService.js",
       "file_type": "code",
       "source_file": "frontend/qrService.js",
@@ -3336,244 +3435,253 @@
     {
       "label": "package.json",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L1",
-      "id": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "community": 28,
+      "id": "package",
+      "community": 6,
       "norm_label": "package.json"
     },
     {
       "label": "name",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L2",
-      "id": "foodsavevietnam_package_name",
-      "community": 28,
+      "id": "package_name",
+      "community": 6,
       "norm_label": "name"
     },
     {
       "label": "version",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L3",
-      "id": "foodsavevietnam_package_version",
-      "community": 28,
+      "id": "package_version",
+      "community": 6,
       "norm_label": "version"
     },
     {
       "label": "private",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L4",
-      "id": "foodsavevietnam_package_private",
-      "community": 28,
+      "id": "package_private",
+      "community": 6,
       "norm_label": "private"
     },
     {
       "label": "description",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L5",
-      "id": "foodsavevietnam_package_description",
-      "community": 28,
+      "id": "package_description",
+      "community": 6,
       "norm_label": "description"
     },
     {
       "label": "engines",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L6",
-      "id": "foodsavevietnam_package_engines",
-      "community": 28,
+      "id": "package_engines",
+      "community": 6,
       "norm_label": "engines"
     },
     {
       "label": "node",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L7",
-      "id": "foodsavevietnam_package_engines_node",
-      "community": 28,
+      "id": "package_engines_node",
+      "community": 6,
       "norm_label": "node"
     },
     {
       "label": "scripts",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L9",
-      "id": "foodsavevietnam_package_scripts",
-      "community": 28,
+      "id": "package_scripts",
+      "community": 6,
       "norm_label": "scripts"
     },
     {
       "label": "build",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L10",
-      "id": "foodsavevietnam_package_scripts_build",
-      "community": 28,
+      "id": "package_scripts_build",
+      "community": 6,
       "norm_label": "build"
     },
     {
       "label": "start",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L11",
-      "id": "foodsavevietnam_package_scripts_start",
-      "community": 28,
+      "id": "package_scripts_start",
+      "community": 6,
       "norm_label": "start"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "package_scripts_test",
+      "community": 6,
+      "norm_label": "test"
     },
     {
       "label": "dependencies",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L13",
-      "id": "foodsavevietnam_package_dependencies",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "package_dependencies",
+      "community": 6,
       "norm_label": "dependencies"
     },
     {
       "label": "@supabase/supabase-js",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L14",
-      "id": "foodsavevietnam_package_dependencies_supabase_supabase_js",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L15",
+      "id": "package_dependencies_supabase_supabase_js",
+      "community": 6,
       "norm_label": "@supabase/supabase-js"
     },
     {
       "label": "cors",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L15",
-      "id": "foodsavevietnam_package_dependencies_cors",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "package_dependencies_cors",
+      "community": 6,
       "norm_label": "cors"
     },
     {
       "label": "dotenv",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L16",
-      "id": "foodsavevietnam_package_dependencies_dotenv",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "package_dependencies_dotenv",
+      "community": 6,
       "norm_label": "dotenv"
     },
     {
       "label": "express",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L17",
-      "id": "foodsavevietnam_package_dependencies_express",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "package_dependencies_express",
+      "community": 6,
       "norm_label": "express"
     },
     {
       "label": "express-rate-limit",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L18",
-      "id": "foodsavevietnam_package_dependencies_express_rate_limit",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "package_dependencies_express_rate_limit",
+      "community": 6,
       "norm_label": "express-rate-limit"
     },
     {
       "label": "helmet",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L19",
-      "id": "foodsavevietnam_package_dependencies_helmet",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L20",
+      "id": "package_dependencies_helmet",
+      "community": 6,
       "norm_label": "helmet"
     },
     {
       "label": "pg",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L20",
-      "id": "foodsavevietnam_package_dependencies_pg",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "package_dependencies_pg",
+      "community": 6,
       "norm_label": "pg"
     },
     {
       "label": "serverless-http",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L21",
-      "id": "foodsavevietnam_package_dependencies_serverless_http",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "package_dependencies_serverless_http",
+      "community": 6,
       "norm_label": "serverless-http"
     },
     {
       "label": "socket.io",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L22",
-      "id": "foodsavevietnam_package_dependencies_socket_io",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "package_dependencies_socket_io",
+      "community": 6,
       "norm_label": "socket.io"
     },
     {
       "label": "zod",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L23",
-      "id": "foodsavevietnam_package_dependencies_zod",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "package_dependencies_zod",
+      "community": 6,
       "norm_label": "zod"
     },
     {
       "label": "devDependencies",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L25",
-      "id": "foodsavevietnam_package_devdependencies",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L26",
+      "id": "package_devdependencies",
+      "community": 6,
       "norm_label": "devdependencies"
     },
     {
       "label": "@types/cors",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L26",
-      "id": "foodsavevietnam_package_devdependencies_types_cors",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L27",
+      "id": "package_devdependencies_types_cors",
+      "community": 6,
       "norm_label": "@types/cors"
     },
     {
       "label": "@types/express",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L27",
-      "id": "foodsavevietnam_package_devdependencies_types_express",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L28",
+      "id": "package_devdependencies_types_express",
+      "community": 6,
       "norm_label": "@types/express"
     },
     {
       "label": "@types/node",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L28",
-      "id": "foodsavevietnam_package_devdependencies_types_node",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L29",
+      "id": "package_devdependencies_types_node",
+      "community": 6,
       "norm_label": "@types/node"
     },
     {
       "label": "@types/pg",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L29",
-      "id": "foodsavevietnam_package_devdependencies_types_pg",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L30",
+      "id": "package_devdependencies_types_pg",
+      "community": 6,
       "norm_label": "@types/pg"
     },
     {
       "label": "typescript",
       "file_type": "code",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
-      "source_location": "L30",
-      "id": "foodsavevietnam_package_devdependencies_typescript",
-      "community": 28,
+      "source_file": "package.json",
+      "source_location": "L31",
+      "id": "package_devdependencies_typescript",
+      "community": 6,
       "norm_label": "typescript"
     },
     {
@@ -3681,7 +3789,7 @@
       "source_file": "src/config/supabase.ts",
       "source_location": "L1",
       "id": "config_supabase",
-      "community": 13,
+      "community": 8,
       "norm_label": "supabase.ts"
     },
     {
@@ -3690,7 +3798,7 @@
       "source_file": "src/config/supabase.ts",
       "source_location": "L4",
       "id": "config_supabase_supabaseauth",
-      "community": 13,
+      "community": 8,
       "norm_label": "supabaseauth"
     },
     {
@@ -3699,7 +3807,7 @@
       "source_file": "src/config/supabase.ts",
       "source_location": "L11",
       "id": "config_supabase_supabaseadmin",
-      "community": 13,
+      "community": 8,
       "norm_label": "supabaseadmin"
     },
     {
@@ -3879,7 +3987,7 @@
       "source_file": "src/controllers/charityController.ts",
       "source_location": "L19",
       "id": "controllers_charitycontroller_charitycontroller",
-      "community": 9,
+      "community": 28,
       "norm_label": "charitycontroller"
     },
     {
@@ -3933,7 +4041,7 @@
       "source_file": "src/controllers/healthController.ts",
       "source_location": "L1",
       "id": "controllers_healthcontroller",
-      "community": 41,
+      "community": 42,
       "norm_label": "healthcontroller.ts"
     },
     {
@@ -3942,7 +4050,7 @@
       "source_file": "src/controllers/healthController.ts",
       "source_location": "L5",
       "id": "controllers_healthcontroller_healthcontroller",
-      "community": 41,
+      "community": 42,
       "norm_label": "healthcontroller"
     },
     {
@@ -3951,7 +4059,7 @@
       "source_file": "src/controllers/notificationController.ts",
       "source_location": "L1",
       "id": "controllers_notificationcontroller",
-      "community": 45,
+      "community": 42,
       "norm_label": "notificationcontroller.ts"
     },
     {
@@ -3960,7 +4068,7 @@
       "source_file": "src/controllers/notificationController.ts",
       "source_location": "L7",
       "id": "controllers_notificationcontroller_uuidparams",
-      "community": 45,
+      "community": 42,
       "norm_label": "uuidparams"
     },
     {
@@ -3978,7 +4086,7 @@
       "source_file": "src/controllers/partnerController.ts",
       "source_location": "L1",
       "id": "controllers_partnercontroller",
-      "community": 43,
+      "community": 42,
       "norm_label": "partnercontroller.ts"
     },
     {
@@ -3987,7 +4095,7 @@
       "source_file": "src/controllers/partnerController.ts",
       "source_location": "L6",
       "id": "controllers_partnercontroller_partnercontroller",
-      "community": 43,
+      "community": 25,
       "norm_label": "partnercontroller"
     },
     {
@@ -4059,7 +4167,7 @@
       "source_file": "src/middlewares/authMiddleware.ts",
       "source_location": "L1",
       "id": "middlewares_authmiddleware",
-      "community": 13,
+      "community": 11,
       "norm_label": "authmiddleware.ts"
     },
     {
@@ -4086,7 +4194,7 @@
       "source_file": "src/middlewares/authMiddleware.ts",
       "source_location": "L52",
       "id": "middlewares_authmiddleware_requireroles",
-      "community": 43,
+      "community": 25,
       "norm_label": "requireroles()"
     },
     {
@@ -4239,7 +4347,7 @@
       "source_file": "src/routes/adminRoutes.ts",
       "source_location": "L1",
       "id": "routes_adminroutes",
-      "community": 42,
+      "community": 25,
       "norm_label": "adminroutes.ts"
     },
     {
@@ -4248,7 +4356,7 @@
       "source_file": "src/routes/adminRoutes.ts",
       "source_location": "L8",
       "id": "routes_adminroutes_adminuserparamschema",
-      "community": 42,
+      "community": 25,
       "norm_label": "adminuserparamschema"
     },
     {
@@ -4257,7 +4365,7 @@
       "source_file": "src/routes/adminRoutes.ts",
       "source_location": "L12",
       "id": "routes_adminroutes_rejectpartnerbodyschema",
-      "community": 42,
+      "community": 25,
       "norm_label": "rejectpartnerbodyschema"
     },
     {
@@ -4266,7 +4374,7 @@
       "source_file": "src/routes/adminRoutes.ts",
       "source_location": "L16",
       "id": "routes_adminroutes_adminroutes",
-      "community": 42,
+      "community": 25,
       "norm_label": "adminroutes"
     },
     {
@@ -4284,7 +4392,7 @@
       "source_file": "src/routes/authRoutes.ts",
       "source_location": "L21",
       "id": "routes_authroutes_authroutes",
-      "community": 41,
+      "community": 25,
       "norm_label": "authroutes"
     },
     {
@@ -4311,7 +4419,7 @@
       "source_file": "src/routes/charityRoutes.ts",
       "source_location": "L1",
       "id": "routes_charityroutes",
-      "community": 9,
+      "community": 28,
       "norm_label": "charityroutes.ts"
     },
     {
@@ -4320,7 +4428,7 @@
       "source_file": "src/routes/charityRoutes.ts",
       "source_location": "L18",
       "id": "routes_charityroutes_charityroutes",
-      "community": 41,
+      "community": 25,
       "norm_label": "charityroutes"
     },
     {
@@ -4338,7 +4446,7 @@
       "source_file": "src/routes/donationRoutes.ts",
       "source_location": "L9",
       "id": "routes_donationroutes_donationroutes",
-      "community": 41,
+      "community": 40,
       "norm_label": "donationroutes"
     },
     {
@@ -4365,7 +4473,7 @@
       "source_file": "src/routes/healthRoutes.ts",
       "source_location": "L1",
       "id": "routes_healthroutes",
-      "community": 41,
+      "community": 42,
       "norm_label": "healthroutes.ts"
     },
     {
@@ -4374,7 +4482,7 @@
       "source_file": "src/routes/healthRoutes.ts",
       "source_location": "L4",
       "id": "routes_healthroutes_healthroutes",
-      "community": 41,
+      "community": 42,
       "norm_label": "healthroutes"
     },
     {
@@ -4383,7 +4491,7 @@
       "source_file": "src/routes/index.ts",
       "source_location": "L1",
       "id": "routes_index",
-      "community": 41,
+      "community": 25,
       "norm_label": "index.ts"
     },
     {
@@ -4392,7 +4500,7 @@
       "source_file": "src/routes/index.ts",
       "source_location": "L16",
       "id": "routes_index_apiroutes",
-      "community": 41,
+      "community": 25,
       "norm_label": "apiroutes"
     },
     {
@@ -4410,7 +4518,7 @@
       "source_file": "src/routes/notificationRoutes.ts",
       "source_location": "L8",
       "id": "routes_notificationroutes_notificationroutes",
-      "community": 41,
+      "community": 45,
       "norm_label": "notificationroutes"
     },
     {
@@ -4419,7 +4527,7 @@
       "source_file": "src/routes/partnerRoutes.ts",
       "source_location": "L1",
       "id": "routes_partnerroutes",
-      "community": 43,
+      "community": 25,
       "norm_label": "partnerroutes.ts"
     },
     {
@@ -4428,7 +4536,7 @@
       "source_file": "src/routes/partnerRoutes.ts",
       "source_location": "L6",
       "id": "routes_partnerroutes_partnerroutes",
-      "community": 43,
+      "community": 25,
       "norm_label": "partnerroutes"
     },
     {
@@ -4482,7 +4590,7 @@
       "source_file": "src/routes/supportRoutes.ts",
       "source_location": "L7",
       "id": "routes_supportroutes_supportroutes",
-      "community": 41,
+      "community": 46,
       "norm_label": "supportroutes"
     },
     {
@@ -4878,7 +4986,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L3",
       "id": "schemas_charityschemas_createcharityprofilebodyschema",
-      "community": 9,
+      "community": 28,
       "norm_label": "createcharityprofilebodyschema"
     },
     {
@@ -4887,7 +4995,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L14",
       "id": "schemas_charityschemas_updatecharityprofilebodyschema",
-      "community": 9,
+      "community": 28,
       "norm_label": "updatecharityprofilebodyschema"
     },
     {
@@ -4896,7 +5004,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L19",
       "id": "schemas_charityschemas_createvolunteerbodyschema",
-      "community": 9,
+      "community": 28,
       "norm_label": "createvolunteerbodyschema"
     },
     {
@@ -4905,7 +5013,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L31",
       "id": "schemas_charityschemas_updatevolunteerbodyschema",
-      "community": 9,
+      "community": 28,
       "norm_label": "updatevolunteerbodyschema"
     },
     {
@@ -4914,7 +5022,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L33",
       "id": "schemas_charityschemas_createbeneficiarygroupbodyschema",
-      "community": 9,
+      "community": 28,
       "norm_label": "createbeneficiarygroupbodyschema"
     },
     {
@@ -4923,7 +5031,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L42",
       "id": "schemas_charityschemas_createimpactreportbodyschema",
-      "community": 9,
+      "community": 28,
       "norm_label": "createimpactreportbodyschema"
     },
     {
@@ -4932,7 +5040,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L54",
       "id": "schemas_charityschemas_creategalleryitembodyschema",
-      "community": 9,
+      "community": 28,
       "norm_label": "creategalleryitembodyschema"
     },
     {
@@ -4941,7 +5049,7 @@
       "source_file": "src/schemas/charitySchemas.ts",
       "source_location": "L65",
       "id": "schemas_charityschemas_publicgalleryqueryschema",
-      "community": 9,
+      "community": 28,
       "norm_label": "publicgalleryqueryschema"
     },
     {
@@ -5022,7 +5130,7 @@
       "source_file": "src/schemas/commonSchemas.ts",
       "source_location": "L1",
       "id": "schemas_commonschemas",
-      "community": 25,
+      "community": 45,
       "norm_label": "commonschemas.ts"
     },
     {
@@ -5031,7 +5139,7 @@
       "source_file": "src/schemas/commonSchemas.ts",
       "source_location": "L3",
       "id": "schemas_commonschemas_uuidparamschema",
-      "community": 25,
+      "community": 45,
       "norm_label": "uuidparamschema"
     },
     {
@@ -5040,7 +5148,7 @@
       "source_file": "src/schemas/commonSchemas.ts",
       "source_location": "L7",
       "id": "schemas_commonschemas_paginationqueryschema",
-      "community": 25,
+      "community": 45,
       "norm_label": "paginationqueryschema"
     },
     {
@@ -5049,7 +5157,7 @@
       "source_file": "src/schemas/commonSchemas.ts",
       "source_location": "L12",
       "id": "schemas_commonschemas_optionalpaginationqueryschema",
-      "community": 25,
+      "community": 45,
       "norm_label": "optionalpaginationqueryschema"
     },
     {
@@ -5058,7 +5166,7 @@
       "source_file": "src/schemas/commonSchemas.ts",
       "source_location": "L17",
       "id": "schemas_commonschemas_nonemptystring",
-      "community": 25,
+      "community": 45,
       "norm_label": "nonemptystring"
     },
     {
@@ -5067,7 +5175,7 @@
       "source_file": "src/schemas/commonSchemas.ts",
       "source_location": "L18",
       "id": "schemas_commonschemas_optionaltrimmedstring",
-      "community": 25,
+      "community": 45,
       "norm_label": "optionaltrimmedstring"
     },
     {
@@ -5076,7 +5184,7 @@
       "source_file": "src/schemas/donationSchemas.ts",
       "source_location": "L1",
       "id": "schemas_donationschemas",
-      "community": 40,
+      "community": 32,
       "norm_label": "donationschemas.ts"
     },
     {
@@ -5085,7 +5193,7 @@
       "source_file": "src/schemas/donationSchemas.ts",
       "source_location": "L3",
       "id": "schemas_donationschemas_donationstatusschema",
-      "community": 40,
+      "community": 32,
       "norm_label": "donationstatusschema"
     },
     {
@@ -5472,7 +5580,7 @@
       "source_file": "src/services/adminService.ts",
       "source_location": "L1",
       "id": "services_adminservice",
-      "community": 21,
+      "community": 11,
       "norm_label": "adminservice.ts"
     },
     {
@@ -5481,7 +5589,7 @@
       "source_file": "src/services/adminService.ts",
       "source_location": "L6",
       "id": "services_adminservice_profilerow",
-      "community": 21,
+      "community": 11,
       "norm_label": "profilerow"
     },
     {
@@ -5490,7 +5598,7 @@
       "source_file": "src/services/adminService.ts",
       "source_location": "L16",
       "id": "services_adminservice_storerow",
-      "community": 21,
+      "community": 11,
       "norm_label": "storerow"
     },
     {
@@ -5571,7 +5679,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L54",
       "id": "services_authservice_authresult",
-      "community": 13,
+      "community": 37,
       "norm_label": "authresult"
     },
     {
@@ -5625,7 +5733,7 @@
       "source_file": "src/services/authService.ts",
       "source_location": "L119",
       "id": "services_authservice_oauthotpchallenge",
-      "community": 13,
+      "community": 10,
       "norm_label": "oauthotpchallenge"
     },
     {
@@ -6453,7 +6561,7 @@
       "source_file": "src/services/notificationService.ts",
       "source_location": "L1",
       "id": "services_notificationservice",
-      "community": 13,
+      "community": 17,
       "norm_label": "notificationservice.ts"
     },
     {
@@ -6462,7 +6570,7 @@
       "source_file": "src/services/notificationService.ts",
       "source_location": "L6",
       "id": "services_notificationservice_notificationservice",
-      "community": 45,
+      "community": 42,
       "norm_label": "notificationservice"
     },
     {
@@ -6471,7 +6579,7 @@
       "source_file": "src/services/partnerService.ts",
       "source_location": "L1",
       "id": "services_partnerservice",
-      "community": 43,
+      "community": 42,
       "norm_label": "partnerservice.ts"
     },
     {
@@ -6480,7 +6588,7 @@
       "source_file": "src/services/partnerService.ts",
       "source_location": "L7",
       "id": "services_partnerservice_partnerservice",
-      "community": 43,
+      "community": 42,
       "norm_label": "partnerservice"
     },
     {
@@ -6606,7 +6714,7 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L1",
       "id": "services_supabaseservice",
-      "community": 13,
+      "community": 17,
       "norm_label": "supabaseservice.ts"
     },
     {
@@ -6615,7 +6723,7 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L10",
       "id": "services_supabaseservice_paginationinput",
-      "community": 13,
+      "community": 17,
       "norm_label": "paginationinput"
     },
     {
@@ -6624,7 +6732,7 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L15",
       "id": "services_supabaseservice_getrange",
-      "community": 13,
+      "community": 17,
       "norm_label": "getrange()"
     },
     {
@@ -6633,7 +6741,7 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L23",
       "id": "services_supabaseservice_topagination",
-      "community": 13,
+      "community": 17,
       "norm_label": "topagination()"
     },
     {
@@ -6660,7 +6768,7 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L54",
       "id": "services_supabaseservice_assertowneroradmin",
-      "community": 13,
+      "community": 7,
       "norm_label": "assertowneroradmin()"
     },
     {
@@ -6669,7 +6777,7 @@
       "source_file": "src/services/supabaseService.ts",
       "source_location": "L60",
       "id": "services_supabaseservice_generatecode",
-      "community": 13,
+      "community": 17,
       "norm_label": "generatecode()"
     },
     {
@@ -6714,7 +6822,7 @@
       "source_file": "src/types/api.ts",
       "source_location": "L8",
       "id": "types_api_errorresponse",
-      "community": 11,
+      "community": 37,
       "norm_label": "errorresponse"
     },
     {
@@ -6723,7 +6831,7 @@
       "source_file": "src/types/api.ts",
       "source_location": "L17",
       "id": "types_api_paginatedresponse",
-      "community": 13,
+      "community": 37,
       "norm_label": "paginatedresponse"
     },
     {
@@ -6750,7 +6858,7 @@
       "source_file": "src/types/domain.ts",
       "source_location": "L1",
       "id": "types_domain_userrole",
-      "community": 13,
+      "community": 17,
       "norm_label": "userrole"
     },
     {
@@ -6858,7 +6966,7 @@
       "source_file": "src/types/domain.ts",
       "source_location": "L17",
       "id": "types_domain_profile",
-      "community": 13,
+      "community": 37,
       "norm_label": "profile"
     },
     {
@@ -6921,7 +7029,7 @@
       "source_file": "src/types/domain.ts",
       "source_location": "L156",
       "id": "types_domain_notification",
-      "community": 13,
+      "community": 17,
       "norm_label": "notification"
     },
     {
@@ -7101,7 +7209,7 @@
       "source_file": "src/utils/asyncHandler.ts",
       "source_location": "L1",
       "id": "utils_asynchandler",
-      "community": 43,
+      "community": 25,
       "norm_label": "asynchandler.ts"
     },
     {
@@ -7110,7 +7218,7 @@
       "source_file": "src/utils/asyncHandler.ts",
       "source_location": "L3",
       "id": "utils_asynchandler_asynchandler",
-      "community": 43,
+      "community": 25,
       "norm_label": "asynchandler()"
     },
     {
@@ -7263,7 +7371,7 @@
       "source_file": "src/utils/requestContext.ts",
       "source_location": "L7",
       "id": "utils_requestcontext_actorcontext",
-      "community": 13,
+      "community": 37,
       "norm_label": "actorcontext"
     },
     {
@@ -7272,7 +7380,7 @@
       "source_file": "src/utils/requestContext.ts",
       "source_location": "L13",
       "id": "utils_requestcontext_getactor",
-      "community": 43,
+      "community": 42,
       "norm_label": "getactor()"
     },
     {
@@ -7281,7 +7389,7 @@
       "source_file": "src/utils/response.ts",
       "source_location": "L1",
       "id": "utils_response",
-      "community": 37,
+      "community": 42,
       "norm_label": "response.ts"
     },
     {
@@ -7292,6 +7400,15 @@
       "id": "utils_response_sendsuccess",
       "community": 42,
       "norm_label": "sendsuccess()"
+    },
+    {
+      "label": "foodsave_core.test.mjs",
+      "file_type": "code",
+      "source_file": "test/foodsave_core.test.mjs",
+      "source_location": "L1",
+      "id": "test_foodsave_core_test",
+      "community": 51,
+      "norm_label": "foodsave_core.test.mjs"
     },
     {
       "label": "tsconfig.json",
@@ -7463,6 +7580,60 @@
       "id": "foodsavevietnam_tsconfig_exclude",
       "community": 31,
       "norm_label": "exclude"
+    },
+    {
+      "label": "vercel.json",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L1",
+      "id": "vercel",
+      "community": 49,
+      "norm_label": "vercel.json"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L2",
+      "id": "vercel_version",
+      "community": 49,
+      "norm_label": "version"
+    },
+    {
+      "label": "cleanUrls",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L3",
+      "id": "vercel_cleanurls",
+      "community": 49,
+      "norm_label": "cleanurls"
+    },
+    {
+      "label": "trailingSlash",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L4",
+      "id": "vercel_trailingslash",
+      "community": 49,
+      "norm_label": "trailingslash"
+    },
+    {
+      "label": "rewrites",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L5",
+      "id": "vercel_rewrites",
+      "community": 49,
+      "norm_label": "rewrites"
+    },
+    {
+      "label": "headers",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L27",
+      "id": "vercel_headers",
+      "community": 49,
+      "norm_label": "headers"
     },
     {
       "label": "README.md",
@@ -8113,6 +8284,168 @@
       "norm_label": "3. checklist kiem thu khi demo cho khach"
     },
     {
+      "label": "phase4_plan.md",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L1",
+      "id": "brainstorming_phase4_plan",
+      "community": 13,
+      "norm_label": "phase4_plan.md"
+    },
+    {
+      "label": "K\u1ebf Ho\u1ea1ch Tri\u1ec3n Khai Giai \u0110o\u1ea1n 4 (Phase 4): V\u1eadn H\u00e0nh Th\u1ef1c \u0110\u1ecba, Logistics & S\u1eb5n S\u00e0ng Tri\u1ec3n Khai",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L1",
+      "id": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
+      "community": 13,
+      "norm_label": "ke hoach trien khai giai \u0111oan 4 (phase 4): van hanh thuc \u0111ia, logistics & san sang trien khai"
+    },
+    {
+      "label": "1. Ph\u00e2n T\u00edch Hi\u1ec7n Tr\u1ea1ng & Y\u00eau C\u1ea7u Giai \u0110o\u1ea1n 4",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L7",
+      "id": "brainstorming_phase4_plan_1_ph\u00e2n_t\u00edch_hi\u1ec7n_tr\u1ea1ng_y\u00eau_c\u1ea7u_giai_\u0111o\u1ea1n_4",
+      "community": 13,
+      "norm_label": "1. phan tich hien trang & yeu cau giai \u0111oan 4"
+    },
+    {
+      "label": "2. Chi Ti\u1ebft C\u00e1c H\u1ea1ng M\u1ee5c Th\u1ef1c Hi\u1ec7n (Work Breakdown Structure)",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L16",
+      "id": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
+      "community": 13,
+      "norm_label": "2. chi tiet cac hang muc thuc hien (work breakdown structure)"
+    },
+    {
+      "label": "H\u1ea1ng m\u1ee5c 4.1: Ph\u00e2n H\u1ec7 \u0110i\u1ec1u Ph\u1ed1i V\u1eadn Chuy\u1ec3n Kh\u1ea9n C\u1ea5p (Logistics Dispatch Engine)",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L18",
+      "id": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_1_ph\u00e2n_h\u1ec7_\u0111i\u1ec1u_ph\u1ed1i_v\u1eadn_chuy\u1ec3n_kh\u1ea9n_c\u1ea5p_logistics_dispatch_engine",
+      "community": 13,
+      "norm_label": "hang muc 4.1: phan he \u0111ieu phoi van chuyen khan cap (logistics dispatch engine)"
+    },
+    {
+      "label": "H\u1ea1ng m\u1ee5c 4.2: H\u1ec7 Th\u1ed1ng C\u1ea3nh B\u00e1o Kh\u1ea9n C\u1ea5p T\u1ee9c Th\u1eddi (Urgent Alert & ZNS Simulator)",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L27",
+      "id": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_2_h\u1ec7_th\u1ed1ng_c\u1ea3nh_b\u00e1o_kh\u1ea9n_c\u1ea5p_t\u1ee9c_th\u1eddi_urgent_alert_zns_simulator",
+      "community": 13,
+      "norm_label": "hang muc 4.2: he thong canh bao khan cap tuc thoi (urgent alert & zns simulator)"
+    },
+    {
+      "label": "H\u1ea1ng m\u1ee5c 4.3: B\u1ed9 Ki\u1ec3m Th\u1eed T\u1ef1 \u0110\u1ed9ng (Automated Test Suite)",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L33",
+      "id": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_3_b\u1ed9_ki\u1ec3m_th\u1eed_t\u1ef1_\u0111\u1ed9ng_automated_test_suite",
+      "community": 13,
+      "norm_label": "hang muc 4.3: bo kiem thu tu \u0111ong (automated test suite)"
+    },
+    {
+      "label": "H\u1ea1ng m\u1ee5c 4.4: C\u1ea5u H\u00ecnh Tri\u1ec3n Khai Vercel & \u0110\u00f3ng G\u00f3i",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L40",
+      "id": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_4_c\u1ea5u_h\u00ecnh_tri\u1ec3n_khai_vercel_\u0111\u00f3ng_g\u00f3i",
+      "community": 13,
+      "norm_label": "hang muc 4.4: cau hinh trien khai vercel & \u0111ong goi"
+    },
+    {
+      "label": "3. K\u1ebf Ho\u1ea1ch Tri\u1ec3n Khai T\u1eebng B\u01b0\u1edbc",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L49",
+      "id": "brainstorming_phase4_plan_3_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_t\u1eebng_b\u01b0\u1edbc",
+      "community": 13,
+      "norm_label": "3. ke hoach trien khai tung buoc"
+    },
+    {
+      "label": "4. Cam K\u1ebft & B\u1ea3o To\u00e0n",
+      "file_type": "document",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L62",
+      "id": "brainstorming_phase4_plan_4_cam_k\u1ebft_b\u1ea3o_to\u00e0n",
+      "community": 13,
+      "norm_label": "4. cam ket & bao toan"
+    },
+    {
+      "label": "NEXTJS_MIGRATION.md",
+      "file_type": "document",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L1",
+      "id": "docs_nextjs_migration",
+      "community": 41,
+      "norm_label": "nextjs_migration.md"
+    },
+    {
+      "label": "L\u1ed9 Tr\u00ecnh Chuy\u1ec3n \u0110\u1ed5i Sang Next.js (App Router) & Shadcn UI",
+      "file_type": "document",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L1",
+      "id": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
+      "community": 41,
+      "norm_label": "lo trinh chuyen \u0111oi sang next.js (app router) & shadcn ui"
+    },
+    {
+      "label": "1. B\u1ea3n \u0110\u1ed3 \u00c1nh X\u1ea1 Tuy\u1ebfn \u0110\u01b0\u1eddng (Route Mapping)",
+      "file_type": "document",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L7",
+      "id": "docs_nextjs_migration_1_b\u1ea3n_\u0111\u1ed3_\u00e1nh_x\u1ea1_tuy\u1ebfn_\u0111\u01b0\u1eddng_route_mapping",
+      "community": 41,
+      "norm_label": "1. ban \u0111o anh xa tuyen \u0111uong (route mapping)"
+    },
+    {
+      "label": "2. C\u00e1c Th\u00e0nh Ph\u1ea7n Shadcn UI T\u01b0\u01a1ng \u1ee8ng",
+      "file_type": "document",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L21",
+      "id": "docs_nextjs_migration_2_c\u00e1c_th\u00e0nh_ph\u1ea7n_shadcn_ui_t\u01b0\u01a1ng_\u1ee9ng",
+      "community": 41,
+      "norm_label": "2. cac thanh phan shadcn ui tuong ung"
+    },
+    {
+      "label": "\u00c1nh x\u1ea1 giao di\u1ec7n c\u1ee5 th\u1ec3:",
+      "file_type": "document",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L30",
+      "id": "docs_nextjs_migration_\u00e1nh_x\u1ea1_giao_di\u1ec7n_c\u1ee5_th\u1ec3",
+      "community": 41,
+      "norm_label": "anh xa giao dien cu the:"
+    },
+    {
+      "label": "3. Ki\u1ebfn Tr\u00fac Qu\u1ea3n L\u00fd D\u1eef Li\u1ec7u (Data Layer & State Management)",
+      "file_type": "document",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L38",
+      "id": "docs_nextjs_migration_3_ki\u1ebfn_tr\u00fac_qu\u1ea3n_l\u00fd_d\u1eef_li\u1ec7u_data_layer_state_management",
+      "community": 41,
+      "norm_label": "3. kien truc quan ly du lieu (data layer & state management)"
+    },
+    {
+      "label": "T\u00edch h\u1ee3p TanStack Query (React Query)",
+      "file_type": "document",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L40",
+      "id": "docs_nextjs_migration_t\u00edch_h\u1ee3p_tanstack_query_react_query",
+      "community": 41,
+      "norm_label": "tich hop tanstack query (react query)"
+    },
+    {
+      "label": "4. T\u00edch H\u1ee3p Supabase SSR (Server-Side Rendering)",
+      "file_type": "document",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L70",
+      "id": "docs_nextjs_migration_4_t\u00edch_h\u1ee3p_supabase_ssr_server_side_rendering",
+      "community": 41,
+      "norm_label": "4. tich hop supabase ssr (server-side rendering)"
+    },
+    {
       "label": "facebookOAuthStartBodySchema",
       "file_type": "code",
       "source_file": "src/schemas/authSchemas.ts",
@@ -8372,249 +8705,6 @@
       "community": 29,
       "norm_label": "giai \u0111oan 4: van hanh thuc \u0111ia & nang cap giao dien (2 \u0111en 3 tuan)",
       "id": "foodsavevietnam_improvements_giai_\u0111o\u1ea1n_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_n\u00e2ng_c\u1ea5p_giao_di\u1ec7n_2_\u0111\u1ebfn_3_tu\u1ea7n"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L1",
-      "community": 6,
-      "norm_label": "package.json",
-      "id": "package"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "community": 6,
-      "norm_label": "name",
-      "id": "package_name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "community": 6,
-      "norm_label": "version",
-      "id": "package_version"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "community": 6,
-      "norm_label": "private",
-      "id": "package_private"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "community": 6,
-      "norm_label": "description",
-      "id": "package_description"
-    },
-    {
-      "label": "engines",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "community": 6,
-      "norm_label": "engines",
-      "id": "package_engines"
-    },
-    {
-      "label": "node",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "community": 6,
-      "norm_label": "node",
-      "id": "package_engines_node"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L9",
-      "community": 6,
-      "norm_label": "scripts",
-      "id": "package_scripts"
-    },
-    {
-      "label": "build",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "community": 6,
-      "norm_label": "build",
-      "id": "package_scripts_build"
-    },
-    {
-      "label": "start",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "community": 6,
-      "norm_label": "start",
-      "id": "package_scripts_start"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "community": 6,
-      "norm_label": "dependencies",
-      "id": "package_dependencies"
-    },
-    {
-      "label": "@supabase/supabase-js",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "community": 6,
-      "norm_label": "@supabase/supabase-js",
-      "id": "package_dependencies_supabase_supabase_js"
-    },
-    {
-      "label": "cors",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "community": 6,
-      "norm_label": "cors",
-      "id": "package_dependencies_cors"
-    },
-    {
-      "label": "dotenv",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "community": 6,
-      "norm_label": "dotenv",
-      "id": "package_dependencies_dotenv"
-    },
-    {
-      "label": "express",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L17",
-      "community": 6,
-      "norm_label": "express",
-      "id": "package_dependencies_express"
-    },
-    {
-      "label": "express-rate-limit",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "community": 6,
-      "norm_label": "express-rate-limit",
-      "id": "package_dependencies_express_rate_limit"
-    },
-    {
-      "label": "helmet",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L19",
-      "community": 6,
-      "norm_label": "helmet",
-      "id": "package_dependencies_helmet"
-    },
-    {
-      "label": "pg",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L20",
-      "community": 6,
-      "norm_label": "pg",
-      "id": "package_dependencies_pg"
-    },
-    {
-      "label": "serverless-http",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "community": 6,
-      "norm_label": "serverless-http",
-      "id": "package_dependencies_serverless_http"
-    },
-    {
-      "label": "socket.io",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "community": 6,
-      "norm_label": "socket.io",
-      "id": "package_dependencies_socket_io"
-    },
-    {
-      "label": "zod",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "community": 6,
-      "norm_label": "zod",
-      "id": "package_dependencies_zod"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "community": 6,
-      "norm_label": "devdependencies",
-      "id": "package_devdependencies"
-    },
-    {
-      "label": "@types/cors",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L26",
-      "community": 6,
-      "norm_label": "@types/cors",
-      "id": "package_devdependencies_types_cors"
-    },
-    {
-      "label": "@types/express",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L27",
-      "community": 6,
-      "norm_label": "@types/express",
-      "id": "package_devdependencies_types_express"
-    },
-    {
-      "label": "@types/node",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L28",
-      "community": 6,
-      "norm_label": "@types/node",
-      "id": "package_devdependencies_types_node"
-    },
-    {
-      "label": "@types/pg",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "community": 6,
-      "norm_label": "@types/pg",
-      "id": "package_devdependencies_types_pg"
-    },
-    {
-      "label": "typescript",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "community": 6,
-      "norm_label": "typescript",
-      "id": "package_devdependencies_typescript"
     },
     {
       "label": "tsconfig.json",
@@ -9143,6 +9233,47 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "frontend/alertService.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "frontend_alertservice",
+      "target": "frontend_alertservice_playurgentchime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/alertService.js",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "frontend_alertservice",
+      "target": "frontend_alertservice_showznsnotificationmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/alertService.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "frontend_alertservice",
+      "target": "frontend_alertservice_triggerurgentdonationalert",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/alertService.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "frontend_alertservice_triggerurgentdonationalert",
+      "target": "frontend_alertservice_playurgentchime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "frontend/apiClient.js",
       "source_location": "L167",
       "weight": 1.0,
@@ -9596,9 +9727,9 @@
       "source_file": "frontend/esgCertificate.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_esgcertificate",
-      "target": "frontend_esgcertificate_showcertificate",
-      "confidence_score": 1.0
+      "target": "frontend_esgcertificate_showcertificate"
     },
     {
       "relation": "contains",
@@ -19427,9 +19558,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L242",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_createdonation",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_createdonation"
     },
     {
       "relation": "contains",
@@ -19437,9 +19568,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L202",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_emitsync",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_emitsync"
     },
     {
       "relation": "contains",
@@ -19447,9 +19578,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_getdonations",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_getdonations"
     },
     {
       "relation": "contains",
@@ -19457,9 +19588,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L374",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_getecoimpactstats",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_getecoimpactstats"
     },
     {
       "relation": "contains",
@@ -19467,9 +19598,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L218",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_getstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_getstate"
     },
     {
       "relation": "contains",
@@ -19477,9 +19608,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L322",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_getstores",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_getstores"
     },
     {
       "relation": "contains",
@@ -19487,9 +19618,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L213",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_init",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_init"
     },
     {
       "relation": "contains",
@@ -19497,9 +19628,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L182",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "contains",
@@ -19507,9 +19638,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L222",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_resettoseeddata",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_resettoseeddata"
     },
     {
       "relation": "contains",
@@ -19517,9 +19648,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L194",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_savestate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_savestate"
     },
     {
       "relation": "contains",
@@ -19527,9 +19658,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L393",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_subscribe",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_subscribe"
     },
     {
       "relation": "contains",
@@ -19537,9 +19668,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L283",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_updatedonationstatus",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_updatedonationstatus"
     },
     {
       "relation": "contains",
@@ -19547,9 +19678,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L327",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_updatestoreverification",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_updatestoreverification"
     },
     {
       "relation": "contains",
@@ -19557,9 +19688,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L354",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb",
-      "target": "frontend_localdb_uploadstorelicense",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_uploadstorelicense"
     },
     {
       "relation": "calls",
@@ -19568,9 +19699,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L243",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_createdonation",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19579,9 +19710,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_getdonations",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19590,9 +19721,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L375",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_getecoimpactstats",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19601,9 +19732,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L219",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_getstate",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19612,9 +19743,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L323",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_getstores",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19623,9 +19754,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_init",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19634,9 +19765,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_loadstate",
-      "target": "frontend_localdb_savestate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_savestate"
     },
     {
       "relation": "calls",
@@ -19645,9 +19776,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L284",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_updatedonationstatus",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19656,9 +19787,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L328",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_updatestoreverification",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19667,9 +19798,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L355",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_uploadstorelicense",
-      "target": "frontend_localdb_loadstate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_loadstate"
     },
     {
       "relation": "calls",
@@ -19678,9 +19809,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L278",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_createdonation",
-      "target": "frontend_localdb_savestate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_savestate"
     },
     {
       "relation": "calls",
@@ -19689,9 +19820,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L223",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_resettoseeddata",
-      "target": "frontend_localdb_savestate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_savestate"
     },
     {
       "relation": "calls",
@@ -19700,9 +19831,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L316",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_updatedonationstatus",
-      "target": "frontend_localdb_savestate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_savestate"
     },
     {
       "relation": "calls",
@@ -19711,9 +19842,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L349",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_updatestoreverification",
-      "target": "frontend_localdb_savestate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_savestate"
     },
     {
       "relation": "calls",
@@ -19722,9 +19853,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L368",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_uploadstorelicense",
-      "target": "frontend_localdb_savestate",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_savestate"
     },
     {
       "relation": "calls",
@@ -19733,9 +19864,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L279",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_createdonation",
-      "target": "frontend_localdb_emitsync",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_emitsync"
     },
     {
       "relation": "calls",
@@ -19744,9 +19875,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L224",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_resettoseeddata",
-      "target": "frontend_localdb_emitsync",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_emitsync"
     },
     {
       "relation": "calls",
@@ -19755,9 +19886,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L317",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_updatedonationstatus",
-      "target": "frontend_localdb_emitsync",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_emitsync"
     },
     {
       "relation": "calls",
@@ -19766,9 +19897,9 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L350",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_updatestoreverification",
-      "target": "frontend_localdb_emitsync",
-      "confidence_score": 1.0
+      "target": "frontend_localdb_emitsync"
     },
     {
       "relation": "calls",
@@ -19777,8 +19908,101 @@
       "source_file": "frontend/localDb.js",
       "source_location": "L369",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_localdb_uploadstorelicense",
-      "target": "frontend_localdb_emitsync",
+      "target": "frontend_localdb_emitsync"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice",
+      "target": "frontend_logisticsservice_calculatedistancekm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice",
+      "target": "frontend_logisticsservice_calculatefee",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice",
+      "target": "frontend_logisticsservice_getpreservationpacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice",
+      "target": "frontend_logisticsservice_getproviders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice",
+      "target": "frontend_logisticsservice_showdispatchmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L284",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice",
+      "target": "frontend_logisticsservice_showdrivertrackingmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice_showdispatchmodal",
+      "target": "frontend_logisticsservice_calculatedistancekm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice_showdispatchmodal",
+      "target": "frontend_logisticsservice_calculatefee",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/logisticsService.js",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "frontend_logisticsservice_showdispatchmodal",
+      "target": "frontend_logisticsservice_showdrivertrackingmodal",
       "confidence_score": 1.0
     },
     {
@@ -19787,9 +20011,9 @@
       "source_file": "frontend/qrService.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_qrservice",
-      "target": "frontend_qrservice_generateqrcodesvg",
-      "confidence_score": 1.0
+      "target": "frontend_qrservice_generateqrcodesvg"
     },
     {
       "relation": "contains",
@@ -19797,9 +20021,9 @@
       "source_file": "frontend/qrService.js",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_qrservice",
-      "target": "frontend_qrservice_showhandoverqr",
-      "confidence_score": 1.0
+      "target": "frontend_qrservice_showhandoverqr"
     },
     {
       "relation": "contains",
@@ -19807,9 +20031,9 @@
       "source_file": "frontend/qrService.js",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_qrservice",
-      "target": "frontend_qrservice_showscanner",
-      "confidence_score": 1.0
+      "target": "frontend_qrservice_showscanner"
     },
     {
       "relation": "calls",
@@ -19818,9 +20042,9 @@
       "source_file": "frontend/qrService.js",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_qrservice_showhandoverqr",
-      "target": "frontend_qrservice_generateqrcodesvg",
-      "confidence_score": 1.0
+      "target": "frontend_qrservice_generateqrcodesvg"
     },
     {
       "relation": "contains",
@@ -19857,262 +20081,272 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L13",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "target": "foodsavevietnam_package_dependencies"
+      "source": "package",
+      "target": "package_dependencies"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "target": "foodsavevietnam_package_description"
+      "source": "package",
+      "target": "package_description"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "target": "foodsavevietnam_package_devdependencies"
+      "source": "package",
+      "target": "package_devdependencies"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "target": "foodsavevietnam_package_engines"
+      "source": "package",
+      "target": "package_engines"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "target": "foodsavevietnam_package_name"
+      "source": "package",
+      "target": "package_name"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "target": "foodsavevietnam_package_private"
+      "source": "package",
+      "target": "package_private"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "target": "foodsavevietnam_package_scripts"
+      "source": "package",
+      "target": "package_scripts"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "users_xuannguyen_gemini_antigravity_ide_scratch_foodsavevietnam_package_json",
-      "target": "foodsavevietnam_package_version"
+      "source": "package",
+      "target": "package_version"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_engines",
-      "target": "foodsavevietnam_package_engines_node"
+      "source": "package_engines",
+      "target": "package_engines_node"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_scripts",
-      "target": "foodsavevietnam_package_scripts_build"
+      "source": "package_scripts",
+      "target": "package_scripts_build"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_scripts",
-      "target": "foodsavevietnam_package_scripts_start"
+      "source": "package_scripts",
+      "target": "package_scripts_start"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L15",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_cors"
+      "source": "package_dependencies",
+      "target": "package_dependencies_cors"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_dotenv"
+      "source": "package_dependencies",
+      "target": "package_dependencies_dotenv"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_express"
+      "source": "package_dependencies",
+      "target": "package_dependencies_express"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L18",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_express_rate_limit"
+      "source": "package_dependencies",
+      "target": "package_dependencies_express_rate_limit"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L19",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_helmet"
+      "source": "package_dependencies",
+      "target": "package_dependencies_helmet"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_pg"
+      "source": "package_dependencies",
+      "target": "package_dependencies_pg"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L21",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_serverless_http"
+      "source": "package_dependencies",
+      "target": "package_dependencies_serverless_http"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L22",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_socket_io"
+      "source": "package_dependencies",
+      "target": "package_dependencies_socket_io"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_supabase_supabase_js"
+      "source": "package_dependencies",
+      "target": "package_dependencies_supabase_supabase_js"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L23",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_dependencies",
-      "target": "foodsavevietnam_package_dependencies_zod"
+      "source": "package_dependencies",
+      "target": "package_dependencies_zod"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L26",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_devdependencies",
-      "target": "foodsavevietnam_package_devdependencies_types_cors"
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_cors"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_devdependencies",
-      "target": "foodsavevietnam_package_devdependencies_types_express"
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_express"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L28",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_devdependencies",
-      "target": "foodsavevietnam_package_devdependencies_types_node"
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L29",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_devdependencies",
-      "target": "foodsavevietnam_package_devdependencies_types_pg"
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_pg"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/package.json",
+      "source_file": "package.json",
       "source_location": "L30",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "foodsavevietnam_package_devdependencies",
-      "target": "foodsavevietnam_package_devdependencies_typescript"
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript"
     },
     {
       "relation": "imports_from",
@@ -31511,6 +31745,56 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "vercel",
+      "target": "vercel_cleanurls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "vercel",
+      "target": "vercel_headers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "vercel",
+      "target": "vercel_rewrites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "vercel",
+      "target": "vercel_trailingslash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "vercel",
+      "target": "vercel_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "/Users/xuannguyen/.gemini/antigravity-ide/scratch/FoodSaveVietNam/README.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -32104,9 +32388,9 @@
       "source_file": "brainstorming/phase3_plan.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase3_plan",
-      "target": "brainstorming_phase3_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_3_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_qr_code_giao_nh\u1eadn_x\u00e1c_th\u1ef1c_ph\u00e1p_l\u00fd_local_database",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase3_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_3_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_qr_code_giao_nh\u1eadn_x\u00e1c_th\u1ef1c_ph\u00e1p_l\u00fd_local_database"
     },
     {
       "relation": "contains",
@@ -32114,9 +32398,9 @@
       "source_file": "brainstorming/phase3_plan.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase3_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_3_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_qr_code_giao_nh\u1eadn_x\u00e1c_th\u1ef1c_ph\u00e1p_l\u00fd_local_database",
-      "target": "brainstorming_phase3_plan_1_n\u1ec1n_t\u1ea3ng_local_database_engine_cho_b\u1ea3n_demo_kh\u00e1ch_xem",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase3_plan_1_n\u1ec1n_t\u1ea3ng_local_database_engine_cho_b\u1ea3n_demo_kh\u00e1ch_xem"
     },
     {
       "relation": "contains",
@@ -32124,9 +32408,9 @@
       "source_file": "brainstorming/phase3_plan.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase3_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_3_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_qr_code_giao_nh\u1eadn_x\u00e1c_th\u1ef1c_ph\u00e1p_l\u00fd_local_database",
-      "target": "brainstorming_phase3_plan_2_chi_ti\u1ebft_4_t\u00ednh_n\u0103ng_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_giai_\u0111o\u1ea1n_3",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase3_plan_2_chi_ti\u1ebft_4_t\u00ednh_n\u0103ng_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_giai_\u0111o\u1ea1n_3"
     },
     {
       "relation": "contains",
@@ -32134,9 +32418,9 @@
       "source_file": "brainstorming/phase3_plan.md",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase3_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_3_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_qr_code_giao_nh\u1eadn_x\u00e1c_th\u1ef1c_ph\u00e1p_l\u00fd_local_database",
-      "target": "brainstorming_phase3_plan_3_checklist_ki\u1ec3m_th\u1eed_khi_demo_cho_kh\u00e1ch",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase3_plan_3_checklist_ki\u1ec3m_th\u1eed_khi_demo_cho_kh\u00e1ch"
     },
     {
       "relation": "contains",
@@ -32144,9 +32428,9 @@
       "source_file": "brainstorming/phase3_plan.md",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase3_plan_2_chi_ti\u1ebft_4_t\u00ednh_n\u0103ng_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_giai_\u0111o\u1ea1n_3",
-      "target": "brainstorming_phase3_plan_t\u00ednh_n\u0103ng_1_giao_nh\u1eadn_\u0111i\u1ec7n_t\u1eed_b\u1eb1ng_m\u00e3_qr_e_handover_protocol",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase3_plan_t\u00ednh_n\u0103ng_1_giao_nh\u1eadn_\u0111i\u1ec7n_t\u1eed_b\u1eb1ng_m\u00e3_qr_e_handover_protocol"
     },
     {
       "relation": "contains",
@@ -32154,9 +32438,9 @@
       "source_file": "brainstorming/phase3_plan.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase3_plan_2_chi_ti\u1ebft_4_t\u00ednh_n\u0103ng_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_giai_\u0111o\u1ea1n_3",
-      "target": "brainstorming_phase3_plan_t\u00ednh_n\u0103ng_2_c\u1ed5ng_n\u1ed9p_h\u1ed3_s\u01a1_x\u00e1c_th\u1ef1c_ph\u00e1p_l\u00fd_kyb_verification",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase3_plan_t\u00ednh_n\u0103ng_2_c\u1ed5ng_n\u1ed9p_h\u1ed3_s\u01a1_x\u00e1c_th\u1ef1c_ph\u00e1p_l\u00fd_kyb_verification"
     },
     {
       "relation": "contains",
@@ -32164,9 +32448,9 @@
       "source_file": "brainstorming/phase3_plan.md",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase3_plan_2_chi_ti\u1ebft_4_t\u00ednh_n\u0103ng_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_giai_\u0111o\u1ea1n_3",
-      "target": "brainstorming_phase3_plan_t\u00ednh_n\u0103ng_3_giao_di\u1ec7n_ph\u00ea_duy\u1ec7t_h\u1ed3_s\u01a1_qu\u1ea3n_tr\u1ecb_admin_review_panel",
-      "confidence_score": 1.0
+      "target": "brainstorming_phase3_plan_t\u00ednh_n\u0103ng_3_giao_di\u1ec7n_ph\u00ea_duy\u1ec7t_h\u1ed3_s\u01a1_qu\u1ea3n_tr\u1ecb_admin_review_panel"
     },
     {
       "relation": "contains",
@@ -32174,8 +32458,168 @@
       "source_file": "brainstorming/phase3_plan.md",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorming_phase3_plan_2_chi_ti\u1ebft_4_t\u00ednh_n\u0103ng_nghi\u1ec7p_v\u1ee5_c\u1ed1t_l\u00f5i_giai_\u0111o\u1ea1n_3",
-      "target": "brainstorming_phase3_plan_t\u00ednh_n\u0103ng_4_xu\u1ea5t_gi\u1ea5y_ch\u1ee9ng_nh\u1eadn_esg_gi\u1ea3m_ph\u00e1t_th\u1ea3i_co2_pdf_certificate",
+      "target": "brainstorming_phase3_plan_t\u00ednh_n\u0103ng_4_xu\u1ea5t_gi\u1ea5y_ch\u1ee9ng_nh\u1eadn_esg_gi\u1ea3m_ph\u00e1t_th\u1ea3i_co2_pdf_certificate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan",
+      "target": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
+      "target": "brainstorming_phase4_plan_1_ph\u00e2n_t\u00edch_hi\u1ec7n_tr\u1ea1ng_y\u00eau_c\u1ea7u_giai_\u0111o\u1ea1n_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
+      "target": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
+      "target": "brainstorming_phase4_plan_3_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_t\u1eebng_b\u01b0\u1edbc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan_k\u1ebf_ho\u1ea1ch_tri\u1ec3n_khai_giai_\u0111o\u1ea1n_4_phase_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_logistics_s\u1eb5n_s\u00e0ng_tri\u1ec3n_khai",
+      "target": "brainstorming_phase4_plan_4_cam_k\u1ebft_b\u1ea3o_to\u00e0n",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
+      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_1_ph\u00e2n_h\u1ec7_\u0111i\u1ec1u_ph\u1ed1i_v\u1eadn_chuy\u1ec3n_kh\u1ea9n_c\u1ea5p_logistics_dispatch_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
+      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_2_h\u1ec7_th\u1ed1ng_c\u1ea3nh_b\u00e1o_kh\u1ea9n_c\u1ea5p_t\u1ee9c_th\u1eddi_urgent_alert_zns_simulator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
+      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_3_b\u1ed9_ki\u1ec3m_th\u1eed_t\u1ef1_\u0111\u1ed9ng_automated_test_suite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "brainstorming/phase4_plan.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "brainstorming_phase4_plan_2_chi_ti\u1ebft_c\u00e1c_h\u1ea1ng_m\u1ee5c_th\u1ef1c_hi\u1ec7n_work_breakdown_structure",
+      "target": "brainstorming_phase4_plan_h\u1ea1ng_m\u1ee5c_4_4_c\u1ea5u_h\u00ecnh_tri\u1ec3n_khai_vercel_\u0111\u00f3ng_g\u00f3i",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_nextjs_migration",
+      "target": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
+      "target": "docs_nextjs_migration_1_b\u1ea3n_\u0111\u1ed3_\u00e1nh_x\u1ea1_tuy\u1ebfn_\u0111\u01b0\u1eddng_route_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
+      "target": "docs_nextjs_migration_2_c\u00e1c_th\u00e0nh_ph\u1ea7n_shadcn_ui_t\u01b0\u01a1ng_\u1ee9ng",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
+      "target": "docs_nextjs_migration_3_ki\u1ebfn_tr\u00fac_qu\u1ea3n_l\u00fd_d\u1eef_li\u1ec7u_data_layer_state_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "docs_nextjs_migration_l\u1ed9_tr\u00ecnh_chuy\u1ec3n_\u0111\u1ed5i_sang_next_js_app_router_shadcn_ui",
+      "target": "docs_nextjs_migration_4_t\u00edch_h\u1ee3p_supabase_ssr_server_side_rendering",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "docs_nextjs_migration_2_c\u00e1c_th\u00e0nh_ph\u1ea7n_shadcn_ui_t\u01b0\u01a1ng_\u1ee9ng",
+      "target": "docs_nextjs_migration_\u00e1nh_x\u1ea1_giao_di\u1ec7n_c\u1ee5_th\u1ec3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/NEXTJS_MIGRATION.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "docs_nextjs_migration_3_ki\u1ebfn_tr\u00fac_qu\u1ea3n_l\u00fd_d\u1eef_li\u1ec7u_data_layer_state_management",
+      "target": "docs_nextjs_migration_t\u00edch_h\u1ee3p_tanstack_query_react_query",
       "confidence_score": 1.0
     },
     {
@@ -32407,266 +32851,6 @@
       "confidence_score": 1.0,
       "source": "foodsavevietnam_improvements_chi_ti\u1ebft_c\u00e1c_b\u01b0\u1edbc_th\u1ef1c_hi\u1ec7n",
       "target": "foodsavevietnam_improvements_giai_\u0111o\u1ea1n_4_v\u1eadn_h\u00e0nh_th\u1ef1c_\u0111\u1ecba_n\u00e2ng_c\u1ea5p_giao_di\u1ec7n_2_\u0111\u1ebfn_3_tu\u1ea7n"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_dependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_description"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_devdependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_engines"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_private"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_scripts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_engines",
-      "target": "package_engines_node"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_build"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_start"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_cors"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_dotenv"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_express_rate_limit"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_helmet"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_pg"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_serverless_http"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_socket_io"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_supabase_supabase_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_zod"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_cors"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_pg"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript"
     },
     {
       "relation": "contains",
@@ -33220,5 +33404,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e552fa1d1107bb17ea1f50cfcd5ca50c1b108cf4"
+  "built_at_commit": "23671637d2e359857fcdf1a9265eaab8202444f0"
 }
