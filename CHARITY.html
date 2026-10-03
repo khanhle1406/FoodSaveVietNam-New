@@ -3773,8 +3773,8 @@ window.FS = window.FS || {};
   try {
     if (typeof window.supabase !== 'undefined' && typeof window.supabase.createClient === 'function') {
       const sb = window.supabase.createClient(
-        'https://idhpydhlgnxjjtyrgfkj.supabase.co',
-        'sb_publishable_kBjao9fkPwim7sJKZfWf_Q_JGRZuUOf'
+        'https://qrvzksosgrgsoibsisyk.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFydnprc29zZ3Jnc29pYnNpc3lrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA5OTI4NTMsImV4cCI6MjEwNjU2ODg1M30.6b_xpOEFWd4Gj9rK4d0lk3IPYqV7CyF0HQxv05CRipo'
       );
       sb.channel('realtime_charity_donations')
         .on('postgres_changes', { event: '*', schema: 'public', table: 'donations' }, (payload) => {

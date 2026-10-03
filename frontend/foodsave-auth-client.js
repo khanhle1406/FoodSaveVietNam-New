@@ -5,8 +5,8 @@
   const API_PATH = "/api/v1";
   const AUTH_STORAGE_KEY = "foodsave.auth.session";
   const PHONE_OTP_STORAGE_KEY = "foodsave.auth.phoneOtp";
-  const SUPABASE_URL = "https://idhpydhlgnxjjtyrgfkj.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_kBjao9fkPwim7sJKZfWf_Q_JGRZuUOf";
+  const SUPABASE_URL = "https://qrvzksosgrgsoibsisyk.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFydnprc29zZ3Jnc29pYnNpc3lrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA5OTI4NTMsImV4cCI6MjEwNjU2ODg1M30.6b_xpOEFWd4Gj9rK4d0lk3IPYqV7CyF0HQxv05CRipo";
   let oauthNoticeTimer = 0;
   let customerLoginPending = false;
   let customerRegisterPending = false;
