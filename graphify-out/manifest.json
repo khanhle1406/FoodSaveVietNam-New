@@ -990,8 +990,8 @@
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/next.config.mjs": {
-    "mtime": 1791005761.6845984,
-    "ast_hash": "3e6cd44d1e235c4ae3717384d7e01a15",
+    "mtime": 1791007395.633886,
+    "ast_hash": "909bd7f2f3b4e9935ed17a1036d7f68f",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/postcss.config.mjs": {
@@ -1000,13 +1000,13 @@
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/admin/page.tsx": {
-    "mtime": 1791005288.4689927,
-    "ast_hash": "ea66a3dd62a2795386e90ada24bda724",
+    "mtime": 1791007273.577932,
+    "ast_hash": "1ce7436c83c0223f804cb3226775826e",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/charity/page.tsx": {
-    "mtime": 1791005272.6498997,
-    "ast_hash": "3220222a11b8fef5598f0f6f41976eb1",
+    "mtime": 1791007383.869668,
+    "ast_hash": "116725dc21be01d6154d293c6bf2ad5f",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/layout.tsx": {
@@ -1015,13 +1015,13 @@
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/page.tsx": {
-    "mtime": 1791005240.8685129,
-    "ast_hash": "342f7b7926b0e5d380f377435dd54810",
+    "mtime": 1791007232.1020534,
+    "ast_hash": "93e9f1903d59afe63f90d64e56dfe6d0",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/partner/page.tsx": {
-    "mtime": 1791005256.901359,
-    "ast_hash": "77a345a23090f706c8ed1fd5061e3d84",
+    "mtime": 1791007389.5228379,
+    "ast_hash": "4fa863fb1801b5bfff98b3eb7ab9bdd9",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/components/alerts/UrgentRedBanner.tsx": {
@@ -1114,26 +1114,6 @@
     "ast_hash": "8a5638e4593ce8dbbcc6d4c5d6211771",
     "semantic_hash": ""
   },
-  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/ADMIN_FOODSAVE.html": {
-    "mtime": 1791005754.8334749,
-    "ast_hash": "f29a74a645cdc1e7819ef9f51c86534a",
-    "semantic_hash": ""
-  },
-  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/CHARITY.html": {
-    "mtime": 1791006585.2735946,
-    "ast_hash": "10350d8db80112338740c80d315a1ad6",
-    "semantic_hash": ""
-  },
-  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/PARTNER.html": {
-    "mtime": 1791006596.0315745,
-    "ast_hash": "b20746a8ce601c683289afa115357c46",
-    "semantic_hash": ""
-  },
-  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/index.html": {
-    "mtime": 1791005754.8110247,
-    "ast_hash": "b5cef1a0bdadf82c06c14a897b94979c",
-    "semantic_hash": ""
-  },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/brainstorming/development_roadmap_2026.md": {
     "mtime": 1791006241.6886146,
     "ast_hash": "11420a74084cabf2c907464d268b800c",
@@ -1162,6 +1142,31 @@
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/test/foodsave_matching.test.mjs": {
     "mtime": 1791006451.308064,
     "ast_hash": "eea703ab98c7b495f514261262dbbcf6",
+    "semantic_hash": ""
+  },
+  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/frontend/admin-bundle.js": {
+    "mtime": 1791007251.195994,
+    "ast_hash": "84baf352a1e1262d2aac6b723ee5bad6",
+    "semantic_hash": ""
+  },
+  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/frontend/charity-bundle.js": {
+    "mtime": 1791007307.8181264,
+    "ast_hash": "43c4cedcf90b3db62bc74d6022a6cd12",
+    "semantic_hash": ""
+  },
+  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/frontend/partner-bundle.js": {
+    "mtime": 1791007363.7176473,
+    "ast_hash": "4d12dc94d819be3597a8bbbc8eca8e84",
+    "semantic_hash": ""
+  },
+  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/charity/charityHtml.ts": {
+    "mtime": 1791007375.8765461,
+    "ast_hash": "7643098a954ff7c2512f349861aac425",
+    "semantic_hash": ""
+  },
+  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/partner/partnerHtml.ts": {
+    "mtime": 1791007375.8826766,
+    "ast_hash": "98837459854b0f54ff97c59991ffd576",
     "semantic_hash": ""
   }
 }

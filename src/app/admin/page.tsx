@@ -1,338 +1,315 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { useLocalDb, StoreKYB } from '@/context/LocalDbContext';
-import {
-  ShieldCheck,
-  Building2,
-  Lock,
-  CheckCircle2,
-  XCircle,
-  FileText,
-  Clock,
-  ArrowLeft,
-  Search,
-  Award,
-  Users,
-  AlertTriangle,
-  LogOut
-} from 'lucide-react';
+import '@/styles/admin.css';
 
 export default function AdminPortalPage() {
-  const { stores, donations, logs, updateKYBStatus, getEsgTotals } = useLocalDb();
-  const { totalWeightKg, totalCo2AvoidedKg, totalMeals } = getEsgTotals();
+  useEffect(() => {
+    let isMounted = true;
 
-  // Authentication Gate State
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true); // Default active for seamless demo inspection
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [authError, setAuthError] = useState('');
+    const loadScript = (src: string): Promise<void> => {
+      return new Promise((resolve, reject) => {
+        const existing = document.querySelector(`script[src="${src}"]`);
+        if (existing) {
+          resolve();
+          return;
+        }
+        const s = document.createElement('script');
+        s.src = src;
+        s.async = false;
+        s.onload = () => resolve();
+        s.onerror = (e) => reject(e);
+        document.body.appendChild(s);
+      });
+    };
 
-  // Active Tab
-  const [activeTab, setActiveTab] = useState<'kyb' | 'donations' | 'logs'>('kyb');
+    const initAdmin = async () => {
+      try {
+        if (typeof window !== 'undefined' && !(window as any).supabase) {
+          await loadScript('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2');
+        }
+        await loadScript('/frontend/localDb.js');
+        await loadScript('/frontend/logisticsService.js');
+        await loadScript('/frontend/alertService.js');
+        await loadScript('/frontend/admin-bundle.js');
+      } catch (err) {
+        console.error('Lỗi khi tải script quản trị Admin:', err);
+      }
+    };
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email === 'admin@foodsave.vn' && (password === 'admin123' || password === 'FoodSave@2026')) {
-      setIsAuthenticated(true);
-      setAuthError('');
-    } else {
-      setAuthError('Email hoặc mật khẩu không chính xác. Sử dụng admin@foodsave.vn / admin123 để kiểm thử demo.');
-    }
-  };
+    initAdmin();
 
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen bg-neutral-950 flex items-center justify-center p-4">
-        <div className="w-full max-w-md bg-neutral-900 border border-neutral-800 rounded-3xl p-8 shadow-2xl text-white">
-          <div className="w-12 h-12 rounded-2xl bg-green-900/60 border border-green-700/50 flex items-center justify-center text-green-400 mx-auto mb-4">
-            <Lock className="w-6 h-6" />
-          </div>
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
-          <h2 className="text-2xl font-black text-center text-white">Cổng Quản Trị Hệ Thống</h2>
-          <p className="text-xs text-neutral-400 text-center mt-1">Xác thực quyền quản trị viên FoodSave Việt Nam</p>
-
-          {authError && (
-            <div className="mt-4 p-3 bg-red-950/60 border border-red-800 text-red-300 text-xs rounded-xl font-medium">
-              {authError}
-            </div>
-          )}
-
-          <form onSubmit={handleLogin} className="mt-6 space-y-4 text-xs font-semibold">
-            <div>
-              <label className="block mb-1.5 text-neutral-300">Email Quản Trị Viên</label>
-              <input
-                type="email"
-                required
-                placeholder="admin@foodsave.vn"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-neutral-800 border border-neutral-700 text-white focus:outline-none focus:border-green-500 font-medium"
-              />
-            </div>
-
-            <div>
-              <label className="block mb-1.5 text-neutral-300">Mật khẩu</label>
-              <input
-                type="password"
-                required
-                placeholder="••••••••"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-neutral-800 border border-neutral-700 text-white focus:outline-none focus:border-green-500 font-medium"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full btn btn-primary py-3.5 text-xs font-black shadow-lg shadow-green-900/30 mt-2"
+  return (
+    <>
+      {/* ADMIN AUTH GATE OVERLAY */}
+      <div
+        id="admin-auth-gate"
+        style={{
+          position: 'fixed',
+          inset: 0,
+          background: 'radial-gradient(circle at 50% 30%, #153b2a, #0b1a13)',
+          zIndex: 99999,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: 20,
+          fontFamily: 'var(--f, system-ui, sans-serif)',
+        }}
+      >
+        <div
+          style={{
+            background: '#ffffff',
+            borderRadius: 18,
+            maxWidth: 420,
+            width: '100%',
+            padding: '32px 28px',
+            boxShadow: '0 24px 48px rgba(0,0,0,0.35)',
+            textAlign: 'center',
+          }}
+        >
+          <div
+            style={{
+              fontWeight: 900,
+              fontSize: '1.6rem',
+              color: '#1A6B47',
+              letterSpacing: '-0.5px',
+              marginBottom: 8,
+            }}
+          >
+            FOOD<span style={{ color: '#F7B928' }}>SAVE</span>{' '}
+            <span
+              style={{
+                fontSize: '0.9rem',
+                background: '#e8f5e9',
+                color: '#1A6B47',
+                padding: '3px 8px',
+                borderRadius: 6,
+                verticalAlign: 'middle',
+              }}
             >
-              Đăng Nhập Quản Trị
+              ADMIN
+            </span>
+          </div>
+          <p style={{ fontSize: '0.86rem', color: '#555', margin: '0 0 20px 0', lineHeight: 1.4 }}>
+            Khu vực quản trị hệ thống. Vui lòng xác thực tài khoản có quyền Quản trị viên để truy cập.
+          </p>
+          <div
+            id="gate-err"
+            style={{
+              display: 'none',
+              background: '#fef2f2',
+              border: '1px solid #fecaca',
+              color: '#b91c1c',
+              padding: '10px 12px',
+              borderRadius: 8,
+              fontSize: '0.8rem',
+              marginBottom: 16,
+              textAlign: 'left',
+            }}
+          ></div>
+          <form id="gate-form" style={{ display: 'grid', gap: 14, textAlign: 'left' }}>
+            <div>
+              <label
+                style={{
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  color: '#333',
+                  display: 'block',
+                  marginBottom: 5,
+                  textTransform: 'uppercase',
+                }}
+              >
+                Email quản trị
+              </label>
+              <input
+                id="gate-email"
+                type="email"
+                placeholder="admin@foodsave.vn"
+                required
+                style={{
+                  width: '100%',
+                  padding: '11px 12px',
+                  border: '1.5px solid #d1d5db',
+                  borderRadius: 8,
+                  fontSize: '0.92rem',
+                  boxSizing: 'border-box',
+                  outline: 'none',
+                }}
+              />
+            </div>
+            <div>
+              <label
+                style={{
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  color: '#333',
+                  display: 'block',
+                  marginBottom: 5,
+                  textTransform: 'uppercase',
+                }}
+              >
+                Mật khẩu
+              </label>
+              <input
+                id="gate-pass"
+                type="password"
+                placeholder="••••••••"
+                required
+                style={{
+                  width: '100%',
+                  padding: '11px 12px',
+                  border: '1.5px solid #d1d5db',
+                  borderRadius: 8,
+                  fontSize: '0.92rem',
+                  boxSizing: 'border-box',
+                  outline: 'none',
+                }}
+              />
+            </div>
+            <button
+              id="gate-btn"
+              type="submit"
+              style={{
+                marginTop: 6,
+                padding: 12,
+                background: '#1A6B47',
+                color: '#fff',
+                border: 'none',
+                borderRadius: 8,
+                fontWeight: 700,
+                fontSize: '0.95rem',
+                cursor: 'pointer',
+                transition: 'background 0.2s',
+              }}
+            >
+              Đăng nhập Quản trị
             </button>
           </form>
-
-          <div className="mt-6 pt-4 border-t border-neutral-800 text-center">
-            <Link href="/" className="text-xs text-neutral-500 hover:text-neutral-300">
-              Quay lại Trang Chủ
+          <div style={{ marginTop: 22, borderTop: '1px solid #e5e7eb', paddingTop: 16 }}>
+            <Link
+              href="/"
+              style={{ color: '#6b7280', fontSize: '0.82rem', textDecoration: 'none', fontWeight: 500 }}
+            >
+              ← Quay về Trang chủ FoodSave
             </Link>
           </div>
         </div>
       </div>
-    );
-  }
 
-  const pendingStores = stores.filter((s) => s.verification_status === 'pending_review');
+      {/* ADMIN SIDEBAR */}
+      <aside className="S">
+        <div className="S-b">
+          <h1>
+            <span className="brand-word">
+              FOOD<span>SAVE</span>
+            </span>
+          </h1>
+        </div>
+        <nav className="S-n">
+          <div className="S-s">Tổng quan</div>
+          <div className="S-i on" data-p="dashboard">Bảng điều khiển</div>
+          <div className="S-s">Người dùng</div>
+          <div className="S-i" data-p="admins">Quản trị viên <em>40</em></div>
+          <div className="S-i" data-p="users">Người dùng <em>40</em></div>
+          <div className="S-i" data-p="reputation">Uy tín</div>
+          <div className="S-s">Đối tác</div>
+          <div className="S-i" data-p="merchants">Cửa hàng <em>40</em></div>
+          <div className="S-i" data-p="charities">Tổ chức từ thiện <em>40</em></div>
+          <div className="S-i" data-p="kyb">
+            Duyệt hồ sơ KYB <em id="kyb-badge" style={{ background: '#ea580c', color: '#fff' }}>1</em>
+          </div>
+          <div className="S-s">Kho hàng</div>
+          <div className="S-i" data-p="inventory">Lô hàng tồn kho <em>40</em></div>
+          <div className="S-s">Giao dịch</div>
+          <div className="S-i" data-p="orders">Đơn hàng <em>40</em></div>
+          <div className="S-i" data-p="payments">Thanh toán <em>40</em></div>
+          <div className="S-i" data-p="payouts">Chi trả đối tác <em>40</em></div>
+          <div className="S-s">Xử lý vi phạm</div>
+          <div className="S-i" data-p="disputes">Tranh chấp <em>7</em></div>
+          <div className="S-i" data-p="risks">Cảnh báo gian lận <em>40</em></div>
+          <div className="S-s">Hệ thống</div>
+          <div className="S-i" data-p="audits">Nhật ký hoạt động <em>40</em></div>
+          <div className="S-i" data-p="config">Cấu hình</div>
+        </nav>
+        <div className="S-f">
+          <b id="admin-name">Quản trị viên</b>
+          <small
+            style={{ cursor: 'pointer', color: 'var(--err)', textDecoration: 'underline' }}
+            onClick={() => {
+              if (typeof window !== 'undefined' && (window as any).adminSignOut) {
+                (window as any).adminSignOut();
+              }
+            }}
+          >
+            Đăng xuất
+          </small>
+        </div>
+      </aside>
 
-  return (
-    <div className="min-h-screen bg-[#fafafa] text-neutral-900 pb-20">
-      {/* Top Header */}
-      <header className="sticky top-0 z-30 bg-neutral-950 text-white border-b border-neutral-800">
-        <div className="wrap h-18 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link href="/" className="text-neutral-400 hover:text-white transition p-1.5 rounded-xl hover:bg-neutral-800">
-              <ArrowLeft className="w-5 h-5" />
-            </Link>
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-green-600 text-white flex items-center justify-center font-black">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <div>
-                <h1 className="text-base font-black text-white flex items-center gap-2">
-                  FoodSave Admin Portal
-                  <span className="text-[10px] bg-green-900 text-green-300 px-2 py-0.5 rounded-full font-mono">
-                    SUPERADMIN
-                  </span>
-                </h1>
-                <div className="text-xs text-neutral-400 font-medium">
-                  Hệ thống kiểm toán & thẩm định pháp lý đối tác
-                </div>
-              </div>
+      {/* MAIN CONTENT AREA */}
+      <div className="M">
+        <div className="T">
+          <h2 id="pt">Bảng điều khiển</h2>
+          <div className="T-r">
+            <div className="T-s">
+              <input placeholder="Tìm kiếm..." />
             </div>
           </div>
+        </div>
+        <div className="C" id="ct"></div>
+      </div>
 
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => setIsAuthenticated(false)}
-              className="text-xs text-neutral-400 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-neutral-800 transition"
-            >
-              <LogOut className="w-4 h-4" /> Đăng xuất
-            </button>
+      {/* FOOTER */}
+      <footer className="foodsave-global-footnote" aria-label="FoodSave footer">
+        <div className="foodsave-footnote-wrap">
+          <Link className="foodsave-footnote-brand" href="/" aria-label="FoodSave">
+            <span className="brand-word">
+              FOOD<span>SAVE</span>
+            </span>
+          </Link>
+          <p className="foodsave-footnote-copy">
+            © 2026 Công ty TNHH FoodSave Việt Nam · MSDN 0317456789 · Trụ sở 19 Nguyễn Hữu Thọ, TP.HCM · Thực phẩm cứu trợ miễn phí, không thương mại hóa quyên góp.
+          </p>
+          <div className="foodsave-footnote-links" aria-label="Kênh liên hệ FoodSave">
+            <a href="mailto:hello@foodsave.vn">hello@foodsave.vn</a>
+            <a href="mailto:partners@foodsave.vn">partners@foodsave.vn</a>
+            <a href="mailto:charity@foodsave.vn">charity@foodsave.vn</a>
           </div>
         </div>
-      </header>
+      </footer>
 
-      {/* Main Body */}
-      <main className="wrap pt-8">
-        {/* KPI Banner */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white p-5 rounded-3xl border border-neutral-200 shadow-sm">
-            <div className="text-xs font-bold text-neutral-500 uppercase">Đối tác Cửa hàng</div>
-            <div className="text-2xl sm:text-3xl font-black text-neutral-950 mt-1">{stores.length}</div>
-            <div className="text-[11px] text-amber-600 font-bold mt-1">
-              {pendingStores.length} hồ sơ chờ duyệt KYB
-            </div>
-          </div>
-
-          <div className="bg-white p-5 rounded-3xl border border-neutral-200 shadow-sm">
-            <div className="text-xs font-bold text-neutral-500 uppercase">Thực phẩm điều phối</div>
-            <div className="text-2xl sm:text-3xl font-black text-neutral-950 mt-1">{totalWeightKg + 14850} <span className="text-xs text-neutral-500">kg</span></div>
-            <div className="text-[11px] text-neutral-500 mt-1 font-medium">{donations.length} đợt cứu trợ</div>
-          </div>
-
-          <div className="bg-white p-5 rounded-3xl border border-neutral-200 shadow-sm">
-            <div className="text-xs font-bold text-neutral-500 uppercase">CO2e Giảm Phát Thải</div>
-            <div className="text-2xl sm:text-3xl font-black text-green-700 mt-1">{totalCo2AvoidedKg + 37125} <span className="text-xs text-neutral-500">kg</span></div>
-            <div className="text-[11px] text-neutral-500 mt-1 font-medium">Tiêu chuẩn GHG Protocol</div>
-          </div>
-
-          <div className="bg-white p-5 rounded-3xl border border-neutral-200 shadow-sm">
-            <div className="text-xs font-bold text-neutral-500 uppercase">Nhật ký Bàn Giao QR</div>
-            <div className="text-2xl sm:text-3xl font-black text-blue-700 mt-1">{logs.length + 18}</div>
-            <div className="text-[11px] text-emerald-700 font-bold mt-1">Chữ ký số xác thực 100%</div>
-          </div>
-        </div>
-
-        {/* Tab Navigation */}
-        <div className="flex items-center gap-2 border-b border-neutral-200 mb-6 pb-2 text-xs font-extrabold">
+      {/* DETAIL MODAL & OVERLAY */}
+      <div
+        className="DO"
+        id="dO"
+        onClick={() => {
+          if (typeof window !== 'undefined' && (window as any).xD) {
+            (window as any).xD();
+          }
+        }}
+      ></div>
+      <div className="DP" id="dP">
+        <div className="DP-h">
+          <h3 id="dT"></h3>
           <button
-            onClick={() => setActiveTab('kyb')}
-            className={`px-4 py-2 rounded-xl transition flex items-center gap-2 ${
-              activeTab === 'kyb'
-                ? 'bg-neutral-900 text-white'
-                : 'text-neutral-600 hover:text-neutral-900 bg-white border border-neutral-200'
-            }`}
+            className="DP-x"
+            onClick={() => {
+              if (typeof window !== 'undefined' && (window as any).xD) {
+                (window as any).xD();
+              }
+            }}
           >
-            <ShieldCheck className="w-4 h-4" /> Thẩm Định Hồ Sơ KYB ({stores.length})
-          </button>
-          <button
-            onClick={() => setActiveTab('donations')}
-            className={`px-4 py-2 rounded-xl transition flex items-center gap-2 ${
-              activeTab === 'donations'
-                ? 'bg-neutral-900 text-white'
-                : 'text-neutral-600 hover:text-neutral-900 bg-white border border-neutral-200'
-            }`}
-          >
-            <Building2 className="w-4 h-4" /> Toàn Bộ Lô Hàng ({donations.length})
-          </button>
-          <button
-            onClick={() => setActiveTab('logs')}
-            className={`px-4 py-2 rounded-xl transition flex items-center gap-2 ${
-              activeTab === 'logs'
-                ? 'bg-neutral-900 text-white'
-                : 'text-neutral-600 hover:text-neutral-900 bg-white border border-neutral-200'
-            }`}
-          >
-            <FileText className="w-4 h-4" /> Nhật Ký Bàn Giao Chữ Ký Số ({logs.length})
+            Đóng
           </button>
         </div>
-
-        {/* Tab Content: KYB Management */}
-        {activeTab === 'kyb' && (
-          <div className="space-y-4">
-            {stores.map((s) => {
-              const isVerified = s.verification_status === 'verified';
-              return (
-                <div
-                  key={s.id}
-                  className="bg-white rounded-3xl p-6 border border-neutral-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-                >
-                  <div>
-                    <div className="flex items-center gap-2.5">
-                      <h3 className="text-lg font-black text-neutral-950">{s.name}</h3>
-                      {isVerified ? (
-                        <span className="text-[11px] font-extrabold px-2.5 py-0.5 bg-green-100 text-green-800 rounded-full flex items-center gap-1">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-green-700" /> ĐÃ XÁC THỰC
-                        </span>
-                      ) : (
-                        <span className="text-[11px] font-extrabold px-2.5 py-0.5 bg-amber-100 text-amber-800 rounded-full flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 text-amber-700" /> CHỜ THẨM ĐỊNH
-                        </span>
-                      )}
-                    </div>
-                    <div className="text-xs text-neutral-500 mt-1 font-medium">
-                      Pháp nhân: <strong>{s.legal_name}</strong> · MST: <strong>{s.tax_code}</strong> · {s.address}
-                    </div>
-                    <div className="flex items-center gap-4 mt-2 text-xs text-neutral-600 font-medium">
-                      <span>GPKD: {s.license_docs?.business?.name || 'Đã nộp bản scan'}</span>
-                      <span>·</span>
-                      <span>ATTP: {s.license_docs?.food_safety?.name || 'Hiệu lực hợp lệ'}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2 shrink-0">
-                    {!isVerified ? (
-                      <>
-                        <button
-                          onClick={() => updateKYBStatus(s.id, 'verified')}
-                          className="btn btn-primary text-xs font-bold py-2.5 px-4 flex items-center gap-1.5"
-                        >
-                          <CheckCircle2 className="w-4 h-4" /> Phê Duyệt KYB
-                        </button>
-                        <button
-                          onClick={() => updateKYBStatus(s.id, 'rejected')}
-                          className="btn btn-outline text-xs font-bold py-2.5 px-3.5 text-red-600 border-red-200 hover:bg-red-50 flex items-center gap-1.5"
-                        >
-                          <XCircle className="w-4 h-4" /> Từ Chối
-                        </button>
-                      </>
-                    ) : (
-                      <span className="text-xs font-bold text-neutral-400 italic">
-                        Đang hoạt động trên sàn
-                      </span>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Tab Content: All Donations */}
-        {activeTab === 'donations' && (
-          <div className="bg-white rounded-3xl border border-neutral-200 overflow-hidden shadow-sm">
-            <table className="w-full text-left text-xs text-neutral-700">
-              <thead className="bg-neutral-50 border-b border-neutral-200 font-extrabold text-neutral-800 uppercase">
-                <tr>
-                  <th className="p-4">Mã lô</th>
-                  <th className="p-4">Cửa hàng</th>
-                  <th className="p-4">Mặt hàng quyên góp</th>
-                  <th className="p-4">Khối lượng</th>
-                  <th className="p-4">Mức độ</th>
-                  <th className="p-4">Trạng thái</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-100 font-medium">
-                {donations.map((d) => (
-                  <tr key={d.id} className="hover:bg-neutral-50/80 transition">
-                    <td className="p-4 font-mono font-bold text-neutral-900">{d.donation_code}</td>
-                    <td className="p-4 font-bold text-neutral-900">{d.store}</td>
-                    <td className="p-4">{d.items}</td>
-                    <td className="p-4 font-bold">{d.weight_kg}kg ({d.amount})</td>
-                    <td className="p-4 font-bold">
-                      {d.urgency === 'red' && <span className="text-red-600">🔴 Khẩn cấp</span>}
-                      {d.urgency === 'yellow' && <span className="text-yellow-600">🟡 Cận date</span>}
-                      {d.urgency === 'green' && <span className="text-green-600">🟢 Tiêu chuẩn</span>}
-                    </td>
-                    <td className="p-4">
-                      <span className="px-2 py-0.5 bg-neutral-100 rounded text-neutral-700 font-bold uppercase text-[10px]">
-                        {d.status}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-
-        {/* Tab Content: Handover Logs */}
-        {activeTab === 'logs' && (
-          <div className="space-y-3">
-            {logs.map((l) => (
-              <div
-                key={l.id}
-                className="bg-white rounded-2xl p-4 border border-neutral-200 shadow-sm flex items-center justify-between text-xs"
-              >
-                <div>
-                  <div className="font-mono font-bold text-green-700">{l.donation_code} · Chữ ký: {l.signature}</div>
-                  <div className="text-neutral-900 font-bold mt-1">
-                    {l.store_name} ➔ {l.charity_name}
-                  </div>
-                  <div className="text-neutral-500 text-[11px] mt-0.5">
-                    Thời gian: {new Date(l.timestamp).toLocaleString('vi-VN')}
-                  </div>
-                </div>
-
-                <div className="text-right">
-                  <div className="font-black text-neutral-900">{l.weight_kg} kg</div>
-                  <div className="text-green-700 font-bold text-[11px] mt-0.5">-{l.co2_saved_kg} kg CO2e</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </div>
+        <div className="DP-b" id="dB"></div>
+      </div>
+    </>
   );
 }

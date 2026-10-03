@@ -1,16 +1,16 @@
 # Graph Report - TISPA  (2026-10-03)
 
 ## Corpus Check
-- 132 files · ~246,684 words
+- 137 files · ~234,230 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1881 nodes · 4452 edges · 87 communities (79 shown, 8 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 2394 nodes · 5612 edges · 107 communities (99 shown, 8 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `83966f75`
+- Built from commit: `6261ab43`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -93,6 +93,26 @@
 - [[_COMMUNITY_Community 79|Community 79]]
 - [[_COMMUNITY_Community 82|Community 82]]
 - [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
+- [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
+- [[_COMMUNITY_Community 91|Community 91]]
+- [[_COMMUNITY_Community 92|Community 92]]
+- [[_COMMUNITY_Community 93|Community 93]]
+- [[_COMMUNITY_Community 94|Community 94]]
+- [[_COMMUNITY_Community 95|Community 95]]
+- [[_COMMUNITY_Community 96|Community 96]]
+- [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 98|Community 98]]
+- [[_COMMUNITY_Community 99|Community 99]]
+- [[_COMMUNITY_Community 100|Community 100]]
+- [[_COMMUNITY_Community 101|Community 101]]
+- [[_COMMUNITY_Community 102|Community 102]]
+- [[_COMMUNITY_Community 103|Community 103]]
+- [[_COMMUNITY_Community 104|Community 104]]
+- [[_COMMUNITY_Community 105|Community 105]]
+- [[_COMMUNITY_Community 106|Community 106]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `select()` - 49 edges
@@ -107,25 +127,25 @@
 10. `partnerState()` - 25 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `AuthResult` --references--> `Profile`  [EXTRACTED]
-  src/services/authService.ts → src/types/domain.ts
-- `OAuthOtpChallenge` --references--> `UserRole`  [EXTRACTED]
-  src/services/authService.ts → src/types/domain.ts
-- `AdminPortalPage()` --calls--> `useLocalDb()`  [EXTRACTED]
-  src/app/admin/page.tsx → src/context/LocalDbContext.tsx
-- `CharityPortalPage()` --calls--> `useLocalDb()`  [EXTRACTED]
-  src/app/charity/page.tsx → src/context/LocalDbContext.tsx
-- `HomePage()` --calls--> `useLocalDb()`  [EXTRACTED]
-  src/app/page.tsx → src/context/LocalDbContext.tsx
+- `nextCharityRegisterStep()` --calls--> `charityHasSentOtp()`  [INFERRED]
+  frontend/foodsave-auth-client.js → public/frontend/charity-bundle.js
+- `nextCharityRegisterStep()` --calls--> `isEkycUnlocked()`  [INFERRED]
+  frontend/foodsave-auth-client.js → public/frontend/charity-bundle.js
+- `nextCharityRegisterStep()` --calls--> `charityHasSentOtp()`  [INFERRED]
+  public/frontend/foodsave-auth-client.js → public/frontend/charity-bundle.js
+- `nextCharityRegisterStep()` --calls--> `isEkycUnlocked()`  [INFERRED]
+  public/frontend/foodsave-auth-client.js → public/frontend/charity-bundle.js
+- `ErrorResponse` --references--> `ErrorCode`  [EXTRACTED]
+  src/types/api.ts → src/constants/errors.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (87 total, 8 thin omitted)
+## Communities (107 total, 8 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.09
-Nodes (40): backPartnerRegisterStep(), bindPartnerStep6SubmitButton(), cancelPartnerRegistration(), capturePortalAccount(), ensurePartnerOtp(), ensurePartnerRegistrationDefaults(), finishPartnerPending(), forcePartnerStep6ToPendingDom() (+32 more)
+Cohesion: 0.15
+Nodes (23): backPartnerRegisterStep(), bindPartnerStep6SubmitButton(), cancelPartnerRegistration(), capturePortalAccount(), finishPartnerPending(), forcePartnerStep6ToPendingDom(), handlePartnerStep6SubmitClick(), installPartnerStep6ClickListener() (+15 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.05
@@ -137,11 +157,11 @@ Nodes (55): acceptDonation(), authToken(), browserLocation(), catalogPath(), cen
 
 ### Community 3 - "Community 3"
 Cohesion: 0.06
-Nodes (52): applyCharityAddress(), applyCharityOcrToState(), applyPartnerOcrToState(), charityAddressParts(), charityCoordinate(), charityDocumentMetadataEntry(), charityDocumentPublicUrl(), charityDocumentsMetadata() (+44 more)
+Nodes (51): applyCharityAddress(), applyCharityOcrToState(), applyPartnerOcrToState(), charityAddressParts(), charityCoordinate(), charityDocumentMetadataEntry(), charityDocumentPublicUrl(), charityDocumentsMetadata() (+43 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.08
-Nodes (37): authController, addressSchema, authRoleSchema, emailSchema, FacebookOAuthCallbackBody, facebookOAuthCallbackBodySchema, FacebookOAuthStartBody, facebookOAuthStartBodySchema (+29 more)
+Nodes (36): authController, addressSchema, authRoleSchema, emailSchema, FacebookOAuthCallbackBody, facebookOAuthCallbackBodySchema, FacebookOAuthStartBody, facebookOAuthStartBodySchema (+28 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.13
@@ -153,27 +173,27 @@ Nodes (40): dependencies, clsx, cors, dotenv, express, express-rate-limit, helme
 
 ### Community 7 - "Community 7"
 Cohesion: 0.16
-Nodes (21): catalogController, UuidParams, CreateStoreBody, createStoreBodySchema, StoreListQuery, storeListQuerySchema, UpdateStoreBody, updateStoreBodySchema (+13 more)
+Nodes (21): catalogController, UuidParams, catalogRoutes, CreateStoreBody, createStoreBodySchema, StoreListQuery, storeListQuerySchema, UpdateStoreBody (+13 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.07
-Nodes (29): envSchema, optionalNonEmptyString, parsedEnv, postgresPool, supabaseAdmin, supabaseAuth, authMiddleware(), extractBearerToken() (+21 more)
+Cohesion: 0.08
+Nodes (28): env, envSchema, optionalNonEmptyString, parsedEnv, postgresPool, supabaseAdmin, supabaseAuth, emitStoreStatusChanged() (+20 more)
 
 ### Community 9 - "Community 9"
-Cohesion: 0.16
-Nodes (22): charityController, UuidParams, charityRoutes, CreateBeneficiaryGroupBody, createBeneficiaryGroupBodySchema, CreateCharityProfileBody, createCharityProfileBodySchema, CreateGalleryItemBody (+14 more)
+Cohesion: 0.17
+Nodes (21): charityController, UuidParams, CreateBeneficiaryGroupBody, createBeneficiaryGroupBodySchema, CreateCharityProfileBody, createCharityProfileBodySchema, CreateGalleryItemBody, createGalleryItemBodySchema (+13 more)
 
 ### Community 10 - "Community 10"
-Cohesion: 0.10
-Nodes (30): AuthAuditEvent, AuthContext, authError(), AuthResult, buildAuthResult(), buildAuthResultFromOAuthCallback(), compactObject(), completeFacebookOAuthCallback() (+22 more)
+Cohesion: 0.09
+Nodes (41): assertProfileCanLoginWithPhoneOtp(), AuthAuditEvent, AuthContext, authError(), authService, buildAuthResult(), buildAuthResultFromOAuthCallback(), compactObject() (+33 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.14
-Nodes (17): adminController, AdminUserParams, RejectPartnerBody, adminService, loadProfilesById(), ProfileRow, requirePartnerProfile(), requirePartnerStores() (+9 more)
+Cohesion: 0.15
+Nodes (16): AdminUserParams, RejectPartnerBody, adminService, loadProfilesById(), ProfileRow, requirePartnerProfile(), requirePartnerStores(), StoreRow (+8 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.12
-Nodes (28): applySellerAddress(), escapeHtml(), isCharityUpload(), isPartnerOcrField(), limitPartnerHashtags(), markSellerFileUploaded(), parseSellerTypedAddress(), partnerBankStyle() (+20 more)
+Cohesion: 0.10
+Nodes (40): applySellerAddress(), ensurePartnerOtp(), ensurePartnerRegistrationDefaults(), escapeHtml(), formatPartnerOtpTime(), handlePartnerHashtagKey(), limitPartnerHashtags(), normalizePhone() (+32 more)
 
 ### Community 13 - "Community 13"
 Cohesion: 0.20
@@ -192,8 +212,8 @@ Cohesion: 0.07
 Nodes (26): compilerOptions, allowJs, esModuleInterop, exactOptionalPropertyTypes, forceConsistentCasingInFileNames, incremental, isolatedModules, jsx (+18 more)
 
 ### Community 17 - "Community 17"
-Cohesion: 0.10
-Nodes (21): ValidatedRequestData, ComplaintPriority, ComplaintStatus, Donation, DonationStatus, DonationUrgency, Order, OrderItem (+13 more)
+Cohesion: 0.06
+Nodes (39): notificationController, UuidParams, notificationRoutes, NotificationListQuery, notificationListQuerySchema, AuthResult, OAuthOtpChallenge, notificationService (+31 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.11
@@ -220,23 +240,23 @@ Cohesion: 0.16
 Nodes (21): accept(), approvePartner(), autoDiscoverToken(), create(), get(), getCharityImpact(), getLeaderboard(), getMyImpact() (+13 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.23
-Nodes (13): cancelPhoneLoginOtp(), clearPhoneLoginOtpInputs(), clearPhoneOtpPending(), maskPhone(), readPhoneOtpInput(), readStoredPhoneOtp(), requestPhoneLoginOtp(), resendPhoneLoginOtp() (+5 more)
+Cohesion: 0.12
+Nodes (22): cancelPhoneLoginOtp(), checkBlockedUser(), clearBlockedUserAuthState(), clearPhoneLoginOtpInputs(), clearPhoneOtpPending(), clearSession(), customerProfileFromSupabaseSession(), customerUserIdFromSession() (+14 more)
 
 ### Community 25 - "Community 25"
-Cohesion: 0.11
-Nodes (22): profileController, supportController, requireRoles(), validateRequest(), ValidationSchema, adminRoutes, adminUserParamSchema, rejectPartnerBodySchema (+14 more)
+Cohesion: 0.08
+Nodes (29): adminController, healthController, partnerController, profileController, supportController, requireRoles(), validateRequest(), ValidationSchema (+21 more)
 
 ### Community 26 - "Community 26"
-Cohesion: 0.24
-Nodes (10): customerProfileFromSupabaseSession(), notifyOnce(), oauthNotice(), setOAuthButtonPending(), socialLogin(), startFacebookLogin(), startGoogleLogin(), supabaseOAuthRedirectUrl() (+2 more)
+Cohesion: 0.38
+Nodes (7): notifyOnce(), oauthNotice(), setOAuthButtonPending(), socialLogin(), startFacebookLogin(), startGoogleLogin(), supabaseOAuthRedirectUrl()
 
 ### Community 27 - "Community 27"
 Cohesion: 0.08
 Nodes (23): 1. TỔNG QUAN HIỆN TRẠNG MÃ NGUỒN, 2.1. Lỗi Broken Link 404 ngay trên trang chủ, 2.2. Lỗi Crash truy vấn SQL trong `adminService.ts` và `ecoImpactService.ts`, 2.3. Lệch pha kiến trúc: Socket.io không thể hoạt động trên Netlify Serverless, 2.4. Xung đột kết nối cơ sở dữ liệu: Dual-Driver Anti-Pattern, 2.5. Lộ Secret Keys và Hardcode thông tin cấu hình, 2. CÁC LỖI KỸ THUẬT & ĐỨT GÃY NGHIÊM TRỌNG (CRITICAL BUGS), 3. SỰ BẤT ĐỒNG NHẤT GIỮA FRONTEND VÀ BACKEND (+15 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.12
+Cohesion: 0.11
 Nodes (23): AdminPortalPage(), UrgentRedBanner(), UrgentRedBannerProps, metadata, HomePage(), CharityPortalPage(), DEFAULT_DONATIONS, DEFAULT_LOGS (+15 more)
 
 ### Community 29 - "Community 29"
@@ -273,19 +293,19 @@ Nodes (8): 1. TỔNG QUAN HIỆN TRẠNG ĐỨT GÃY, 2. CHI TIẾT CÁC HẠNG 
 
 ### Community 37 - "Community 37"
 Cohesion: 0.06
-Nodes (52): applyCharityAddress(), applyCharityOcrToState(), applyPartnerOcrToState(), charityAddressParts(), charityCoordinate(), charityDocumentMetadataEntry(), charityDocumentPublicUrl(), charityDocumentsMetadata() (+44 more)
+Nodes (46): applyCharityAddress(), applyCharityOcrToState(), applyPartnerOcrToState(), charityAddressParts(), charityCoordinate(), charityDocumentMetadataEntry(), charityDocumentPublicUrl(), charityDocumentsMetadata() (+38 more)
 
 ### Community 38 - "Community 38"
 Cohesion: 0.32
 Nodes (13): createDonation(), emitSync(), getDonations(), getEcoImpactStats(), getState(), getStores(), init(), loadState() (+5 more)
 
 ### Community 39 - "Community 39"
-Cohesion: 0.19
-Nodes (17): env, ERROR_CODES, ErrorCode, HTTP_STATUS, HttpStatus, handler, errorHandler(), formatZodIssues() (+9 more)
+Cohesion: 0.22
+Nodes (14): ERROR_CODES, ErrorCode, HTTP_STATUS, HttpStatus, handler, authMiddleware(), extractBearerToken(), errorHandler() (+6 more)
 
 ### Community 40 - "Community 40"
-Cohesion: 0.12
-Nodes (28): applySellerAddress(), escapeHtml(), isCharityUpload(), isPartnerOcrField(), limitPartnerHashtags(), markSellerFileUploaded(), parseSellerTypedAddress(), partnerBankStyle() (+20 more)
+Cohesion: 0.10
+Nodes (40): applySellerAddress(), ensurePartnerOtp(), ensurePartnerRegistrationDefaults(), escapeHtml(), formatPartnerOtpTime(), handlePartnerHashtagKey(), isCharityUpload(), isPartnerOcrField() (+32 more)
 
 ### Community 41 - "Community 41"
 Cohesion: 0.25
@@ -304,8 +324,8 @@ Cohesion: 0.22
 Nodes (8): 1. NỀN TẢNG: LOCAL DATABASE ENGINE CHO BẢN DEMO KHÁCH XEM, 2. CHI TIẾT 4 TÍNH NĂNG NGHIỆP VỤ CỐT LÕI (GIAI ĐOẠN 3), 3. CHECKLIST KIỂM THỬ KHI DEMO CHO KHÁCH, Kế Hoạch Triển Khai Giai Đoạn 3: Nghiệp Vụ Cốt Lõi, QR Code Giao Nhận, Xác Thực Pháp Lý & Local Database, Tính năng 1: Giao Nhận Điện Tử Bằng Mã QR (E-Handover Protocol), Tính năng 2: Cổng Nộp Hồ Sơ Xác Thực Pháp Lý (KYB Verification), Tính năng 3: Giao Diện Phê Duyệt Hồ Sơ Quản Trị (Admin Review Panel), Tính năng 4: Xuất Giấy Chứng Nhận ESG & Giảm Phát Thải CO₂ (PDF Certificate)
 
 ### Community 45 - "Community 45"
-Cohesion: 0.12
-Nodes (17): healthController, notificationController, UuidParams, partnerController, healthRoutes, notificationRoutes, NotificationListQuery, notificationListQuerySchema (+9 more)
+Cohesion: 0.04
+Nodes (64): acceptCharity(), activePRD(), addProd(), BTYPE, cancelOrder(), CATS, CHS, closeLegal() (+56 more)
 
 ### Community 49 - "Community 49"
 Cohesion: 0.22
@@ -336,8 +356,8 @@ Cohesion: 0.11
 Nodes (27): afterCharityRegisterRender(), afterPartnerRegisterRender(), attachCharityFaceStream(), attachPartnerFaceStream(), backToRegisterMethods(), beginPhoneSignup(), charityAuthState(), initPartnerFaceScan() (+19 more)
 
 ### Community 61 - "Community 61"
-Cohesion: 0.16
-Nodes (22): buildPartnerRegistrationPayloads(), compactPartnerPayload(), insertPartnerRow(), logPartnerSupabaseError(), normalizePartnerEmail(), partnerContactEmail(), partnerDocumentsMetadata(), partnerOpeningHoursText() (+14 more)
+Cohesion: 0.13
+Nodes (27): buildPartnerRegistrationPayloads(), compactPartnerPayload(), insertPartnerRow(), logPartnerSupabaseError(), normalizePartnerEmail(), normalizePhone(), partnerContactEmail(), partnerContactPhone() (+19 more)
 
 ### Community 62 - "Community 62"
 Cohesion: 0.11
@@ -352,12 +372,12 @@ Cohesion: 0.16
 Nodes (21): accept(), approvePartner(), autoDiscoverToken(), create(), get(), getCharityImpact(), getLeaderboard(), getMyImpact() (+13 more)
 
 ### Community 65 - "Community 65"
-Cohesion: 0.09
-Nodes (40): backPartnerRegisterStep(), bindPartnerStep6SubmitButton(), cancelPartnerRegistration(), capturePortalAccount(), ensurePartnerOtp(), ensurePartnerRegistrationDefaults(), finishPartnerPending(), forcePartnerStep6ToPendingDom() (+32 more)
+Cohesion: 0.15
+Nodes (23): backPartnerRegisterStep(), bindPartnerStep6SubmitButton(), cancelPartnerRegistration(), capturePortalAccount(), finishPartnerPending(), forcePartnerStep6ToPendingDom(), handlePartnerStep6SubmitClick(), installPartnerStep6ClickListener() (+15 more)
 
 ### Community 66 - "Community 66"
-Cohesion: 0.23
-Nodes (13): cancelPhoneLoginOtp(), clearPhoneLoginOtpInputs(), clearPhoneOtpPending(), maskPhone(), readPhoneOtpInput(), readStoredPhoneOtp(), requestPhoneLoginOtp(), resendPhoneLoginOtp() (+5 more)
+Cohesion: 0.12
+Nodes (22): cancelPhoneLoginOtp(), checkBlockedUser(), clearBlockedUserAuthState(), clearPhoneLoginOtpInputs(), clearPhoneOtpPending(), clearSession(), customerProfileFromSupabaseSession(), customerUserIdFromSession() (+14 more)
 
 ### Community 67 - "Community 67"
 Cohesion: 0.16
@@ -384,8 +404,8 @@ Cohesion: 0.24
 Nodes (10): customerProfileFromSupabaseSession(), notifyOnce(), oauthNotice(), setOAuthButtonPending(), socialLogin(), startFacebookLogin(), startGoogleLogin(), supabaseOAuthRedirectUrl() (+2 more)
 
 ### Community 73 - "Community 73"
-Cohesion: 0.24
-Nodes (10): customerProfileFromSupabaseSession(), notifyOnce(), oauthNotice(), setOAuthButtonPending(), socialLogin(), startFacebookLogin(), startGoogleLogin(), supabaseOAuthRedirectUrl() (+2 more)
+Cohesion: 0.38
+Nodes (7): notifyOnce(), oauthNotice(), setOAuthButtonPending(), socialLogin(), startFacebookLogin(), startGoogleLogin(), supabaseOAuthRedirectUrl()
 
 ### Community 74 - "Community 74"
 Cohesion: 0.43
@@ -396,31 +416,111 @@ Cohesion: 0.43
 Nodes (4): calculateDistanceKm(), calculateFee(), showDispatchModal(), showDriverTrackingModal()
 
 ### Community 82 - "Community 82"
-Cohesion: 0.24
-Nodes (12): assertProfileCanLoginWithPhoneOtp(), createAuthUser(), loadProfileByPhone(), normalizePhone(), normalizePhoneForSms(), phoneLoginCandidates(), requestPhoneOtp(), resolveEmailFromIdentifier() (+4 more)
+Cohesion: 0.05
+Nodes (37): BENEFICIARIES, CATS, charityOrgTypes, charityRegState, charityRegSteps, closeLegal(), COMMUNITY, DONATIONS (+29 more)
 
 ### Community 83 - "Community 83"
 Cohesion: 0.33
 Nodes (5): CharityDemand, DemandMatchResult, matchingService, StoreDonationCandidate, StoreMatchAllocation
 
+### Community 87 - "Community 87"
+Cohesion: 0.07
+Nodes (25): A, AUD, CR, DIS, ensureAdminToastRoot(), foodsaveAdminSupabase, IV, MR (+17 more)
+
+### Community 88 - "Community 88"
+Cohesion: 0.09
+Nodes (30): captureFacePhoto(), cccdRuleError(), closeFaceCapture(), forgotPage(), handleFaceUpload(), handleStoreImageUpload(), loginPage(), otpPage() (+22 more)
+
+### Community 89 - "Community 89"
+Cohesion: 0.12
+Nodes (28): cleanPartnerBusinessName(), cleanPartnerOcrName(), normalizePartnerOcr(), parseBusinessLicenseOcrText(), parseCccdOcrText(), parseFoodSafetyCertOcrText(), partnerBestCccdNameCandidate(), partnerCccdLabelText() (+20 more)
+
+### Community 90 - "Community 90"
+Cohesion: 0.13
+Nodes (26): acceptD(), changeDonationStatus(), charityAvatarHtml(), charityAvatarUrl(), charityLogoUrl(), charityProfileInitials(), charityRepresentativeInfo(), charitySidebarAddress() (+18 more)
+
+### Community 91 - "Community 91"
+Cohesion: 0.11
+Nodes (26): charityCanContinue(), charityFooter(), charityHasSentOtp(), charityIsEmailReady(), charityOtpCode(), charityOtpInlineHtml(), esc(), faceTitle() (+18 more)
+
+### Community 92 - "Community 92"
+Cohesion: 0.14
+Nodes (24): currentPartnerStoreProfile(), maskPartnerBankAccount(), normalizePartnerStoreProfile(), partnerBusinessTypeLabel(), partnerDefaultOpeningScheduleRows(), partnerEditableOpeningScheduleRows(), partnerFallbackStoreProfile(), partnerFinanceData() (+16 more)
+
+### Community 93 - "Community 93"
+Cohesion: 0.17
+Nodes (23): B(), charityReviewActions(), customerStatusBadge(), esc(), jsQ(), mn(), moLienQuan(), oA() (+15 more)
+
+### Community 94 - "Community 94"
+Cohesion: 0.13
+Nodes (22): applyCharityOcrResult(), cleanUpper(), combinedCccdOcrText(), extractCccdFromOcr(), extractNameFromOcr(), extractOrgFromOcr(), extractTaxIdFromOcr(), finishCharityMockOcr() (+14 more)
+
+### Community 95 - "Community 95"
+Cohesion: 0.12
+Nodes (22): businessLicenseUploadBox(), cccdUploadBox(), ensureRepresentativeContactDefaults(), escHtml(), faceScanCircle(), foodSafetyCertUploadBox(), isCccdReady(), isPartnerPasswordValid() (+14 more)
+
+### Community 96 - "Community 96"
+Cohesion: 0.16
+Nodes (20): contact(), detectStoreLocation(), donateProduct(), ensurePartnerSupabaseClient(), fetchProductsFromSupabase(), fetchStoreProfileFromSupabase(), getCurrentStoreId(), go() (+12 more)
+
+### Community 97 - "Community 97"
+Cohesion: 0.12
+Nodes (18): buildPartnerRegistrationPayload(), enterPortal(), getPartnerSupabase(), goAuth(), goView(), partnerAddressPartsFromText(), partnerLoginSubmit(), partnerRegistrationSlug() (+10 more)
+
+### Community 98 - "Community 98"
+Cohesion: 0.13
+Nodes (17): afterAuthRender(), bindCharityFaceVideo(), charityCurrentStepHtml(), charityRegisterShell(), isPhoneLike(), refreshCharityNextButton(), refreshPasswordRules(), renderLucideIcons() (+9 more)
+
+### Community 99 - "Community 99"
+Cohesion: 0.19
+Nodes (15): approvePartner(), checkAdminAuthGate(), confirmRejectCharity(), confirmRejectPartner(), fetchCustomers(), go(), initAdminSupabaseSync(), setCustomerSummary() (+7 more)
+
+### Community 100 - "Community 100"
+Cohesion: 0.17
+Nodes (15): handleBusinessLicenseUpload(), handleCccdUpload(), handleFoodSafetyCertUpload(), partnerCccdCombinedText(), partnerHistogramPercentile(), partnerLoadImageFromFile(), partnerNamesCompatible(), partnerNameTokens() (+7 more)
+
+### Community 101 - "Community 101"
+Cohesion: 0.36
+Nodes (11): obj(), openPartnerDetail(), partnerActions(), partnerAdminStatus(), partnerAppendDocuments(), partnerDocEntries(), partnerDocs(), partnerMeta() (+3 more)
+
+### Community 102 - "Community 102"
+Cohesion: 0.18
+Nodes (11): modal(), openComments(), openCommunityPost(), rejectD(), sharePost(), showAddVolModal(), showFilterModal(), showNoti() (+3 more)
+
+### Community 103 - "Community 103"
+Cohesion: 0.39
+Nodes (8): charityImpactCards(), charityReportCards(), impactKg(), impactNumber(), impactTotals(), pDash(), pImpact(), pReports()
+
+### Community 104 - "Community 104"
+Cohesion: 0.38
+Nodes (7): approveCharity(), ensureFoodSaveAdminAccess(), partnerOpenDomModal(), partnerSection(), promptFoodSaveAdminLogin(), rejectCharity(), rejectPartner()
+
+### Community 105 - "Community 105"
+Cohesion: 0.29
+Nodes (7): enterPortal(), goAuth(), goView(), mockFaceScan(), renderLanding(), startFaceScan(), stopCharityFaceStream()
+
+### Community 106 - "Community 106"
+Cohesion: 0.47
+Nodes (6): charityDocs(), charityInfo(), charityMeta(), charityOrderedDocKeys(), charityOwner(), renderCharityDocuments()
+
 ## Knowledge Gaps
-- **302 isolated node(s):** `handler`, `nextConfig`, `name`, `version`, `private` (+297 more)
+- **347 isolated node(s):** `handler`, `nextConfig`, `name`, `version`, `private` (+342 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `AppError` connect `Community 39` to `Community 32`, `Community 1`, `Community 4`, `Community 8`, `Community 9`, `Community 10`, `Community 11`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `UserRole` connect `Community 17` to `Community 32`, `Community 1`, `Community 7`, `Community 8`, `Community 9`, `Community 10`, `Community 39`, `Community 45`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `handleSupabaseError()` connect `Community 11` to `Community 32`, `Community 1`, `Community 7`, `Community 8`, `Community 9`, `Community 10`, `Community 39`, `Community 45`, `Community 82`, `Community 25`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `nextCharityRegisterStep()` connect `Community 56` to `Community 58`, `Community 91`, `Community 15`?**
+  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+- **Why does `nextCharityRegisterStep()` connect `Community 55` to `Community 57`, `Community 91`, `Community 37`?**
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+- **Why does `charityHasSentOtp()` connect `Community 91` to `Community 56`, `Community 82`, `Community 55`?**
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **What connects `handler`, `nextConfig`, `name` to the rest of the system?**
-  _302 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _347 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.09487179487179487 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14624505928853754 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05499735589635114 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**

@@ -2,282 +2,364 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useLocalDb } from '@/context/LocalDbContext';
-import {
-  Leaf,
-  Heart,
-  ShieldCheck,
-  Building2,
-  Truck,
-  ArrowRight,
-  Sparkles,
-  Calculator,
-  Trees,
-  UtensilsCrossed,
-  CheckCircle2,
-  HelpCircle,
-  ExternalLink
-} from 'lucide-react';
+import '@/styles/home.css';
 
 export default function HomePage() {
-  const { getEsgTotals, stores, donations } = useLocalDb();
-  const { totalWeightKg, totalCo2AvoidedKg, totalMeals } = getEsgTotals();
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [currentRole, setCurrentRole] = useState<'business' | 'charity'>('business');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [noticeVisible, setNoticeVisible] = useState(false);
 
-  // Interactive ESG Calculator State
-  const [calcKg, setCalcKg] = useState<number>(50);
-  const calcCo2 = Number((calcKg * 2.5).toFixed(1));
-  const calcMeals = Math.round(calcKg * 2.4);
-  const calcTrees = Number((calcCo2 / 20).toFixed(1));
+  const handleOpenLogin = (role?: 'business' | 'charity') => {
+    if (role) setCurrentRole(role);
+    setIsLoginOpen(true);
+    setNoticeVisible(false);
+    if (typeof document !== 'undefined') {
+      document.body.classList.add('locked');
+    }
+  };
+
+  const handleCloseLogin = () => {
+    setIsLoginOpen(false);
+    setNoticeVisible(false);
+    if (typeof document !== 'undefined') {
+      document.body.classList.remove('locked');
+    }
+  };
+
+  const handleLoginSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('foodsave_login_role', currentRole);
+    }
+    setNoticeVisible(true);
+  };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] text-neutral-900 selection:bg-green-100 selection:text-green-900">
-      {/* Top Mission Strip */}
-      <div className="bg-neutral-950 text-neutral-300 text-xs py-2 px-4 border-b border-neutral-800">
-        <div className="wrap flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span className="font-semibold text-white">FoodSave 2026:</span>
-            <span>Mô hình kết nối trực tiếp Doanh nghiệp & Tổ chức từ thiện · 100% Phi lợi nhuận</span>
-          </div>
-          <div className="hidden sm:flex items-center gap-4 text-neutral-400">
-            <span>Tiêu chuẩn GHG Protocol</span>
-            <span>·</span>
-            <span>Net Zero Việt Nam</span>
+    <>
+      {/* Thông báo sứ mệnh FoodSave */}
+      <div className="mission-strip" aria-label="Thông báo sứ mệnh FoodSave">
+        <div className="wrap">
+          <span className="live-pulse">
+            <span className="dot"></span> Live
+          </span>
+          <div className="ticker-window">
+            <div className="ticker-track">
+              <span>FoodSave là tổ chức kết nối thực phẩm phi lợi nhuận</span>
+              <span>Không thu phí từ doanh nghiệp hoặc tổ chức từ thiện</span>
+              <span>Nhãn màu giúp ưu tiên nhận và sử dụng thực phẩm an toàn</span>
+              <span>Doanh nghiệp -&gt; FoodSave -&gt; Tổ chức từ thiện</span>
+              <span>FoodSave là tổ chức kết nối thực phẩm phi lợi nhuận</span>
+              <span>Không thu phí từ doanh nghiệp hoặc tổ chức từ thiện</span>
+              <span>Nhãn màu giúp ưu tiên nhận và sử dụng thực phẩm an toàn</span>
+              <span>Doanh nghiệp -&gt; FoodSave -&gt; Tổ chức từ thiện</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-neutral-200/80">
-        <div className="wrap h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-green-800 to-green-600 flex items-center justify-center text-white shadow-md shadow-green-700/20">
-              <Leaf className="w-5 h-5" />
-            </div>
-            <div>
-              <span className="text-xl font-black tracking-tight text-neutral-950">FoodSave</span>
-              <span className="text-xs font-bold text-green-700 ml-1.5 uppercase tracking-wider bg-green-50 px-2 py-0.5 rounded-full border border-green-200">
-                Việt Nam
-              </span>
-            </div>
+      {/* Topbar điều hướng chính */}
+      <header className="topbar">
+        <nav className="wrap nav" aria-label="Điều hướng chính">
+          <Link className="brand" href="/" aria-label="FoodSave">
+            <span>
+              <span className="wordmark">FOOD<span>SAVE</span></span>
+              <span className="tagline">Cứu thực phẩm, bảo vệ hành tinh</span>
+            </span>
           </Link>
-
-          <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-neutral-700">
-            <Link href="#impact" className="hover:text-green-700 transition">Tác Động ESG</Link>
-            <Link href="#model" className="hover:text-green-700 transition">Mô Hình Cứu Trợ</Link>
-            <Link href="#calculator" className="hover:text-green-700 transition">Máy Tính CO2e</Link>
-            <Link href="/admin" className="hover:text-neutral-950 transition flex items-center gap-1 text-neutral-500 hover:text-neutral-900">
-              <ShieldCheck className="w-4 h-4 text-green-700" /> Quản Trị
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link
-              href="/partner"
-              className="btn btn-outline text-xs sm:text-sm font-bold py-2.5 px-4 rounded-full flex items-center gap-1.5"
+          <div className="nav-links">
+            <a href="#story">Giới thiệu</a>
+            <a href="#labels">Nhãn màu</a>
+            <a href="#flow">Cách hoạt động</a>
+            <Link href="/admin" style={{ opacity: 0.85 }}>Quản trị</Link>
+            <button
+              className="btn yellow"
+              type="button"
+              onClick={() => handleOpenLogin('business')}
             >
-              <Building2 className="w-4 h-4 text-green-700" /> Cổng Doanh Nghiệp
-            </Link>
-            <Link
-              href="/charity"
-              className="btn btn-primary text-xs sm:text-sm font-bold py-2.5 px-4 sm:px-5 rounded-full flex items-center gap-1.5 shadow-md shadow-green-700/20"
-            >
-              <Heart className="w-4 h-4 text-red-200 fill-red-200" /> Cổng Từ Thiện
-            </Link>
+              Đăng nhập
+            </button>
           </div>
-        </div>
+        </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative pt-16 pb-24 overflow-hidden">
-        <div className="wrap">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100/80 text-green-900 font-extrabold text-xs uppercase tracking-wider mb-6 border border-green-300/60">
-              <Sparkles className="w-3.5 h-3.5 text-green-700" /> Nền tảng điều phối thực phẩm cứu trợ thế hệ mới
-            </div>
-
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-neutral-950 tracking-tight leading-[1.08]">
-              Cứu Thực Phẩm, <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 via-emerald-600 to-teal-700">
-                Giảm Phát Thải CO2e
+      <main id="top">
+        {/* Hero Section */}
+        <section className="hero" aria-label="FoodSave">
+          <img
+            className="hero-media"
+            src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1800&q=82"
+            alt="Thực phẩm tươi được chuẩn bị để chia sẻ"
+          />
+          <div className="wrap">
+            <span className="eyebrow">Tổ chức kết nối thực phẩm phi lợi nhuận</span>
+            <h1 className="hero-title">
+              Cứu thực phẩm,{' '}
+              <span className="accent">
+                Bảo vệ <span className="shine">hành tinh.</span>
               </span>
             </h1>
-
-            <p className="mt-6 text-lg sm:text-xl text-neutral-600 font-medium max-w-2xl mx-auto leading-relaxed">
-              FoodSave kết nối trực tiếp siêu thị, nhà hàng có thực phẩm còn hạn tốt với các mái ấm, bếp ăn từ thiện.
-              <strong className="text-neutral-900 font-bold"> 100% Phi lợi nhuận, không phí trung gian, kiểm soát minh bạch bằng mã QR.</strong>
+            <p className="hero-copy">
+              FoodSave giữ tinh thần cũ, nhưng mô hình mới chỉ còn doanh nghiệp và tổ chức từ thiện. Chúng tôi kết nối thực phẩm còn dùng tốt đến đúng nơi cần, phi lợi nhuận, không hoa hồng, không thu kinh phí hoạt động từ hai bên.
             </p>
-
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/partner"
-                className="w-full sm:w-auto btn btn-yellow text-sm font-black py-4 px-8 rounded-full shadow-lg shadow-yellow-500/20 flex items-center justify-center gap-2"
-              >
-                <Building2 className="w-5 h-5" /> Dành cho Cửa hàng & Siêu thị
+            <div className="hero-actions">
+              <Link className="btn yellow" href="/partner">
+                Đăng nhập doanh nghiệp
               </Link>
-              <Link
-                href="/charity"
-                className="w-full sm:w-auto btn btn-dark text-sm font-black py-4 px-8 rounded-full shadow-lg flex items-center justify-center gap-2"
-              >
-                <Heart className="w-5 h-5 text-rose-400" /> Dành cho Mái ấm & Bếp từ thiện
+              <Link className="btn light" href="/charity">
+                Đăng nhập tổ chức
               </Link>
             </div>
-          </div>
-
-          {/* Realtime ESG Counter Banner */}
-          <div className="mt-16 bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-neutral-200/80 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center md:border-r border-neutral-200">
-              <div className="text-3xl sm:text-4xl font-black text-neutral-950">{(totalWeightKg + 14850).toLocaleString()} <span className="text-sm font-bold text-neutral-500">kg</span></div>
-              <div className="text-xs sm:text-sm font-bold text-neutral-500 mt-1">Thực phẩm giải cứu</div>
-            </div>
-            <div className="text-center md:border-r border-neutral-200">
-              <div className="text-3xl sm:text-4xl font-black text-green-700">{(totalCo2AvoidedKg + 37125).toLocaleString()} <span className="text-sm font-bold text-neutral-500">kg</span></div>
-              <div className="text-xs sm:text-sm font-bold text-neutral-500 mt-1">CO2e tránh phát thải</div>
-            </div>
-            <div className="text-center md:border-r border-neutral-200">
-              <div className="text-3xl sm:text-4xl font-black text-neutral-950">{(totalMeals + 35640).toLocaleString()} <span className="text-sm font-bold text-neutral-500">suất</span></div>
-              <div className="text-xs sm:text-sm font-bold text-neutral-500 mt-1">Bữa ăn hỗ trợ</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-black text-emerald-800">100%</div>
-              <div className="text-xs sm:text-sm font-bold text-neutral-500 mt-1">Phi lợi nhuận & Minh bạch</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Model Section */}
-      <section id="model" className="py-20 bg-neutral-100/70 border-y border-neutral-200">
-        <div className="wrap">
-          <div className="max-w-2xl mx-auto text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-neutral-950">
-              Mô Hình Tinh Gọn 2 Chiều
-            </h2>
-            <p className="mt-3 text-neutral-600 text-sm sm:text-base">
-              Loại bỏ hoàn toàn khâu trung gian thương mại, chỉ tập trung tối đa vào tốc độ cứu trợ và an toàn thực phẩm.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-3xl border border-neutral-200 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center font-black text-lg mb-4 border border-amber-200">
-                  1
-                </div>
-                <h3 className="text-xl font-black text-neutral-900">Doanh Nghiệp Đăng Lô Hàng</h3>
-                <p className="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">
-                  Cửa hàng, siêu thị đăng tải thực phẩm cận date (bánh mì, thực phẩm tươi, sữa) kèm khung giờ và nhãn khẩn cấp Xanh - Vàng - Đỏ.
-                </p>
+            <div className="hero-stats" aria-label="Cam kết chính">
+              <div className="hero-stat">
+                <strong>0đ</strong>
+                <span>phí nền tảng</span>
               </div>
-              <div className="mt-6 pt-4 border-t border-neutral-100 text-xs text-neutral-500 font-semibold flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-green-600" /> Thẩm định pháp lý KYB tự động
+              <div className="hero-stat">
+                <strong>2 vai trò</strong>
+                <span>doanh nghiệp và từ thiện</span>
               </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-3xl border border-neutral-200 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center font-black text-lg mb-4 border border-blue-200">
-                  2
-                </div>
-                <h3 className="text-xl font-black text-neutral-900">Từ Thiện Tiếp Nhận & Điều Xe</h3>
-                <p className="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">
-                  Mái ấm và bếp từ thiện nhận thông báo tức thời, chọn gọi xe giữ nhiệt AhaMove/Grab hoặc đội Tình nguyện viên đến nhận.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-neutral-100 text-xs text-neutral-500 font-semibold flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-green-600" /> Miễn phí cước vận chuyển 100%
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-3xl border border-neutral-200 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-green-50 text-green-700 flex items-center justify-center font-black text-lg mb-4 border border-green-200">
-                  3
-                </div>
-                <h3 className="text-xl font-black text-neutral-900">Bàn Giao QR & Chứng Nhận ESG</h3>
-                <p className="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">
-                  Hai bên quét mã QR đối soát điện tử, hệ thống tự động sinh chứng thư giảm phát thải CO2e chuẩn quốc tế phục vụ báo cáo ESG.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-neutral-100 text-xs text-neutral-500 font-semibold flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-green-600" /> Minh bạch & Không thể làm giả
+              <div className="hero-stat">
+                <strong>3 nhãn</strong>
+                <span>xanh, vàng, đỏ</span>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Interactive ESG Impact Calculator */}
-      <section id="calculator" className="py-20 bg-white">
-        <div className="wrap">
-          <div className="max-w-3xl mx-auto bg-gradient-to-br from-green-950 via-neutral-900 to-green-900 text-white p-8 sm:p-12 rounded-3xl shadow-2xl">
-            <div className="flex items-center gap-2 text-green-400 text-xs font-black uppercase tracking-wider mb-2">
-              <Calculator className="w-4 h-4" /> MÁY TÍNH TÁC ĐỘNG MÔI TRƯỜNG & KHÍ HẬU
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white">
-              Đo Lường Tác Động Khi Giải Cứu Thực Phẩm
-            </h2>
-            <p className="text-neutral-300 text-sm mt-2">
-              Kéo thanh trượt để xem lượng phát thải CO2e tránh được theo tiêu chuẩn GHG Protocol (1kg thức ăn = 2.5kg CO2e).
-            </p>
-
-            <div className="mt-8 bg-white/10 p-6 rounded-2xl border border-white/10">
-              <div className="flex items-center justify-between font-bold text-sm mb-3">
-                <span className="text-neutral-300">Khối lượng thực phẩm giải cứu:</span>
-                <span className="text-2xl font-black text-yellow-300 font-mono">{calcKg} kg</span>
-              </div>
-              <input
-                type="range"
-                min="5"
-                max="500"
-                step="5"
-                value={calcKg}
-                onChange={(e) => setCalcKg(Number(e.target.value))}
-                className="w-full h-2.5 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-yellow-400"
-              />
-              <div className="flex justify-between text-[11px] text-neutral-400 mt-2 font-mono">
-                <span>5 kg</span>
-                <span>250 kg</span>
-                <span>500 kg</span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4 mt-6 text-center">
-              <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                <div className="text-2xl sm:text-3xl font-black text-green-400 font-mono">{calcCo2}</div>
-                <div className="text-xs text-neutral-300 mt-1 font-bold">kg CO2e tránh phát thải</div>
-              </div>
-              <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                <div className="text-2xl sm:text-3xl font-black text-yellow-300 font-mono">{calcMeals}</div>
-                <div className="text-xs text-neutral-300 mt-1 font-bold">Bữa ăn hỗ trợ</div>
-              </div>
-              <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                <div className="text-2xl sm:text-3xl font-black text-teal-300 font-mono">{calcTrees}</div>
-                <div className="text-xs text-neutral-300 mt-1 font-bold">Cây xanh hấp thụ (1 năm)</div>
-              </div>
+        {/* Story Section */}
+        <section id="story">
+          <div className="wrap">
+            <header className="section-head center">
+              <span className="section-kicker">Brand Story</span>
+              <h2>FoodSave là cầu nối thực phẩm phi lợi nhuận.</h2>
+              <p>Trang này là trang giới thiệu thương hiệu và điểm vào hệ thống. Các flow đăng nguồn, nhận nguồn, điều phối thông minh và báo cáo ESG nằm trong cổng chuyên biệt.</p>
+            </header>
+            <div className="grid three">
+              <article className="card dark">
+                <span className="card-tag">Phi lợi nhuận</span>
+                <h3>Không thu bất kỳ khoản phí nào</h3>
+                <p>FoodSave không lấy tiền từ doanh nghiệp, không thu phí tổ chức từ thiện và không thương mại hóa thực phẩm được kết nối.</p>
+              </article>
+              <article className="card">
+                <span className="card-tag">Doanh nghiệp</span>
+                <h3>Chia sẻ nguồn còn dùng tốt</h3>
+                <p>Nhà hàng, khách sạn, siêu thị, bếp ăn hoặc nhà sản xuất có thể đưa thực phẩm dư vào mạng lưới kết nối.</p>
+              </article>
+              <article className="card">
+                <span className="card-tag">Từ thiện</span>
+                <h3>Tiếp nhận theo năng lực thật</h3>
+                <p>Mái ấm, bếp ăn cộng đồng, nhóm cứu trợ hoặc tổ chức xã hội nhận thực phẩm theo địa điểm, thời gian và khả năng xử lý.</p>
+              </article>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Footer */}
-      <footer className="bg-neutral-950 text-neutral-400 py-12 border-t border-neutral-800 text-xs">
-        <div className="wrap flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-xl bg-green-700 flex items-center justify-center text-white font-black">
-              FS
-            </div>
-            <span className="text-white font-black text-sm">FoodSave Việt Nam</span>
-            <span>· Bản quyền 2026. Nền tảng điều phối phi lợi nhuận.</span>
+        {/* Brand Banner */}
+        <section className="brand-band">
+          <div className="wrap">
+            <h2>Giữ điều hay nhất: nhãn màu để biết nhận thực phẩm và ưu tiên sử dụng thế nào.</h2>
+            <p>Nhãn màu là ngôn ngữ nhận diện của FoodSave. Nó giúp hai bên nói cùng một ngôn ngữ về thời hạn, mức ưu tiên và trách nhiệm an toàn khi tiếp nhận thực phẩm.</p>
           </div>
+        </section>
 
-          <div className="flex items-center gap-6">
-            <Link href="/partner" className="hover:text-white transition">Cổng Doanh Nghiệp</Link>
-            <Link href="/charity" className="hover:text-white transition">Cổng Từ Thiện</Link>
-            <Link href="/admin" className="hover:text-white transition">Quản Trị Viên</Link>
+        {/* Labels Section */}
+        <section id="labels">
+          <div className="wrap">
+            <header className="section-head">
+              <span className="section-kicker">Color System</span>
+              <h2>Nhãn màu FoodSave</h2>
+              <p>Mỗi nhãn là một tín hiệu ưu tiên. Tổ chức tiếp nhận vẫn cần kiểm tra thực tế, điều kiện bảo quản và khả năng chế biến trước khi phân phối.</p>
+            </header>
+            <div className="label-grid">
+              <article className="label-card label-green">
+                <span className="label-chip">Nhãn xanh</span>
+                <h3>Dùng trong 48 giờ</h3>
+                <p>Thực phẩm còn ổn định, phù hợp để nhận theo kế hoạch và phân phối trong ngày hôm sau.</p>
+              </article>
+              <article className="label-card label-yellow">
+                <span className="label-chip">Nhãn vàng</span>
+                <h3>Dùng trong 24 giờ</h3>
+                <p>Nguồn cần được ưu tiên nhận sớm, kiểm tra nhanh và chế biến trong ngày.</p>
+              </article>
+              <article className="label-card label-red">
+                <span className="label-chip">Nhãn đỏ</span>
+                <h3>Dùng trong 6-12 giờ</h3>
+                <p>Chỉ nhận khi có đội xử lý ngay, không để qua đêm nếu chưa có điều kiện bảo quản phù hợp.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Flow Section */}
+        <section id="flow">
+          <div className="wrap">
+            <header className="section-head">
+              <span className="section-kicker">How It Works</span>
+              <h2>Một thương hiệu, hai cổng chuyên biệt.</h2>
+              <p>FoodSave giữ trải nghiệm tinh gọn, bảo đảm tốc độ và phân loại chính xác theo nhu cầu thực tế.</p>
+            </header>
+            <div className="grid three flow">
+              <article className="card step">
+                <h3>Doanh nghiệp đăng tin</h3>
+                <p>Quản lý nguồn thực phẩm còn dùng tốt, thời gian bàn giao, nhãn màu và trạng thái kết nối.</p>
+              </article>
+              <article className="card step">
+                <h3>Tổ chức từ thiện tiếp nhận</h3>
+                <p>Xem nguồn phù hợp, xác nhận nhu cầu, cập nhật năng lực vận chuyển và tiếp nhận.</p>
+              </article>
+              <article className="card step">
+                <h3>FoodSave điều phối AI</h3>
+                <p>Ưu tiên theo độ gấp hạn dùng, khoảng cách địa lý, năng lực tiếp nhận và chứng thực minh bạch.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Portals Section */}
+        <section className="portal" aria-label="Cổng đăng nhập FoodSave">
+          <div className="wrap">
+            <header className="section-head">
+              <span className="section-kicker">Access Portal</span>
+              <h2>Cổng đăng nhập FoodSave</h2>
+              <p>Chọn đúng vai trò. FoodSave hiện mở cổng cho Doanh nghiệp, Tổ chức từ thiện và Quản trị viên.</p>
+            </header>
+            <div className="portal-cards">
+              <article className="portal-card">
+                <span className="card-tag">Business</span>
+                <h3>Doanh nghiệp</h3>
+                <p>Dành cho đơn vị có nguồn thực phẩm còn dùng tốt và muốn kết nối miễn phí với mạng lưới từ thiện.</p>
+                <Link className="btn yellow" href="/partner">
+                  Đăng nhập doanh nghiệp
+                </Link>
+              </article>
+              <article className="portal-card">
+                <span className="card-tag">Charity</span>
+                <h3>Tổ chức từ thiện</h3>
+                <p>Dành cho mái ấm, bếp ăn cộng đồng, nhóm cứu trợ và tổ chức xã hội có nhu cầu tiếp nhận.</p>
+                <Link className="btn light" href="/charity">
+                  Đăng nhập tổ chức
+                </Link>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Global Footnote */}
+      <footer className="foodsave-global-footnote" aria-label="FoodSave footer">
+        <div className="foodsave-footnote-wrap">
+          <Link className="foodsave-footnote-brand" href="/" aria-label="FoodSave">
+            <span className="brand-word">FOOD<span>SAVE</span></span>
+          </Link>
+          <p className="foodsave-footnote-copy">
+            © 2026 Công ty TNHH FoodSave Việt Nam · MSDN 0317456789 · Trụ sở 19 Nguyễn Hữu Thọ, TP.HCM · Thực phẩm cứu trợ miễn phí, không thương mại hóa quyên góp.
+          </p>
+          <div className="foodsave-footnote-links" aria-label="Kênh liên hệ FoodSave">
+            <a href="mailto:hello@foodsave.vn">hello@foodsave.vn</a>
+            <a href="mailto:partners@foodsave.vn">partners@foodsave.vn</a>
+            <a href="mailto:charity@foodsave.vn">charity@foodsave.vn</a>
           </div>
         </div>
       </footer>
-    </div>
+
+      {/* Login Modal */}
+      {isLoginOpen && (
+        <div
+          className="modal open"
+          id="loginModal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="loginTitle"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) handleCloseLogin();
+          }}
+        >
+          <div className="dialog">
+            <div className="dialog-head">
+              <div>
+                <span className="section-kicker">Login</span>
+                <h2 id="loginTitle">
+                  Đăng nhập {currentRole === 'business' ? 'doanh nghiệp' : 'tổ chức từ thiện'}
+                </h2>
+              </div>
+              <button
+                className="close"
+                type="button"
+                onClick={handleCloseLogin}
+                aria-label="Đóng"
+              >
+                ×
+              </button>
+            </div>
+            <div className="dialog-body">
+              <div className="roles" aria-label="Chọn vai trò đăng nhập">
+                <button
+                  className={`role ${currentRole === 'business' ? 'active' : ''}`}
+                  type="button"
+                  onClick={() => setCurrentRole('business')}
+                >
+                  Doanh nghiệp
+                </button>
+                <button
+                  className={`role ${currentRole === 'charity' ? 'active' : ''}`}
+                  type="button"
+                  onClick={() => setCurrentRole('charity')}
+                >
+                  Tổ chức từ thiện
+                </button>
+              </div>
+              <form className="form" id="loginForm" onSubmit={handleLoginSubmit}>
+                <div className="field">
+                  <label htmlFor="email">Email đăng nhập</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    placeholder="ten@donvi.vn"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="field">
+                  <label htmlFor="password">Mật khẩu</label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    autoComplete="current-password"
+                    required
+                    placeholder="Nhập mật khẩu"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+                <button className="btn yellow" type="submit" id="loginSubmit">
+                  Tiếp tục với vai trò {currentRole === 'business' ? 'doanh nghiệp' : 'tổ chức từ thiện'}
+                </button>
+                <p className="form-note">
+                  Hoặc bạn có thể truy cập trực tiếp vào{' '}
+                  <Link
+                    href={currentRole === 'business' ? '/partner' : '/charity'}
+                    style={{ textDecoration: 'underline', color: 'var(--green-800)' }}
+                  >
+                    Cổng {currentRole === 'business' ? 'Doanh nghiệp' : 'Từ thiện'}
+                  </Link>
+                  .
+                </p>
+                {noticeVisible && (
+                  <div className="notice" id="loginNotice" style={{ display: 'block' }}>
+                    Đã ghi nhận vai trò {currentRole === 'business' ? 'Doanh nghiệp' : 'Tổ chức từ thiện'}. Bạn đang chuyển hướng đến cổng làm việc...
+                  </div>
+                )}
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
