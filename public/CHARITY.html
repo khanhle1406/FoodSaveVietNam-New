@@ -1344,6 +1344,7 @@ textarea.inp{resize:none;font-family:inherit}
       <div class="t-a">
         <div class="t-s"><i class="ti ti-search"></i><input placeholder="Tìm donation, tình nguyện viên..."></div>
         <div class="t-clk" id="clk">--:--:--</div>
+        <button onclick="if(window.FoodSaveMatching)window.FoodSaveMatching.showCreateDemandModal();" class="btn btn-sm" style="height:36px;padding:0 14px;border-radius:10px;font-size:12px;font-weight:900;display:inline-flex;align-items:center;gap:6px;background:#16a34a;color:#fff;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(22,163,74,0.25);"><i class="ti ti-bolt"></i>Đăng Nhu Cầu & Ghép Đơn</button>
         <div class="t-b" onclick="showNoti()"><i class="ti ti-bell"></i><div class="dot"></div></div>
         <div class="t-b" onclick="showQR()"><i class="ti ti-qrcode"></i></div>
         <div class="t-av" id="charity-header-avatar" onclick="showProf()"><img id="charity-header-avatar-img" src="link_anh_placeholder_mac_dinh.png" alt="Avatar tổ chức"></div>
@@ -3722,6 +3723,7 @@ window.addEventListener('error',function(e){
 <script src="frontend/qrService.js"></script>
 <script src="frontend/esgCertificate.js"></script>
 <script src="frontend/logisticsService.js"></script>
+<script src="frontend/matchingService.js"></script>
 <script src="frontend/alertService.js"></script>
 <script src="frontend/apiClient.js"></script>
 <script src="frontend/foodsave-live-data.js"></script>

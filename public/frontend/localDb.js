@@ -152,6 +152,41 @@
         time: '2.5 giờ trước'
       }
     ],
+    demands: [
+      {
+        id: 'FS-DEMAND-101',
+        demand_code: 'FS-DEMAND-101',
+        charity_id: 'charity-tre-xanh',
+        charity_name: 'Mái Ấm Tre Xanh (Thảo Đàn)',
+        charity_address: '40/34 Calmette, P. Nguyễn Thái Bình, Quận 1',
+        category: 'bakery',
+        item_name: 'Bánh mì & Bánh ngọt dinh dưỡng',
+        target_quantity: 50,
+        unit: 'cái',
+        urgency: 'yellow',
+        matched_quantity: 0,
+        status: 'open',
+        notes: 'Cần 50 cái bánh phục vụ bữa phụ xế chiều cho các em nhỏ.',
+        created_at: new Date(Date.now() - 45 * 60000).toISOString()
+      },
+      {
+        id: 'FS-DEMAND-102',
+        demand_code: 'FS-DEMAND-102',
+        charity_id: 'charity-bep-yeu-thuong',
+        charity_name: 'Bếp Cơm Yêu Thương Q.7',
+        charity_address: '142 Lâm Văn Bền, Phường Tân Quy, Quận 7',
+        category: 'fresh_produce',
+        item_name: 'Rau củ tươi & Nông sản sạch',
+        target_quantity: 35,
+        unit: 'kg',
+        urgency: 'green',
+        matched_quantity: 0,
+        status: 'open',
+        notes: 'Cần rau sạch để nấu 150 suất cơm chay cho bà con nghèo.',
+        created_at: new Date(Date.now() - 110 * 60000).toISOString()
+      }
+    ],
+    demand_matches: [],
     handover_records: [],
     audit_logs: [
       {
@@ -368,6 +403,97 @@
       saveState(state);
       emitSync('STORE_LICENSE_UPLOADED', { storeId, type, fileName });
       return store;
+    },
+
+    // ─── PHÂN HỆ NHU CẦU CỨU TRỢ & GHÉP ĐƠN ĐA ĐIỂM (SPRINT 1) ───
+    getDemands(filters = {}) {
+      const state = loadState();
+      let list = state.demands || [];
+      if (filters.charity_id) {
+        list = list.filter(d => d.charity_id === filters.charity_id);
+      }
+      if (filters.status) {
+        list = list.filter(d => d.status === filters.status);
+      }
+      return list;
+    },
+
+    addDemand(demandData) {
+      const state = loadState();
+      if (!state.demands) state.demands = [];
+      const code = 'FS-DEMAND-' + Math.floor(100 + Math.random() * 900);
+      const newDemand = {
+        id: code,
+        demand_code: code,
+        charity_id: demandData.charity_id || 'charity-tre-xanh',
+        charity_name: demandData.charity_name || 'Mái Ấm Tre Xanh (Thảo Đàn)',
+        charity_address: demandData.charity_address || '40/34 Calmette, P. Nguyễn Thái Bình, Quận 1',
+        category: demandData.category || 'bakery',
+        item_name: demandData.item_name || 'Thực phẩm dinh dưỡng',
+        target_quantity: parseInt(demandData.target_quantity, 10) || 50,
+        unit: demandData.unit || 'phần',
+        urgency: demandData.urgency || 'yellow',
+        matched_quantity: 0,
+        status: 'open',
+        notes: demandData.notes || '',
+        created_at: new Date().toISOString()
+      };
+      state.demands.unshift(newDemand);
+      saveState(state);
+      emitSync('NEW_DEMAND', newDemand);
+      return newDemand;
+    },
+
+    matchDemandAuto(demandId) {
+      const state = loadState();
+      const demands = state.demands || [];
+      const demand = demands.find(d => d.id === demandId || d.demand_code === demandId);
+      if (!demand) return null;
+
+      const donations = state.donations || [];
+      if (typeof window !== 'undefined' && window.FoodSaveMatching) {
+        return window.FoodSaveMatching.matchDemand(demand, donations);
+      }
+      return null;
+    },
+
+    fulfillMatchedDemand(matchResult) {
+      const state = loadState();
+      if (!matchResult || !matchResult.demand_id) return false;
+
+      // Cập nhật trạng thái demand
+      if (state.demands) {
+        state.demands = state.demands.map(d => {
+          if (d.id === matchResult.demand_id || d.demand_code === matchResult.demand_id) {
+            return {
+              ...d,
+              matched_quantity: matchResult.total_matched_quantity,
+              status: matchResult.is_fully_matched ? 'fulfilled' : 'partially_matched'
+            };
+          }
+          return d;
+        });
+      }
+
+      // Đánh dấu các donation tham gia
+      const matchedDonationIds = (matchResult.allocations || []).map(a => a.donation_id);
+      if (state.donations) {
+        state.donations = state.donations.map(d => {
+          if (matchedDonationIds.includes(d.id) || matchedDonationIds.includes(d.donation_code)) {
+            return {
+              ...d,
+              status: 'in_route',
+              charity_name: matchResult.charity_name || 'Mái Ấm Tiếp Nhận',
+              claimed_at: new Date().toISOString()
+            };
+          }
+          return d;
+        });
+      }
+
+      saveState(state);
+      emitSync('DEMAND_MATCHED_FULFILLED', matchResult);
+      return true;
     },
 
     // ─── TÍNH ĐIỂM ESG & BÁO CÁO MÔI TRƯỜNG ───
