@@ -2,7 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import '@/styles/charity.css';
-import { CHARITY_BODY_HTML } from './charityHtml';
+import CharityTopbar from '@/components/charity/CharityTopbar';
+import CharityLandingView from '@/components/charity/CharityLandingView';
+import CharityAuthView from '@/components/charity/CharityAuthView';
+import CharityPortalView from '@/components/charity/CharityPortalView';
+import CharityModals from '@/components/charity/CharityModals';
 
 export default function CharityPortalPage() {
   const [mounted, setMounted] = useState(false);
@@ -51,9 +55,12 @@ export default function CharityPortalPage() {
   }, []);
 
   return (
-    <div
-      id="charity-portal-root"
-      dangerouslySetInnerHTML={{ __html: CHARITY_BODY_HTML }}
-    />
+    <div id="charity-portal-root">
+      <CharityTopbar />
+      <CharityLandingView />
+      <CharityAuthView />
+      <CharityPortalView />
+      <CharityModals />
+    </div>
   );
 }

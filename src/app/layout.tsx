@@ -1,6 +1,34 @@
 import type { Metadata } from 'next';
+import { Inter, Plus_Jakarta_Sans, Be_Vietnam_Pro, Source_Serif_4 } from 'next/font/google';
 import './globals.css';
 import { LocalDbProvider } from '@/context/LocalDbContext';
+
+const inter = Inter({
+  subsets: ['latin', 'vietnamese'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['600', '700', '800'],
+  display: 'swap',
+  variable: '--font-plus-jakarta',
+});
+
+const beVietnam = Be_Vietnam_Pro({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-be-vietnam',
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['400', '600', '700', '900'],
+  display: 'swap',
+  variable: '--font-source-serif',
+});
 
 export const metadata: Metadata = {
   title: 'FoodSave Việt Nam - Cứu Thực Phẩm, Giảm Phát Thải CO2e',
@@ -22,14 +50,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi">
+    <html
+      lang="vi"
+      className={`${inter.variable} ${plusJakarta.variable} ${beVietnam.variable} ${sourceSerif.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,400..900;1,400..900&display=swap"
-          rel="stylesheet"
-        />
         <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
       </head>

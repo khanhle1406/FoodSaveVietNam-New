@@ -2,7 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import '@/styles/partner.css';
-import { PARTNER_BODY_HTML } from './partnerHtml';
+import PartnerTopbar from '@/components/partner/PartnerTopbar';
+import PartnerLandingView from '@/components/partner/PartnerLandingView';
+import PartnerAuthView from '@/components/partner/PartnerAuthView';
+import PartnerPortalView from '@/components/partner/PartnerPortalView';
+import PartnerModals from '@/components/partner/PartnerModals';
 
 export default function PartnerPortalPage() {
   const [mounted, setMounted] = useState(false);
@@ -39,6 +43,8 @@ export default function PartnerPortalPage() {
         await loadScript('/frontend/matchingService.js');
         await loadScript('/frontend/alertService.js');
         await loadScript('/frontend/apiClient.js');
+        await loadScript('/frontend/foodsave-live-data.js');
+        await loadScript('/frontend/foodsave-auth-client.js');
         await loadScript('/frontend/partner-bundle.js');
       } catch (err) {
         console.error('Lỗi khởi tạo cổng Đối tác:', err);
@@ -49,9 +55,12 @@ export default function PartnerPortalPage() {
   }, []);
 
   return (
-    <div
-      id="partner-portal-root"
-      dangerouslySetInnerHTML={{ __html: PARTNER_BODY_HTML }}
-    />
+    <div id="partner-portal-root">
+      <PartnerTopbar />
+      <PartnerLandingView />
+      <PartnerAuthView />
+      <PartnerPortalView />
+      <PartnerModals />
+    </div>
   );
 }
