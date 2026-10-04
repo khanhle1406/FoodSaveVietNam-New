@@ -1408,7 +1408,7 @@ async function adminSignOut() {
     window.location.reload();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAdminGate() {
     const gateForm = document.getElementById('gate-form');
     gateForm?.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -1455,4 +1455,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     checkAdminAuthGate();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAdminGate);
+} else {
+    initAdminGate();
+}

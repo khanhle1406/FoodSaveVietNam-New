@@ -40,8 +40,8 @@ export default function CharityPortalPage() {
         await loadScript('/frontend/alertService.js');
         await loadScript('/frontend/apiClient.js');
         await loadScript('/frontend/foodsave-live-data.js');
-        await loadScript('/frontend/charity-bundle.js');
         await loadScript('/frontend/foodsave-auth-client.js');
+        await loadScript('/frontend/charity-bundle.js');
       } catch (err) {
         console.error('Lỗi khởi tạo cổng Từ thiện:', err);
       }

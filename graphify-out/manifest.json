@@ -525,8 +525,8 @@
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/frontend/foodsave-auth-client.js": {
-    "mtime": 1791004207.1957936,
-    "ast_hash": "002f9d0ce4c8bcd133ef198aa05ae7d4",
+    "mtime": 1791127521.7147737,
+    "ast_hash": "f9abe816a03d21f855dae93f01aa1199",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/frontend/foodsave-live-data.js": {
@@ -1005,8 +1005,8 @@
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/charity/page.tsx": {
-    "mtime": 1791007383.869668,
-    "ast_hash": "116725dc21be01d6154d293c6bf2ad5f",
+    "mtime": 1791127646.7057002,
+    "ast_hash": "a873e3d264c91d2dddaa2d5023131cc5",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/layout.tsx": {
@@ -1015,8 +1015,8 @@
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/page.tsx": {
-    "mtime": 1791008014.0239246,
-    "ast_hash": "b04df50b64c95d7a1966d73b4e0ddc7f",
+    "mtime": 1791127669.865205,
+    "ast_hash": "2f5e560b833096561ab14618a8f1604b",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/partner/page.tsx": {
@@ -1090,8 +1090,8 @@
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/frontend/foodsave-auth-client.js": {
-    "mtime": 1791005754.8457482,
-    "ast_hash": "002f9d0ce4c8bcd133ef198aa05ae7d4",
+    "mtime": 1791008817.2944164,
+    "ast_hash": "f9abe816a03d21f855dae93f01aa1199",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/frontend/foodsave-live-data.js": {
@@ -1145,18 +1145,18 @@
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/frontend/admin-bundle.js": {
-    "mtime": 1791007251.195994,
-    "ast_hash": "84baf352a1e1262d2aac6b723ee5bad6",
+    "mtime": 1791127599.610647,
+    "ast_hash": "a19c096c9290293ea59732b18ae4e4c3",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/frontend/charity-bundle.js": {
-    "mtime": 1791007307.8181264,
-    "ast_hash": "43c4cedcf90b3db62bc74d6022a6cd12",
+    "mtime": 1791127503.4603698,
+    "ast_hash": "696323425aca4b89a74ce3569d7ff39b",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/public/frontend/partner-bundle.js": {
-    "mtime": 1791007363.7176473,
-    "ast_hash": "4d12dc94d819be3597a8bbbc8eca8e84",
+    "mtime": 1791127510.3525252,
+    "ast_hash": "656f915b347da26159e505b4cae6a354",
     "semantic_hash": ""
   },
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/charity/charityHtml.ts": {
@@ -1167,6 +1167,16 @@
   "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/src/app/partner/partnerHtml.ts": {
     "mtime": 1791007375.8826766,
     "ast_hash": "98837459854b0f54ff97c59991ffd576",
+    "semantic_hash": ""
+  },
+  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/frontend/charity-bundle.js": {
+    "mtime": 1791127521.7046623,
+    "ast_hash": "696323425aca4b89a74ce3569d7ff39b",
+    "semantic_hash": ""
+  },
+  "/Users/xuannguyen/Desktop/Competitions/2026/TISPA/frontend/partner-bundle.js": {
+    "mtime": 1791127521.7096357,
+    "ast_hash": "656f915b347da26159e505b4cae6a354",
     "semantic_hash": ""
   }
 }

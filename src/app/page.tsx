@@ -32,8 +32,11 @@ export default function HomePage() {
     e.preventDefault();
     if (typeof window !== 'undefined') {
       localStorage.setItem('foodsave_login_role', currentRole);
+      setNoticeVisible(true);
+      setTimeout(() => {
+        window.location.href = currentRole === 'business' ? '/partner' : '/charity';
+      }, 600);
     }
-    setNoticeVisible(true);
   };
 
   return (
