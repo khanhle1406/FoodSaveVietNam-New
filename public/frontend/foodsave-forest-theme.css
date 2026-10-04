@@ -274,11 +274,23 @@ th,
   color: inherit !important;
 }
 
-.tick-item i,
-.ticker-track span::before,
-.live-pulse .dot {
+.tick-item i {
   color: var(--forest-gold) !important;
+  background: transparent !important;
+}
+
+.live-pulse .dot,
+.tick-sep,
+.ticker-track > span:not(.tick-item):not(.tick-sep)::before {
   background: var(--forest-gold) !important;
+}
+
+.tick-item::before,
+.tick-item span::before,
+.tick-sep::before,
+.tick-sep::after {
+  content: none !important;
+  display: none !important;
 }
 
 .brand-word,
@@ -502,7 +514,6 @@ tbody tr:hover,
 a:hover,
 .lk,
 .st i,
-.tick-item i,
 .pillar-ic i,
 .step-ic i {
   color: var(--forest-orange) !important;

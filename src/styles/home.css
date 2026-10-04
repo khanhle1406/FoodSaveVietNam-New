@@ -123,7 +123,7 @@
       min-width: 100%;
       animation: tickerMove 24s linear infinite;
     }
-    .ticker-track span::before {
+    .ticker-track > span:not(.tick-item):not(.tick-sep)::before {
       content: "";
       display: inline-block;
       width: 6px;
